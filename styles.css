@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  width: 100%;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+}
+
+.main-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.selection-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* 커스텀 비디오 컨트롤 바 */
+.video-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #1f2937;
+  border-top: 1px solid #374151;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.control-btn:hover {
+  opacity: 0.8;
+}
+
+.control-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  min-width: 100px;
+}
+
+.seek-bar-container {
+  flex: 1;
+  height: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.seek-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #4b5563;
+  border-radius: 3px;
+  position: relative;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.seek-bar-progress {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 3px;
+  width: 0%;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+.seek-bar-handle {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.seek-bar-container:hover .seek-bar-handle {
+  opacity: 1;
+}
+
+.seek-bar-container:hover .seek-bar-progress {
+  background-color: #2563eb;
+}
+
+.selection-box {
+  position: absolute;
+  border: 2px solid #3b82f6;
+  background-color: rgba(59, 130, 246, 0.2);
+  pointer-events: none;
+}
+
+/* Handwriting 오버레이 */
+.handwriting-overlay {
+  position: absolute;
+  z-index: 25;
+  pointer-events: auto;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 20px;
+  box-shadow: none;
+  border: none;
+}
+
+#handwritingContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 스크롤바 스타일링 */
+#handwritingContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#handwritingContainer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+#handwritingContainer::-webkit-scrollbar-thumb {
+  background: rgba(30, 64, 175, 0.3);
+  border-radius: 4px;
+}
+
+#handwritingContainer::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 64, 175, 0.5);
+}
+
+#handwritingContainer svg {
+  overflow: visible !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+#handwritingContainer > * {
+  overflow: visible !important;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.avatar-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 21;
+  pointer-events: auto;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* 이미지 팝업 모달 */
+.image-popup-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-popup-content {
+  position: absolute;
+  pointer-events: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  max-width: 600px;
+  max-height: 500px;
+}
+
+.image-popup-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-close-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  pointer-events: auto;
+  transition: background-color 0.2s;
+}
+
+.image-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Ask 모달 스타일 */
+.ask-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.ask-panel {
+  position: absolute;
+  pointer-events: auto;
+  width: 340px;
+  max-width: 92vw;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+/* Ask 섹션 */
+.ask-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ask-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ask-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.ask-close-btn {
+  color: #9ca3af;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.ask-close-btn:hover {
+  color: #4b5563;
+}
+
+.ask-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.ask-input {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.ask-input:focus {
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.2);
+}
+
+.ask-send-btn {
+  margin-left: 0;
+  padding: 6px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.ask-send-btn:hover {
+  background-color: #dbeafe;
+}
+
+.ask-send-icon {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+}
+
+.ask-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ask-chip {
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #374151;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.ask-chip:hover {
+  background-color: #f9fafb;
+}
+
+.ask-chip-last {
+  border-color: #a855f7;
+  color: #7c3aed;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ask-chip-last:hover {
+  background-color: #faf5ff;
+}
+
+/* Enhanced Visual 섹션 */
+.enhanced-visual-section {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.enhanced-visual-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+

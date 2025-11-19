@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Lecture Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Vara.js 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- 비디오 플레이어 영역 -->
+    <div class="video-wrapper">
+      <div class="video-container" id="videoContainer">
+        <video 
+          id="mainVideo" 
+          class="main-video"
+          preload="auto"
+          src="./video/physics.mp4"
+        ></video>
+        
+        <!-- 선택 영역 표시 레이어 -->
+        <div class="selection-layer" id="selectionLayer"></div>
+        
+        <!-- Handwriting 오버레이 -->
+        <div class="handwriting-overlay" id="handwritingOverlay" style="display: none;">
+          <div id="handwritingContainer"></div>
+        </div>
+        
+        <!-- 아바타 응답 비디오 오버레이 -->
+        <div class="avatar-overlay" id="avatarOverlay" style="display: none;">
+          <video 
+            id="avatarVideo" 
+            class="avatar-video"
+            autoplay
+          ></video>
+          <button class="close-btn" id="closeAvatarBtn">×</button>
+        </div>
+      </div>
+      
+      <!-- 커스텀 비디오 컨트롤 바 -->
+      <div class="video-controls" id="videoControls">
+        <button class="control-btn" id="playPauseBtn" aria-label="Play/Pause">
+          <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+          </svg>
+        </button>
+        <div class="time-display">
+          <span id="currentTime">0:00</span>
+          <span>/</span>
+          <span id="duration">0:00</span>
+        </div>
+        <div class="seek-bar-container" id="seekBarContainer">
+          <div class="seek-bar" id="seekBar">
+            <div class="seek-bar-progress" id="seekBarProgress"></div>
+            <div class="seek-bar-handle" id="seekBarHandle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Visual 이미지 팝업 -->
+    <div class="image-popup-modal" id="imagePopupModal" style="display: none;">
+      <div class="image-popup-content">
+        <button class="image-close-btn" id="closeImagePopupBtn">×</button>
+        <img id="popupImage" src="" alt="Enhanced Visual" />
+      </div>
+    </div>
+
+    <!-- Ask 창 모달 -->
+    <div class="ask-modal" id="askModal" style="display: none;">
+      <div class="ask-panel" id="askPanel">
+        <!-- Ask 섹션 -->
+        <div class="ask-section">
+          <div class="ask-header">
+            <h3 class="ask-title">Ask</h3>
+            <button class="ask-close-btn" id="closeAskBtn" aria-label="Close">✕</button>
+          </div>
+          
+          <div class="ask-input-group">
+            <input
+              type="text"
+              id="questionInput"
+              placeholder="please explain this"
+              class="ask-input"
+            />
+            <button class="ask-send-btn" id="askSendBtn" aria-label="Send question" title="Send">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ask-send-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="ask-chips">
+            <button class="ask-chip" id="stepByStepChip">
+              "walk me through this step by step"
+            </button>
+            <button class="ask-chip" id="analogyChip">
+              "can you make an analogy"
+            </button>
+            <button class="ask-chip ask-chip-last" id="lastQuestionChip" style="display: none;">
+            </button>
+          </div>
+        </div>
+        
+        <!-- Enhanced Visual 섹션 -->
+        <div class="enhanced-visual-section">
+          <div class="enhanced-visual-text">Enhanced Visual</div>
+          <button class="ask-send-btn" id="visualSendBtn" aria-label="Send visual" title="Send">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ask-send-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

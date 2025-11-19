@@ -1,0 +1,137 @@
+[
+  {
+    "seconds": 0,
+    "slideNumber": 1,
+    "shouldGenerateQuiz": false,
+    "slideContent": {
+      "title": "7. Matrix examples",
+      "plain_text": [
+        "Matrix examples"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 40,
+    "slideNumber": 2,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Geometric transformations",
+      "plain_text": [
+        "Vector mappings via matrix multiplication",
+        "Example: rotation by angle θ",
+        "Matrix form of rotation: y = [ [cosθ, -sinθ], [sinθ, cosθ] ] x",
+        "Geometric interpretation: applying Ax rotates vector x by θ"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 120,
+    "slideNumber": 3,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Geometric transformations",
+      "plain_text": [
+        "Representing geometric transformations and mappings of 2-D and 3-D vectors via matrix multiplication y = Ax",
+        "Rotation by angle θ as an example of such transformations",
+        "Matrix form of a 2D rotation: y = [ [cos θ, -sin θ], [sin θ, cos θ] ] x",
+        "Vector depiction of transformation Ax and rotation components",
+        "Geometric intuition with example vectors and a simple triangle/diagram"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 270,
+    "slideNumber": 4,
+    "shouldGenerateQuiz": false,
+    "slideContent": {
+      "title": "Selectors",
+      "plain_text": [
+        "Definition of an m × n selector matrix",
+        "Each row is a unit vector (transposed)",
+        "Matrix A structure with columns as selector vectors",
+        "Multiplication by A selects entries of x",
+        "Example: the m × 2m matrix A shown",
+        "Down-sampling concept: if x is a 2m-vector then y = Ax = (x1, x3, ..., x2m−1)",
+        "Other examples: image cropping, permutation, ..."
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 330,
+    "slideNumber": 5,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Selectors",
+      "plain_text": [
+        "Definition of an m × n selector matrix",
+        "Each row is a unit vector (transposed)",
+        "Multiplication by A selects entries of x",
+        "Example: the m × 2m matrix",
+        "Applications: extracting samples (down-sampling) and other examples (image cropping, permutation)"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 370,
+    "slideNumber": 6,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Selectors",
+      "plain_text": [
+        "Definition of an m × n selector matrix",
+        "Each row as a unit vector (transposed)",
+        "Multiplying by A selects entries of x",
+        "Example: the m × 2m matrix",
+        "Applications: down-samples, image cropping, permutation"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 520,
+    "slideNumber": 7,
+    "shouldGenerateQuiz": false,
+    "slideContent": {
+      "title": "Stanford Engineering",
+      "plain_text": [
+        "Institution branding",
+        "Engineering discipline at Stanford",
+        "Lecture recreation notice"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  }
+]

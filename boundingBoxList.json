@@ -1,0 +1,131 @@
+{
+  "boundingBoxes": [
+    {
+      "name": "linear-algebra",
+      "videoRegion": {
+        "x": 111,
+        "y": 39,
+        "width": 1247,
+        "height": 701
+      },
+      "slideRegion": {
+        "x": 0,
+        "y": 88,
+        "width": 1203,
+        "height": 906
+      },
+      "instructorRegion": {
+        "x": 1203,
+        "y": 345,
+        "width": 714,
+        "height": 408
+      }
+    },
+    {
+      "name": "programming",
+      "videoRegion": {
+        "x": 17,
+        "y": 16,
+        "width": 1247,
+        "height": 701
+      },
+      "slideRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1283,
+        "height": 1075
+      },
+      "instructorRegion": {
+        "x": 1283,
+        "y": 407,
+        "width": 631,
+        "height": 665
+      }
+    },
+    {
+      "name": "special-relativity",
+      "videoRegion": {
+        "x": 17,
+        "y": 16,
+        "width": 1247,
+        "height": 701
+      },
+      "slideRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1435,
+        "height": 1078
+      },
+      "instructorRegion": {
+        "x": 1440,
+        "y": 0,
+        "width": 328,
+        "height": 181
+      }
+    },
+    {
+      "name": "quantum",
+      "videoRegion": {
+        "x": 111,
+        "y": 39,
+        "width": 1247,
+        "height": 701
+      },
+      "slideRegion": {
+        "x": 0,
+        "y": 88,
+        "width": 1203,
+        "height": 906
+      },
+      "instructorRegion": {
+        "x": 1203,
+        "y": 345,
+        "width": 714,
+        "height": 408
+      }
+    },
+    {
+      "name": "machinelearning",
+      "videoRegion": {
+        "x": 201,
+        "y": 40,
+        "width": 1502,
+        "height": 845
+      },
+      "slideRegion": {
+        "x": 0,
+        "y": 97,
+        "width": 1561,
+        "height": 884
+      },
+      "instructorRegion": {
+        "x": 1563,
+        "y": 278,
+        "width": 353,
+        "height": 518
+      }
+    },
+    {
+      "name": "physics",
+      "videoRegion": {
+        "x": 112,
+        "y": 40,
+        "width": 1247,
+        "height": 701
+      },
+      "slideRegion": {
+        "x": 91,
+        "y": 50,
+        "width": 1733,
+        "height": 976
+      },
+      "instructorRegion": {
+        "x": 1500,
+        "y": 0,
+        "width": 420,
+        "height": 239
+      }
+    }
+  ]
+}
+

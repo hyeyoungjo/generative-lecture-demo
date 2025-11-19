@@ -1,0 +1,172 @@
+[
+  {
+    "seconds": 0,
+    "slideNumber": 1,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Introduction",
+      "plain_text": [
+        "Atomic structure",
+        "Nucleus and nucleons (protons and neutrons)",
+        "Electrons surrounding nucleus",
+        "Quarks inside nucleons"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 265,
+    "slideNumber": 2,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Force Particles",
+      "plain_text": [
+        "Force particles types (Strong, Electromagnetic, Gravitational, Weak)",
+        "Gluons, photons, W and Z bosons as force carriers",
+        "Subatomic particles: quarks, mesons, baryons, nuclei",
+        "Electromagnetic interactions: photons; atoms, light, chemistry, electronics",
+        "Gravitational interactions: gravitons (hypothetical)",
+        "Weak interactions: W, Z bosons; neutron decay, beta radioactivity, sun burning"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 389,
+    "slideNumber": 3,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Matter Particles",
+      "plain_text": [
+        "Particle families; quarks and leptons",
+        "Generations and charges table",
+        "Quarks: up, down, charm, strange, top, bottom",
+        "Leptons: electron, muon, tau and neutrinos",
+        "Electric charge and weak isospin notation (Y, EM, etc.)",
+        "Mass values of leptons and quarks (bare masses shown at bottom)"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 477,
+    "slideNumber": 4,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "The Higgs Boson",
+      "plain_text": [
+        "Higgs Boson overview",
+        "Higgs Boson properties (Symbol: H, Number: 1, Charge: 0)",
+        "Higgs Boson imagery: CERN pizza day posters",
+        "Feynman/visual representations of the Higgs field"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 562,
+    "slideNumber": 5,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Elementary Particle",
+      "plain_text": [
+        "Quarks",
+        "Leptons",
+        "Forces"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 590,
+    "slideNumber": 6,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Timeline of Discoveries",
+      "plain_text": [
+        "The Standard Model of particle physics",
+        "Historical timeline of particle discoveries",
+        "Particles: leptons, bosons, quarks",
+        "Theorized/explained vs discovered particles"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 625,
+    "slideNumber": 7,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Composite Particles and Hadrons",
+      "plain_text": [
+        "Mesons: quark-antiquark states; bosons",
+        "Baryons: three-quark states; fermions"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 665,
+    "slideNumber": 8,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Composite Particles and Hadrons",
+      "plain_text": [
+        "Mesons: quark-antiquark states; bosons",
+        "Baryons: three-quark states; fermions"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  },
+  {
+    "seconds": 710,
+    "slideNumber": 9,
+    "shouldGenerateQuiz": true,
+    "slideContent": {
+      "title": "Nuclei",
+      "plain_text": [
+        "Bound state of protons and neutrons through the strong force",
+        "description using number of protons (Z), atomic number, and number of neutrons (N)",
+        "mass number A = Z + N",
+        "Nuclear chart/plot: number of neutrons vs number of protons with decay type regions"
+      ],
+      "equations": [],
+      "code": null,
+      "diagrams": [],
+      "graphs": [],
+      "tables": []
+    }
+  }
+]
