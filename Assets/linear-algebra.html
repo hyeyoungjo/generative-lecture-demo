@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Geometric Transformations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans 3', 'Inter', sans-serif;
+            background-color: #f8f9fa; /* A light grey similar to a whiteboard or slide */
+        }
+        .latex {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        .matrix {
+            display: inline-grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
+            padding: 5px;
+            margin: 0 10px;
+            vertical-align: middle;
+            font-family: 'Source Sans 3', 'Inter', sans-serif;
+            font-style: normal;
+        }
+        .matrix span {
+            padding: 2px 10px;
+            text-align: center;
+            min-width: 120px;
+        }
+        canvas {
+            cursor: pointer;
+            touch-action: none;
+        }
+        .bullet-point::before {
+            content: '►';
+            color: #4A5568;
+            margin-right: 0.75rem;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-5xl bg-white rounded-lg shadow-lg p-6 md:p-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center" style="color: #2c5282;">Geometric transformations</h1>
+
+        <div class="space-y-4 text-gray-700 text-lg">
+            <p class="bullet-point">many geometric transformations and mappings of 2-D and 3-D vectors can be represented via matrix multiplication <span class="latex font-semibold bg-green-100 px-1 rounded">y</span> = <span class="latex font-semibold">A</span><span class="latex font-semibold">x</span></p>
+            <p class="bullet-point">for example, rotation by <span class="latex font-semibold">&theta;</span>:</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-around mt-8 space-y-8 md:space-y-0 md:space-x-8">
+            <!-- Left Side: Equation -->
+            <div class="text-xl md:text-2xl text-gray-800 flex items-center">
+                <span class="latex">y</span> =
+                <div class="matrix">
+                    <span>cos<span class="latex">&theta;</span> = <span id="cos-val">1.00</span></span>
+                    <span>-sin<span class="latex">&theta;</span> = <span id="neg-sin-val">-0.00</span></span>
+                    <span>sin<span class="latex">&theta;</span> = <span id="sin-val">0.00</span></span>
+                    <span>cos<span class="latex">&theta;</span> = <span id="cos-val-2">1.00</span></span>
+                </div>
+                <span class="latex">x</span>
+            </div>
+
+            <!-- Right Side: Canvas -->
+            <div class="w-full md:w-1/2 max-w-sm">
+                <canvas id="rotationCanvas" width="400" height="400" class="rounded-lg border border-gray-200 w-full"></canvas>
+            </div>
+        </div>
+        
+        <div class="text-center mt-6 text-gray-600">
+            <p class="text-sm">(to get the entries, look at <span class="latex">Ae<sub>1</sub></span> and <span class="latex">Ae<sub>2</sub></span>)</p>
+            <p class="mt-4 font-semibold text-lg">Click and drag the red arrow to change the angle!</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('rotationCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Get spans for matrix values
+        const cosValEl = document.getElementById('cos-val');
+        const negSinValEl = document.getElementById('neg-sin-val');
+        const sinValEl = document.getElementById('sin-val');
+        const cosVal2El = document.getElementById('cos-val-2');
+
+        const center = { x: canvas.width / 2, y: canvas.height / 2 };
+        const vectorLength = 120;
+        let angle = 0; // Initial angle in radians
+
+        let isDragging = false;
+        
+        // --- Drawing Functions ---
+
+        function drawArrow(x, y, color, label) {
+            ctx.save();
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 3;
+
+            // Line
+            ctx.beginPath();
+            ctx.moveTo(center.x, center.y);
+            ctx.lineTo(center.x + x, center.y - y); // Y is inverted in canvas
+            ctx.stroke();
+
+            // Arrowhead
+            const headlen = 10;
+            const angle = Math.atan2(y, x);
+            ctx.beginPath();
+            ctx.moveTo(center.x + x, center.y - y);
+            ctx.lineTo(center.x + x - headlen * Math.cos(angle - Math.PI / 6), center.y - (y - headlen * Math.sin(angle - Math.PI / 6)));
+            ctx.lineTo(center.x + x - headlen * Math.cos(angle + Math.PI / 6), center.y - (y - headlen * Math.sin(angle + Math.PI / 6)));
+            ctx.closePath();
+            ctx.fill();
+
+            // Label
+            ctx.font = "italic 20px 'Times New Roman'";
+            ctx.fillText(label, center.x + x + 15, center.y - y);
+            
+            ctx.restore();
+        }
+
+        function drawAxes() {
+            ctx.save();
+            ctx.strokeStyle = '#D1D5DB'; // light gray
+            ctx.lineWidth = 1;
+            
+            // X-axis
+            ctx.beginPath();
+            ctx.moveTo(0, center.y);
+            ctx.lineTo(canvas.width, center.y);
+            ctx.stroke();
+
+            // Y-axis
+            ctx.beginPath();
+            ctx.moveTo(center.x, 0);
+            ctx.lineTo(center.x, canvas.height);
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function drawAngleArc() {
+            ctx.save();
+            ctx.strokeStyle = '#6B7280'; // medium gray
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(center.x, center.y, 40, 0, -angle, angle < 0);
+            ctx.stroke();
+
+            // Theta label and value
+            ctx.fillStyle = '#374151';
+            const labelAngle = -angle / 2;
+            const labelRadius = 55;
+            const textX = center.x + labelRadius * Math.cos(labelAngle) - 5;
+            const textY = center.y + labelRadius * Math.sin(labelAngle) + 5;
+            
+            // Calculate and format angle for display
+            const angleDegrees = angle * (180 / Math.PI);
+            const displayAngle = (angleDegrees < 0) ? angleDegrees + 360 : angleDegrees;
+            const angleText = `= ${displayAngle.toFixed(1)}°`;
+            
+            // Draw symbol and value
+            ctx.font = "italic 18px 'Times New Roman'";
+            ctx.fillText("θ", textX, textY);
+            ctx.font = "16px 'Source Sans 3'"; // Use normal font for the value
+            ctx.fillText(angleText, textX + 15, textY); // Draw value next to the symbol
+
+            ctx.restore();
+        }
+        
+        function updateMatrixValues() {
+            const cosVal = Math.cos(angle);
+            const sinVal = Math.sin(angle);
+            
+            cosValEl.textContent = cosVal.toFixed(2);
+            negSinValEl.textContent = (-sinVal).toFixed(2);
+            sinValEl.textContent = sinVal.toFixed(2);
+            cosVal2El.textContent = cosVal.toFixed(2);
+        }
+
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            drawAxes();
+
+            // Original vector (x)
+            drawArrow(vectorLength, 0, '#3B82F6', 'x'); // Blue
+
+            // Transformed vector (Ax)
+            const Ax = {
+                x: vectorLength * Math.cos(angle),
+                y: vectorLength * Math.sin(angle)
+            };
+            drawArrow(Ax.x, Ax.y, '#EF4444', 'Ax'); // Red
+
+            drawAngleArc();
+            updateMatrixValues();
+        }
+
+        // --- Event Handlers ---
+
+        function getMousePos(evt) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            // Adjust for multi-touch (use the first touch point)
+            const clientX = evt.clientX || (evt.touches && evt.touches[0].clientX);
+            const clientY = evt.clientY || (evt.touches && evt.touches[0].clientY);
+
+            return {
+              x: (clientX - rect.left) * scaleX - center.x,
+              y: center.y - (clientY - rect.top) * scaleY // Invert Y
+            };
+        }
+
+        function handleStart(evt) {
+            evt.preventDefault();
+            const mousePos = getMousePos(evt);
+            const Ax = {
+                x: vectorLength * Math.cos(angle),
+                y: vectorLength * Math.sin(angle)
+            };
+            const dist = Math.sqrt(Math.pow(mousePos.x - Ax.x, 2) + Math.pow(mousePos.y - Ax.y, 2));
+            
+            // Check if the click/touch is near the arrowhead of the red vector
+            if (dist < 20) {
+                isDragging = true;
+            }
+        }
+
+        function handleMove(evt) {
+            if (isDragging) {
+                evt.preventDefault();
+                const mousePos = getMousePos(evt);
+                angle = Math.atan2(mousePos.y, mousePos.x);
+                draw();
+            }
+        }
+
+        function handleEnd(evt) {
+            evt.preventDefault();
+            isDragging = false;
+        }
+
+        // Mouse events
+        canvas.addEventListener('mousedown', handleStart);
+        canvas.addEventListener('mousemove', handleMove);
+        window.addEventListener('mouseup', handleEnd); // Listen on window to catch mouseup outside canvas
+
+        // Touch events
+        canvas.addEventListener('touchstart', handleStart);
+        canvas.addEventListener('touchmove', handleMove);
+        canvas.addEventListener('touchend', handleEnd);
+
+
+        // Initial draw
+        draw();
+    </script>
+
+</body>
+</html>
+

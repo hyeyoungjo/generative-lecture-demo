@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Structure of Matter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .stage-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .visualization-circle {
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .visualization-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .particle {
+             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative; /* Needed for label positioning */
+        }
+        .electron {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            top: -7.5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nucleus-proxy {
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background-color: white;
+        }
+        .nucleon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding: 15px;
+        }
+        .nucleon {
+             width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            background-color: white;
+        }
+        .quark {
+            width: 25px;
+            height: 25px;
+            background-color: black;
+            color: white;
+        }
+        .connector {
+            flex-shrink: 0;
+            width: 100px;
+            height: 200px;
+            position: relative;
+            margin: 0 5px;
+        }
+        .connector::before, .connector::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 140%; 
+            height: 2px;
+            background-image: linear-gradient(to right, black 50%, transparent 50%);
+            background-size: 10px 2px;
+            background-repeat: repeat-x;
+            transform-origin: left center;
+        }
+        .connector::before {
+            transform: translateY(-50px) rotate(-15deg);
+        }
+        .connector::after {
+            transform: translateY(50px) rotate(15deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .hidden-initially {
+            opacity: 0;
+            pointer-events: none; /* Add this to prevent clicking on hidden elements */
+        }
+        
+        .particle-label {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .particle:hover > .particle-label {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-white text-black flex flex-col items-center justify-center min-h-screen p-4">
+    
+    <div id="explanation-panel" class="w-full max-w-3xl text-center mb-10 h-20 flex items-center justify-center px-4">
+        <p id="explanation-text" class="text-xl text-gray-700 transition-opacity duration-300"></p>
+    </div>
+
+    <div class="flex flex-col items-center w-full">
+        <div id="visualization-container" class="flex items-center justify-center flex-wrap">
+            
+            <!-- Intro Stage -->
+            <div id="intro-stage" class="stage-container hidden-initially" data-explanation="The basic unit of a chemical element. Atoms consist of a central nucleus and surrounding electrons.">
+                <div id="intro-circle" class="visualization-circle" style="width: 80px; height: 80px;">
+                     <div class="particle" style="width:10px; height:10px; border: 2px solid black; background: white; border-radius: 50%;"></div>
+                </div>
+                 <div class="label" style="position: relative;">
+                    <p class="label-title">Atom</p>
+                </div>
+            </div>
+
+            <!-- Connector 0 -->
+            <div id="connector-0" class="connector hidden-initially"></div>
+
+            <!-- Atom Detail Stage -->
+            <div id="atom-stage" class="stage-container hidden-initially" data-explanation="Most of an atom is empty space. The nucleus is about 100,000 times smaller than the atom itself.">
+                <div id="atom-circle" class="visualization-circle" style="width: 200px; height: 200px;">
+                    <div class="particle nucleus-proxy"></div>
+                    <div class="electron particle">
+                        <span class="particle-label">Electron</span>
+                    </div>
+                </div>
+                <div class="label" style="position: relative;">
+                    <p class="label-title">Atom Detail</p>
+                </div>
+            </div>
+
+            <!-- Connector 1 -->
+            <div id="connector-1" class="connector hidden-initially"></div>
+
+            <!-- Nucleus Stage -->
+            <div id="nucleus-stage" class="stage-container hidden-initially" data-explanation="The dense, positively charged center of an atom, composed of protons and neutrons held together by the strong nuclear force.">
+                <div id="nucleus-circle" class="visualization-circle" style="width: 200px; height: 200px;">
+                    <div class="nucleon-grid">
+                        <!-- Nucleons generated by JS -->
+                    </div>
+                </div>
+                <div class="label" style="position: relative;">
+                    <p class="label-title">Nucleus</p>
+                    <p class="label-scale">a few 10<sup>-15</sup>m</p>
+                </div>
+            </div>
+
+            <!-- Connector 2 -->
+            <div id="connector-2" class="connector hidden-initially"></div>
+
+            <!-- Nucleon Stage -->
+            <div id="nucleon-stage" class="stage-container hidden-initially" data-explanation="Protons and neutrons are made of fundamental particles called quarks. A proton is two 'up' quarks and one 'down' quark (uud).">
+                <div id="nucleon-circle" class="visualization-circle flex gap-3 p-4" style="width: 200px; height: 200px;">
+                    <div class="particle quark">u<span class="particle-label">Up Quark</span></div>
+                    <div class="particle quark">u<span class="particle-label">Up Quark</span></div>
+                    <div class="particle quark">d<span class="particle-label">Down Quark</span></div>
+                </div>
+                <div class="label" style="position: relative;">
+                    <p class="label-title">Quarks</p>
+                     <p class="label-scale">10<sup>-15</sup>m / 1 fm</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-8">
+            <button id="reset-btn" class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-6 rounded-lg transition-all">
+                Reset
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const stages = {
+            intro: document.getElementById('intro-stage'),
+            atom: document.getElementById('atom-stage'),
+            nucleus: document.getElementById('nucleus-stage'),
+            nucleon: document.getElementById('nucleon-stage'),
+        };
+
+        const connectors = {
+            conn0: document.getElementById('connector-0'),
+            conn1: document.getElementById('connector-1'),
+            conn2: document.getElementById('connector-2'),
+        };
+
+        const circles = {
+            intro: document.getElementById('intro-circle'),
+            atom: document.getElementById('atom-circle'),
+            nucleus: document.getElementById('nucleus-circle'),
+            nucleon: document.getElementById('nucleon-circle'),
+        };
+        
+        const resetButton = document.getElementById('reset-btn');
+        const explanationText = document.getElementById('explanation-text');
+        const visualizationContainer = document.getElementById('visualization-container');
+        const allStageElements = Object.values(stages);
+        const allConnectorElements = Object.values(connectors);
+
+        // Helper function to animate an element in
+        const animateIn = (element) => {
+            if (!element) return;
+            if (element.classList.contains('hidden-initially')) {
+                element.classList.remove('hidden-initially');
+                element.classList.add('fade-in');
+            }
+        };
+
+        const resetView = () => {
+            [...allStageElements, ...allConnectorElements].forEach(el => {
+                el.classList.add('hidden-initially');
+                el.classList.remove('fade-in');
+            });
+            animateIn(stages.intro);
+        };
+        
+        circles.intro.addEventListener('click', () => {
+            animateIn(connectors.conn0);
+            animateIn(stages.atom);
+        });
+        circles.atom.addEventListener('click', () => {
+            animateIn(connectors.conn1);
+            animateIn(stages.nucleus);
+        });
+        circles.nucleus.addEventListener('click', () => {
+            animateIn(connectors.conn2);
+            animateIn(stages.nucleon);
+        });
+        
+        circles.nucleon.addEventListener('click', () => {
+             // Show a final message using a custom modal
+            const modal = document.createElement('div');
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 100;';
+            modal.innerHTML = `
+                <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center;">
+                    <p style="margin-bottom: 1rem;">Quarks and Electrons are fundamental particles!</p>
+                    <button id="close-modal-btn" style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid black; background: black; color: white;">Close</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            document.getElementById('close-modal-btn').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+        });
+        
+        resetButton.addEventListener('click', resetView);
+        
+        // --- Explanation Panel Logic ---
+        const updateExplanation = (text) => {
+            explanationText.textContent = text;
+            explanationText.style.opacity = 1;
+        };
+
+        const clearExplanation = () => {
+            explanationText.style.opacity = 0;
+        };
+
+        allStageElements.forEach(stage => {
+            stage.addEventListener('mouseenter', () => {
+                const text = stage.getAttribute('data-explanation');
+                if (text) {
+                    updateExplanation(text);
+                }
+            });
+        });
+
+        visualizationContainer.addEventListener('mouseleave', () => {
+            clearExplanation();
+        });
+
+
+        // --- Initial Setup ---
+        function generateNucleons() {
+            const grid = stages.nucleus.querySelector('.nucleon-grid');
+            grid.innerHTML = '';
+            const nucleonCount = 16;
+            for (let i = 0; i < nucleonCount; i++) {
+                const nucleon = document.createElement('div');
+                nucleon.classList.add('particle', 'nucleon');
+                
+                const label = document.createElement('span');
+                label.classList.add('particle-label');
+
+                let textChar = '';
+                if (Math.random() > 0.5) {
+                    textChar = 'p';
+                    label.textContent = 'Proton';
+                } else {
+                    textChar = 'n';
+                    label.textContent = 'Neutron';
+                }
+                const textNode = document.createTextNode(textChar);
+                nucleon.appendChild(textNode);
+                nucleon.appendChild(label);
+                grid.appendChild(nucleon);
+            }
+        }
+
+        generateNucleons();
+        resetView(); // Set the initial state when the page loads
+        explanationText.textContent = ''; // Ensure panel is empty on load
+        explanationText.style.opacity = 0; // Ensure panel is invisible on load
+    </script>
+</body>
+</html>
+
+

@@ -37,10 +37,43 @@
           ></video>
           <button class="close-btn" id="closeAvatarBtn">×</button>
         </div>
+        
+        <!-- Interactive Diagram 오버레이 -->
+        <div class="diagram-overlay" id="diagramOverlay" style="display: none;">
+          <!-- 닫기 버튼 -->
+          <button class="close-diagram-btn" id="closeDiagramBtn" aria-label="Close diagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+          
+          <!-- 로딩 상태 -->
+          <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <p>Loading <span id="diagramName"></span>...</p>
+          </div>
+          
+          <!-- Iframe -->
+          <iframe 
+            id="diagramIframe" 
+            class="diagram-iframe"
+            sandbox="allow-scripts allow-same-origin"
+            title="Interactive Diagram"
+          ></iframe>
+        </div>
+        
+        <!-- 토스트 알림 -->
+        <div class="toast-notification" id="toastNotification"></div>
       </div>
       
       <!-- 커스텀 비디오 컨트롤 바 -->
       <div class="video-controls" id="videoControls">
+        <select class="video-selector" id="videoSelector">
+          <option value="physics">Physics</option>
+          <option value="linear-algebra">Linear Algebra</option>
+          <option value="machinelearning">Machine Learning</option>
+        </select>
         <button class="control-btn" id="playPauseBtn" aria-label="Play/Pause">
           <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M8 5v14l11-7z"/>
@@ -60,6 +93,9 @@
             <div class="seek-bar-handle" id="seekBarHandle"></div>
           </div>
         </div>
+        <button class="diagram-btn" id="interactiveDiagramBtn" aria-label="Open Interactive Diagram">
+          Diagram
+        </button>
       </div>
     </div>
 

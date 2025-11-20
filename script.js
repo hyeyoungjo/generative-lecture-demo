@@ -27,8 +27,18 @@ const handwritingContainer = document.getElementById('handwritingContainer');
 const imagePopupModal = document.getElementById('imagePopupModal');
 const popupImage = document.getElementById('popupImage');
 const closeImagePopupBtn = document.getElementById('closeImagePopupBtn');
+const toastNotification = document.getElementById('toastNotification');
+
+// Interactive Diagram 요소
+const interactiveDiagramBtn = document.getElementById('interactiveDiagramBtn');
+const diagramOverlay = document.getElementById('diagramOverlay');
+const diagramIframe = document.getElementById('diagramIframe');
+const closeDiagramBtn = document.getElementById('closeDiagramBtn');
+const loadingState = document.getElementById('loadingState');
+const diagramNameDisplay = document.getElementById('diagramName');
 
 // 비디오 컨트롤 요소
+const videoSelector = document.getElementById('videoSelector');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const playIcon = document.getElementById('playIcon');
 const pauseIcon = document.getElementById('pauseIcon');
@@ -67,9 +77,39 @@ async function init() {
   if (match) {
     currentVideoName = match[1];
   }
+  
+  // 드롭다운 초기값 설정
+  if (videoSelector) {
+    videoSelector.value = currentVideoName;
+  }
 
   setupEventListeners();
   setupVideoControls();
+}
+
+// 비디오 변경 함수
+function changeVideo(videoName) {
+  console.log('Changing video to:', videoName);
+  
+  // 현재 비디오 이름 업데이트
+  currentVideoName = videoName;
+  
+  // 비디오 소스 변경
+  const wasPlaying = !mainVideo.paused;
+  mainVideo.src = `./video/${videoName}.mp4`;
+  mainVideo.load();
+  
+  // 재생 중이었다면 다시 재생
+  if (wasPlaying) {
+    mainVideo.play().catch(err => {
+      console.log('Auto-play prevented:', err);
+    });
+  }
+  
+  // duration 업데이트를 위해 loadedmetadata 기다림
+  mainVideo.addEventListener('loadedmetadata', () => {
+    durationDisplay.textContent = formatTime(mainVideo.duration);
+  }, { once: true });
 }
 
 // 비디오 컨트롤 설정
@@ -85,6 +125,15 @@ function setupVideoControls() {
     e.preventDefault();
     e.stopPropagation(); // videoContainer의 contextmenu 방지
   });
+  
+  // 비디오 선택 드롭다운
+  if (videoSelector) {
+    videoSelector.addEventListener('change', (e) => {
+      e.stopPropagation();
+      const selectedVideo = e.target.value;
+      changeVideo(selectedVideo);
+    });
+  }
   
   // 재생/일시정지 버튼
   playPauseBtn.addEventListener('click', (e) => {
@@ -247,8 +296,46 @@ function setupEventListeners() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && askModal.style.display === 'block') {
       closeAskModal();
+    } else if (e.key === 'Escape' && diagramOverlay && diagramOverlay.style.display === 'block') {
+      closeDiagram();
     }
   });
+  
+  // Interactive Diagram 버튼 클릭 이벤트
+  if (interactiveDiagramBtn) {
+    interactiveDiagramBtn.addEventListener('click', () => {
+      console.log('Interactive Diagram button clicked for video:', currentVideoName);
+      openDiagramForCurrentVideo();
+    });
+  } else {
+    console.error('Interactive Diagram button not found!');
+  }
+  
+  // Diagram 닫기 버튼
+  if (closeDiagramBtn) {
+    closeDiagramBtn.addEventListener('click', closeDiagram);
+  }
+  
+  // Diagram 오버레이 배경 클릭시 닫기
+  if (diagramOverlay) {
+    diagramOverlay.addEventListener('click', (e) => {
+      if (e.target === diagramOverlay) {
+        closeDiagram();
+      }
+    });
+  }
+  
+  // Diagram Iframe 로드 완료
+  if (diagramIframe) {
+    diagramIframe.addEventListener('load', () => {
+      console.log('Diagram loaded');
+      
+      // 로딩 상태 숨기기
+      if (diagramIframe.src && loadingState) {
+        loadingState.classList.add('hidden');
+      }
+    });
+  }
 }
 
 
@@ -444,7 +531,7 @@ async function handleAskSend() {
   const matchedResponse = findMatchingResponse(question);
   
   if (!matchedResponse) {
-    alert('No matching response found for this question');
+    showToast('Saved generated response not available');
     closeAskModal();
     return;
   }
@@ -466,8 +553,20 @@ async function handleAskSend() {
 
 // Enhanced Visual 전송 처리
 async function handleVisualSend() {
+  // 비디오별 Enhanced Visual 이미지 매핑
+  const enhancedVisualMap = {
+    'physics': './response/physics-quarks.png',
+    'linear-algebra': './response/linear-algebra-geometric-transformations.png',
+    'machinelearning': './response/machinelearning-forward-propagation.png'
+  };
+  
+  // 현재 비디오에 맞는 이미지 선택
+  const imagePath = enhancedVisualMap[currentVideoName] || './response/enhancedVisual.png';
+  
+  console.log('Showing Enhanced Visual for:', currentVideoName, '→', imagePath);
+  
   // Enhanced Visual 이미지 표시
-  showImagePopup('./response/enhancedVisual.png');
+  showImagePopup(imagePath);
   closeAskModal();
 }
 
@@ -688,6 +787,94 @@ function getBoundingBoxConfig() {
   );
 }
 
+// Interactive Diagram 관련 함수
+const diagramFileMap = {
+  'physics': 'physics.html',
+  'linear-algebra': 'linear-algebra.html',
+  'machinelearning': 'machinelearning.html'
+};
+
+const diagramNames = {
+  'physics': 'Structure of Matter',
+  'linear-algebra': 'Geometric Transformations',
+  'machinelearning': 'Perceptron Model'
+};
+
+// 현재 비디오에 맞는 Diagram 열기
+function openDiagramForCurrentVideo() {
+  const diagramFile = diagramFileMap[currentVideoName];
+  const diagramTitle = diagramNames[currentVideoName];
+  
+  if (!diagramFile) {
+    console.error('No diagram found for video:', currentVideoName);
+    alert('No interactive diagram available for this video');
+    return;
+  }
+  
+  console.log('Opening diagram:', diagramFile);
+  
+  if (!diagramOverlay || !diagramIframe) {
+    console.error('Diagram overlay or iframe not found!');
+    return;
+  }
+  
+  // 비디오 일시정지
+  if (!mainVideo.paused) {
+    mainVideo.pause();
+  }
+  
+  // 로딩 상태 표시
+  if (loadingState) {
+    loadingState.classList.remove('hidden');
+  }
+  if (diagramNameDisplay) {
+    diagramNameDisplay.textContent = diagramTitle || 'Interactive Diagram';
+  }
+  
+  // Iframe src 설정 (캐시 방지)
+  const diagramPath = `./Assets/${diagramFile}?t=${Date.now()}`;
+  console.log('Setting iframe src to:', diagramPath);
+  diagramIframe.src = diagramPath;
+  
+  // 오버레이 표시
+  console.log('Showing overlay');
+  diagramOverlay.style.display = 'block';
+}
+
+// Diagram 닫기
+function closeDiagram() {
+  console.log('Closing diagram');
+  
+  // 오버레이 숨기기
+  if (diagramOverlay) {
+    diagramOverlay.style.display = 'none';
+  }
+  
+  // Iframe src 초기화 (리소스 해제)
+  if (diagramIframe) {
+    diagramIframe.src = '';
+  }
+  
+  // 로딩 상태 초기화
+  if (loadingState) {
+    loadingState.classList.remove('hidden');
+  }
+}
+
+// 토스트 알림 표시
+function showToast(message, duration = 1000) {
+  if (!toastNotification) return;
+  
+  toastNotification.textContent = message;
+  toastNotification.classList.add('show');
+  
+  setTimeout(() => {
+    toastNotification.classList.remove('show');
+  }, duration);
+}
+
 // 초기화 실행
 init();
+
+console.log('Interactive Lecture Demo initialized with Diagrams');
 
