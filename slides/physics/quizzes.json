@@ -1,0 +1,2085 @@
+{
+  "videoName": "physics",
+  "generatedAt": "2025-09-05T04:34:18.797Z",
+  "quizzes": {
+    "1": {
+      "slideNumber": 1,
+      "sectionId": "slide-1",
+      "title": "Introduction",
+      "questions": [
+        {
+          "id": "1_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which of the following best explains why Rutherford's gold foil experiment indicated that atoms are mostly empty space?",
+          "options": [
+            "Most of an atom's mass is in the electrons distributed widely around the nucleus.",
+            "The nucleus is extremely small compared to the overall size of the atom, concentrating most mass and charge in a tiny region.",
+            "Protons and neutrons spread uniformly throughout the atom causing most of the atom to be empty.",
+            "Quarks inside protons and neutrons repel incoming alpha particles, causing most to pass through."
+          ],
+          "correctAnswer": "The nucleus is extremely small compared to the overall size of the atom, concentrating most mass and charge in a tiny region.",
+          "explanation": "Rutherford's experiment observed that most alpha particles passed through thin gold foil with little deflection, while a few were strongly deflected. This is explained by a very small, dense, positively charged nucleus (size ~10^-15 m) surrounded by a much larger region where the electrons reside (atom size ~10^-10 m), so most of the atom is 'empty' space.",
+          "slideReference": "Introduction (Slide 1)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "1_d3_q2",
+          "type": "true-false",
+          "question": "According to the lecture, protons and neutrons are fundamental particles with no internal structure.",
+          "options": [],
+          "correctAnswer": "False",
+          "explanation": "The lecture states that protons and neutrons are not fundamental: each nucleon is made of quarks (proton = two up quarks + one down quark; neutron = one up quark + two down quarks). Fundamental particles are those with no substructure.",
+          "slideReference": "Introduction (Slide 1)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "1_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: A proton is composed of two _____ quarks and one _____ quark.",
+          "options": [],
+          "correctAnswer": "up, down",
+          "explanation": "In the standard quark model described in the lecture, a proton consists of two up quarks and one down quark (u u d), while a neutron consists of one up quark and two down quarks (u d d).",
+          "slideReference": "Introduction (Slide 1)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "1_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best explains why atoms are mostly empty space according to the lecture?",
+            "options": [
+              "Electrons occupy most of the atom's mass and leave the nucleus small.",
+              "The nucleus is extremely dense and much smaller in size than the electron cloud.",
+              "Protons and neutrons are spread out evenly throughout the atom.",
+              "Quarks fill the space between electrons and the nucleus."
+            ],
+            "correctAnswer": "The nucleus is extremely dense and much smaller in size than the electron cloud.",
+            "explanation": "The lecture emphasized the large difference in scale: atoms are about 10^-10 m while nuclei are about 10^-15 m. This means the nucleus is tiny and dense compared with the surrounding electron cloud, which explains why atoms are mostly empty space (as shown by the gold foil experiment).",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d1_q2",
+            "type": "true-false",
+            "question": "Protons and neutrons are fundamental particles with no internal structure.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The lecture states that protons and neutrons are not fundamental: each is made of quarks (proton = two up quarks + one down quark; neutron = one up quark + two down quarks), so they have internal structure.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: A proton is composed of two _____ quarks and one _____ quark.",
+            "options": [],
+            "correctAnswer": "up, down",
+            "explanation": "As described in the lecture, a proton consists of two up quarks and one down quark, while a neutron has one up quark and two down quarks. This highlights that nucleons are made of quarks.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "1_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best explains why atoms are mostly empty space according to the lecture?",
+            "options": [
+              "The electrons occupy most of the atom's volume while the nucleus is extremely small and dense.",
+              "Protons and neutrons fill the atom uniformly, leaving little empty space.",
+              "Quarks are distributed evenly through the atom causing large empty regions.",
+              "Neutrinos create voids inside atoms because they do not interact strongly."
+            ],
+            "correctAnswer": "The electrons occupy most of the atom's volume while the nucleus is extremely small and dense.",
+            "explanation": "The lecture emphasized the huge size difference: a typical atom is ~10^-10 m while the nucleus is ~10^-15 m. Electrons form a diffuse cloud around a very small, dense nucleus, so most of the atom's volume is effectively empty space — which is what the gold foil experiment revealed.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d2_q2",
+            "type": "true-false",
+            "question": "Protons and neutrons are fundamental particles with no internal structure.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. The lecture explains that protons and neutrons (nucleons) are not fundamental; each is made of quarks (e.g., a proton = two up quarks + one down quark). Fundamental particles are those with no substructure.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: A proton is composed of two _____ quarks and one _____ quark.",
+            "options": [],
+            "correctAnswer": "up, down",
+            "explanation": "By the quark model described in the lecture, a proton consists of two up quarks and one down quark (2 up + 1 down), while a neutron has one up and two down quarks.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "1_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following best explains why Rutherford's gold foil experiment indicated that atoms are mostly empty space?",
+            "options": [
+              "Most of an atom's mass is in the electrons distributed widely around the nucleus.",
+              "The nucleus is extremely small compared to the overall size of the atom, concentrating most mass and charge in a tiny region.",
+              "Protons and neutrons spread uniformly throughout the atom causing most of the atom to be empty.",
+              "Quarks inside protons and neutrons repel incoming alpha particles, causing most to pass through."
+            ],
+            "correctAnswer": "The nucleus is extremely small compared to the overall size of the atom, concentrating most mass and charge in a tiny region.",
+            "explanation": "Rutherford's experiment observed that most alpha particles passed through thin gold foil with little deflection, while a few were strongly deflected. This is explained by a very small, dense, positively charged nucleus (size ~10^-15 m) surrounded by a much larger region where the electrons reside (atom size ~10^-10 m), so most of the atom is 'empty' space.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d3_q2",
+            "type": "true-false",
+            "question": "According to the lecture, protons and neutrons are fundamental particles with no internal structure.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The lecture states that protons and neutrons are not fundamental: each nucleon is made of quarks (proton = two up quarks + one down quark; neutron = one up quark + two down quarks). Fundamental particles are those with no substructure.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: A proton is composed of two _____ quarks and one _____ quark.",
+            "options": [],
+            "correctAnswer": "up, down",
+            "explanation": "In the standard quark model described in the lecture, a proton consists of two up quarks and one down quark (u u d), while a neutron consists of one up quark and two down quarks (u d d).",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "1_d4_q1",
+            "type": "multiple-choice",
+            "question": "The gold foil experiment revealed that atoms are mostly empty space with a dense central nucleus. Which observation from that experiment most directly supports this conclusion?",
+            "options": [
+              "Most alpha particles passed straight through the foil with little or no deflection.",
+              "Alpha particles were completely absorbed by the foil, heating it uniformly.",
+              "All alpha particles were deflected by large angles indicating a uniform charge distribution.",
+              "Alpha particles split into smaller particles upon hitting the foil."
+            ],
+            "correctAnswer": "Most alpha particles passed straight through the foil with little or no deflection.",
+            "explanation": "If atoms were solid or uniformly filled, most alpha particles would be deflected. The observation that most passed through unimpeded implies that matter inside an atom is mostly empty space, with only a small, dense, positively charged nucleus causing the occasional large deflection.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d4_q2",
+            "type": "true-false",
+            "question": "Protons and neutrons are fundamental particles with no internal structure according to current experimental evidence.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Protons and neutrons are nucleons composed of quarks (e.g., a proton = two up quarks + one down quark). Experiments probe their substructure, showing they are not fundamental; quarks are treated as fundamental in the Standard Model.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model context used in the lecture, neutrinos differ from electrons primarily because they interact via the weak force and have (fill in) mass compared to the electron's measurable mass.",
+            "options": [],
+            "correctAnswer": "much smaller or nearly zero",
+            "explanation": "Neutrinos interact only via the weak force (and gravity) and have a very small nonzero mass compared to charged leptons like the electron. Historically they were treated as massless in the Standard Model, but experiments show a nonzero (very small) mass.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "1_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given the descriptions in the transcript, which of the following best explains why the Rutherford (gold foil) experiment supported a model of the atom with a tiny dense nucleus rather than uniform matter?",
+            "options": [
+              "Most alpha particles were absorbed, indicating atoms are dense throughout.",
+              "Almost all alpha particles passed through with minimal deflection, but a few experienced large-angle scattering, implying most of the atom is empty space with a small concentrated center of mass and charge.",
+              "Alpha particles were evenly deflected in all directions, showing a uniform distribution of positive charge.",
+              "Alpha particles were attracted into the foil, proving electrons occupy the nucleus."
+            ],
+            "correctAnswer": "Almost all alpha particles passed through with minimal deflection, but a few experienced large-angle scattering, implying most of the atom is empty space with a small concentrated center of mass and charge.",
+            "explanation": "The transcript emphasizes the enormous size difference between the atomic scale (~10^-10 m) and the nucleus (~10^-15 m) and states that the gold foil experiment found atoms to be 'mostly empty space' with a dense charged core. The correct option captures that observation: most alpha particles pass through (empty space) while occasional large deflections reveal a small, dense nucleus containing most of the mass and positive charge. The other options contradict the experimental observations or misidentify where electrons are located.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "1_d5_q2",
+            "type": "true-false",
+            "question": "True or False: According to the lecture, protons and neutrons are fundamental particles with no internal structure.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The transcript explicitly states that protons and neutrons are not fundamental; they are composite particles made of quarks (proton = two up quarks + one down quark; neutron = one up quark + two down quarks). Fundamental particles are defined in the lecture as having no substructure and being pointlike to current experimental limits.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "1_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the context of the standard model described in the transcript, a particle is considered 'fundamental' if it has no ______, cannot be broken into constituents, and cannot be excited.",
+            "options": [],
+            "correctAnswer": "substructure",
+            "explanation": "The lecturer defines a fundamental particle as one that has no size and no substructure—meaning it cannot be decomposed into smaller constituents nor excited into internal states. 'Substructure' precisely captures that concept.",
+            "slideReference": "Introduction (Slide 1)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "2": {
+      "slideNumber": 2,
+      "sectionId": "slide-2",
+      "title": "Force Particles",
+      "questions": [
+        {
+          "id": "2_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which of the following correctly matches a fundamental interaction with its primary force-carrying particle(s) as described in the slide content?",
+          "options": [
+            "Electromagnetic — gluons",
+            "Strong — photons",
+            "Weak — W and Z bosons",
+            "Gravitational — photons"
+          ],
+          "correctAnswer": "Weak — W and Z bosons",
+          "explanation": "The slide states that the weak interaction is carried by the W and Z bosons. Electromagnetic interactions are carried by photons (not gluons), the strong interaction is carried by gluons (not photons), and gravity is hypothesized to have a graviton (not a photon) and is not part of the Standard Model.",
+          "slideReference": "Force Particles (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q2",
+          "type": "true-false",
+          "question": "The weak force carriers (W and Z bosons) are massive particles and play a role in processes such as neutron decay and the nuclear reactions that power the Sun.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "True. The W and Z bosons are heavy (massive) gauge bosons; the weak interaction they mediate is responsible for beta decay (neutron decay) and certain fusion processes that contribute to energy production in the Sun.",
+          "slideReference": "Force Particles (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: In the Standard Model, the particle that mediates electromagnetic interactions and is responsible for phenomena like light and chemistry is the _______.",
+          "options": [],
+          "correctAnswer": "photon",
+          "explanation": "The photon is the gauge boson that mediates electromagnetic interactions. These interactions govern atomic structure, light, chemical behavior, and many electronic phenomena.",
+          "slideReference": "Force Particles (Slide 2)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "2_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which particle is the force carrier for the strong interaction and is associated with 'color' charge?",
+            "options": [
+              "Photon",
+              "Gluon",
+              "W boson",
+              "Graviton"
+            ],
+            "correctAnswer": "Gluon",
+            "explanation": "Gluons are the force carriers of the strong interaction and come in eight types distinguished by color charge. Photons carry the electromagnetic force, W bosons are carriers of the weak force, and gravitons are a hypothetical carrier of gravity not included in the Standard Model.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q2",
+            "type": "true-false",
+            "question": "The weak interaction is mediated by massive W and Z bosons and is responsible for processes like neutron decay and some reactions powering the Sun.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This statement is true: the W and Z bosons are heavy (massive) carriers of the weak force, which governs beta decay (neutron decay) and certain fusion processes in the Sun.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Photons are the force carriers for the _____ interaction and are responsible for phenomena like light, chemistry, and electronics.",
+            "options": [],
+            "correctAnswer": "electromagnetic",
+            "explanation": "Photons mediate the electromagnetic interaction, which governs electromagnetic radiation (light), the behavior of atoms and molecules in chemistry, and the principles behind electronics.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "2_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which force carrier is correctly matched with the phenomena it primarily explains?",
+            "options": [
+              "Photons — chemistry and behavior of atoms",
+              "Gluons — electromagnetic interactions like light",
+              "W and Z bosons — holding atomic nuclei together by the strong force",
+              "Gravitons — responsible for beta decay"
+            ],
+            "correctAnswer": "Photons — chemistry and behavior of atoms",
+            "explanation": "Photons are the force carriers of the electromagnetic interaction, which governs light, chemistry, and how atoms and molecules behave. Gluons carry the strong force (not electromagnetic), W and Z bosons mediate the weak interaction (involved in processes like neutron decay), and gravitons are a hypothetical carrier of gravity (not involved in beta decay).",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q2",
+            "type": "true-false",
+            "question": "The W and Z bosons are much heavier than protons and are responsible for processes such as neutron decay and aspects of how the Sun produces energy.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This is true: W and Z bosons are massive (roughly 80–100 times the proton mass) and mediate the weak interaction, which drives neutron decay and nuclear reactions important for the Sun's energy generation.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The force carrier for the strong interaction is the ______, which comes in multiple types distinguished by 'color'.",
+            "options": [],
+            "correctAnswer": "gluon",
+            "explanation": "Gluons are the carriers of the strong force and they carry 'color' charge in quantum chromodynamics; there are eight gluon types associated with different color combinations.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "2_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following correctly matches a fundamental interaction with its primary force-carrying particle(s) as described in the slide content?",
+            "options": [
+              "Electromagnetic — gluons",
+              "Strong — photons",
+              "Weak — W and Z bosons",
+              "Gravitational — photons"
+            ],
+            "correctAnswer": "Weak — W and Z bosons",
+            "explanation": "The slide states that the weak interaction is carried by the W and Z bosons. Electromagnetic interactions are carried by photons (not gluons), the strong interaction is carried by gluons (not photons), and gravity is hypothesized to have a graviton (not a photon) and is not part of the Standard Model.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q2",
+            "type": "true-false",
+            "question": "The weak force carriers (W and Z bosons) are massive particles and play a role in processes such as neutron decay and the nuclear reactions that power the Sun.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. The W and Z bosons are heavy (massive) gauge bosons; the weak interaction they mediate is responsible for beta decay (neutron decay) and certain fusion processes that contribute to energy production in the Sun.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the Standard Model, the particle that mediates electromagnetic interactions and is responsible for phenomena like light and chemistry is the _______.",
+            "options": [],
+            "correctAnswer": "photon",
+            "explanation": "The photon is the gauge boson that mediates electromagnetic interactions. These interactions govern atomic structure, light, chemical behavior, and many electronic phenomena.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "2_d4_q1",
+            "type": "multiple-choice",
+            "question": "Which property of the W and Z bosons most directly explains why the weak interaction is short-ranged compared with the electromagnetic interaction?",
+            "options": [
+              "They carry electric charge",
+              "They are massless",
+              "They are massive (have large rest mass)",
+              "They mediate color charge"
+            ],
+            "correctAnswer": "They are massive (have large rest mass)",
+            "explanation": "The range of a force mediated by a particle is inversely related to the mediator's mass (via the Yukawa suppression). W and Z bosons are heavy (much heavier than the proton), so the weak force they mediate is short-ranged. In contrast, the photon is massless, giving the electromagnetic force an infinite range. Carrying electric charge or color charge is not what sets the interaction range.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q2",
+            "type": "true-false",
+            "question": "Gluons mediate the strong interaction between quarks and come in eight types distinguished by combinations of color charge.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "In quantum chromodynamics (the theory of the strong interaction), gluons are the gauge bosons that carry color charge and there are eight independent gluon states corresponding to the SU(3) color symmetry. This distinguishes them by different color–anticolor combinations (with one combination redundant), allowing gluons to mediate the strong force between quarks.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the Standard Model, electromagnetic interactions are mediated by the ______, while gravity would hypothetically be mediated by the ______ (not included in the Standard Model).",
+            "options": [],
+            "correctAnswer": "photon; graviton",
+            "explanation": "Electromagnetic interactions are carried by the photon, the massless spin-1 gauge boson in the Standard Model. Gravity is not accounted for in the Standard Model; if quantized, its force carrier is hypothesized to be the graviton, a (hypothetical) massless spin-2 particle.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "2_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a hypothetical experiment that can isolate individual force-mediated interactions between two quarks. Which observation would best distinguish the strong force carrier from the electromagnetic force carrier, based on their described properties in the slide content?",
+            "options": [
+              "Detection of an exchanged massless boson that mediates long-range interactions between color-neutral objects",
+              "Observation that the mediator comes in multiple 'color' states and confines quarks inside hadrons, preventing isolation of single quarks",
+              "Measurement of a mediator with electric charge causing electromagnetic radiation emission",
+              "Observation of a heavy, short-range mediator that changes particle flavor and enables beta decay"
+            ],
+            "correctAnswer": "Observation that the mediator comes in multiple 'color' states and confines quarks inside hadrons, preventing isolation of single quarks",
+            "explanation": "The strong force is mediated by gluons, which come in eight color states and produce confinement — quarks cannot be isolated because the strong interaction increases with separation, forming bound hadrons (mesons, baryons). Photons are the electromagnetic mediators: they are massless, do not carry color, and mediate long-range forces between electrically charged objects. The other options describe electromagnetic (massless but not color-related), weak (heavy, changes flavor, enables beta decay), or incorrect charged mediators; thus the correct distinguishing observation is gluon color states and confinement.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q2",
+            "type": "true-false",
+            "question": "True or False: W and Z bosons are massive force carriers whose properties make them primarily responsible for processes that change particle flavor, such as neutron beta decay and many reactions that power the sun.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This is true. The W and Z bosons mediate the weak interaction; the W± in particular changes particle flavor (e.g., a down quark to an up quark in neutron → proton + electron + antineutrino), enabling beta decay. The weak interaction (including W-mediated processes) also governs key reactions in stellar fusion that power the sun. W and Z bosons are heavy, which makes the weak force short-ranged.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the Standard Model described on the slide, electromagnetic interactions are mediated by the ______, which is massless and governs phenomena such as light, atomic structure, and chemistry.",
+            "options": [],
+            "correctAnswer": "photon",
+            "explanation": "The electromagnetic force is carried by the photon, a massless spin-1 boson. Photons mediate long-range electromagnetic interactions responsible for light, the binding of electrons in atoms (thus chemistry), and many electronic phenomena.",
+            "slideReference": "Force Particles (Slide 2)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "3": {
+      "slideNumber": 3,
+      "sectionId": "slide-3",
+      "title": "Matter Particles",
+      "questions": [
+        {
+          "id": "3_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which statement best explains why heavier generation fermions can decay into lighter ones in the Standard Model?",
+          "options": [
+            "Heavier fermions have different electric charges than lighter ones, allowing new decay channels.",
+            "Heavier fermions couple more strongly to the Higgs field, giving them greater mass and enabling decay into lighter generations.",
+            "Heavier fermions experience stronger strong nuclear forces which cause them to split into lighter particles.",
+            "Heavier fermions are unstable because they carry different weak isospin which forces decay."
+          ],
+          "correctAnswer": "Heavier fermions couple more strongly to the Higgs field, giving them greater mass and enabling decay into lighter generations.",
+          "explanation": "The slide explains that the primary difference between generations is their mass, which arises from different couplings to the Higgs field. Larger mass (stronger Higgs coupling) means the heavier particle can kinematically and dynamically decay into lighter particles of other generations. Electric charge or simply weak isospin differences are not the general reason for generation-to-generation decays, and the strong force applies only to quarks, not leptons in general.",
+          "slideReference": "Matter Particles (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q2",
+          "type": "true-false",
+          "question": "Neutrinos participate in strong interactions in the same way quarks do.",
+          "options": [],
+          "correctAnswer": "False",
+          "explanation": "Neutrinos are leptons and do not carry color charge, so they do not participate in the strong interaction. Quarks do carry color charge and partake in the strong force. The slide and transcript explicitly distinguish quarks (strong interaction) from leptons (no strong interaction).",
+          "slideReference": "Matter Particles (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: The Standard Model distinguishes matter particles into two families: quarks and _____.",
+          "options": [],
+          "correctAnswer": "leptons",
+          "explanation": "The slide content and transcript identify the two main matter particle families as quarks and leptons. Quarks interact via the strong force and carry color charge, while leptons (such as electrons and neutrinos) do not participate in the strong interaction.",
+          "slideReference": "Matter Particles (Slide 3)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "3_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following correctly distinguishes quarks from leptons?",
+            "options": [
+              "Quarks participate in the strong interaction, while leptons do not.",
+              "Leptons are heavier than quarks in every generation.",
+              "Quarks do not couple to the Higgs field, while leptons do.",
+              "Leptons always carry color charge, while quarks are color neutral."
+            ],
+            "correctAnswer": "Quarks participate in the strong interaction, while leptons do not.",
+            "explanation": "A key difference from the slide is that quarks experience the strong force (they carry color charge) whereas leptons do not. The other choices are incorrect: leptons are not always heavier than quarks, both quarks and leptons obtain mass via couplings to the Higgs field, and quarks (not leptons) carry color charge.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q2",
+            "type": "true-false",
+            "question": "There are three generations of matter fermions, and the primary difference between generations is their mass (i.e., different couplings to the Higgs field).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The slide and transcript state that matter particles come in three generations and that the generations differ mainly by mass, which reflects different strengths of coupling to the Higgs field. This mass difference allows heavier-generation particles to decay into lighter ones.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Electron, muon, and tau are examples of charged ______.",
+            "options": [],
+            "correctAnswer": "leptons",
+            "explanation": "The slide lists electron, muon, and tau as the charged members of the lepton family; their corresponding neutrinos are the neutral leptons. This distinguishes them from quarks, which participate in the strong interaction.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "3_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following correctly contrasts quarks and leptons based on their interactions?",
+            "options": [
+              "Quarks participate in the strong interaction while leptons do not.",
+              "Leptons participate in the strong interaction while quarks do not.",
+              "Both quarks and leptons participate equally in the strong interaction.",
+              "Neither quarks nor leptons participate in the strong interaction."
+            ],
+            "correctAnswer": "Quarks participate in the strong interaction while leptons do not.",
+            "explanation": "Quarks experience the strong force (they carry color charge) and therefore partake in strong interactions. Leptons do not carry color charge and so do not take part in the strong interaction; instead they interact via the electromagnetic and weak forces (if charged) or only the weak force (neutrinos). This distinction is a central feature of the matter particle families described in the slide.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q2",
+            "type": "true-false",
+            "question": "All three generations of fermions differ only by their masses (i.e., their couplings to the Higgs field) and otherwise have the same charges and interaction types.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The generations are copies of the same set of quantum numbers and interaction types; the primary difference is their masses, which reflect different couplings to the Higgs field. This is why heavier-generation particles can decay into lighter-generation ones while conserving charges and interaction properties.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Neutrinos are leptons that do not carry electric charge and therefore do not couple to the _______.",
+            "options": [],
+            "correctAnswer": "photon",
+            "explanation": "Neutrinos are electrically neutral leptons, so they do not interact electromagnetically and do not couple to the photon. This is why they do not participate in electromagnetic processes, unlike charged leptons (electron, muon, tau) which do couple to photons.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "3_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best explains why heavier generation fermions can decay into lighter ones in the Standard Model?",
+            "options": [
+              "Heavier fermions have different electric charges than lighter ones, allowing new decay channels.",
+              "Heavier fermions couple more strongly to the Higgs field, giving them greater mass and enabling decay into lighter generations.",
+              "Heavier fermions experience stronger strong nuclear forces which cause them to split into lighter particles.",
+              "Heavier fermions are unstable because they carry different weak isospin which forces decay."
+            ],
+            "correctAnswer": "Heavier fermions couple more strongly to the Higgs field, giving them greater mass and enabling decay into lighter generations.",
+            "explanation": "The slide explains that the primary difference between generations is their mass, which arises from different couplings to the Higgs field. Larger mass (stronger Higgs coupling) means the heavier particle can kinematically and dynamically decay into lighter particles of other generations. Electric charge or simply weak isospin differences are not the general reason for generation-to-generation decays, and the strong force applies only to quarks, not leptons in general.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q2",
+            "type": "true-false",
+            "question": "Neutrinos participate in strong interactions in the same way quarks do.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Neutrinos are leptons and do not carry color charge, so they do not participate in the strong interaction. Quarks do carry color charge and partake in the strong force. The slide and transcript explicitly distinguish quarks (strong interaction) from leptons (no strong interaction).",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The Standard Model distinguishes matter particles into two families: quarks and _____.",
+            "options": [],
+            "correctAnswer": "leptons",
+            "explanation": "The slide content and transcript identify the two main matter particle families as quarks and leptons. Quarks interact via the strong force and carry color charge, while leptons (such as electrons and neutrinos) do not participate in the strong interaction.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "3_d4_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following best explains why heavier-generation fermions (e.g., muon, tau, charm, top) are able to decay into lighter-generation fermions?",
+            "options": [
+              "Heavier fermions have different electric charges that force decay into lighter ones.",
+              "Heavier fermions couple more strongly to the Higgs field, giving them larger mass and allowing kinematically allowed decays to lighter particles.",
+              "Heavier fermions participate in the strong interaction while lighter ones do not, enabling decay.",
+              "Heavier fermions are unstable because they carry weak isospin values that lighter fermions lack."
+            ],
+            "correctAnswer": "Heavier fermions couple more strongly to the Higgs field, giving them larger mass and allowing kinematically allowed decays to lighter particles.",
+            "explanation": "The slide and transcript state that different generations differ only by mass, which arises from different couplings to the Higgs field. Larger mass means more available rest energy, so decays to lighter particles are kinematically allowed. Electric charge differences or participation in the strong interaction do not by themselves explain the generation-decay pattern; weak interactions mediate many decays but the root cause of different masses is the Higgs coupling.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q2",
+            "type": "true-false",
+            "question": "Quarks and charged leptons both carry electric charge and therefore both couple to photons, while neutrinos do not couple to photons because they are electrically neutral.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The slide differentiates quarks (which carry fractional electric charge) and charged leptons (like the electron) from neutrinos. Charged particles couple to the electromagnetic field (photons); neutrinos are electrically neutral and do not couple to photons (neglecting tiny effects beyond the Standard Model).",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The primary distinguishing property between the three generations of fermions is their different couplings to the _____ field, which give them different masses.",
+            "options": [],
+            "correctAnswer": "Higgs",
+            "explanation": "According to the slide/transcript, generations differ only by mass, which arises because each generation's fermions couple differently to the Higgs field. Those different Yukawa couplings set the fermion masses and therefore allow heavier generations to decay into lighter ones.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "3_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider the three generations of fermionic matter particles described in the slide. Which of the following best explains why heavier-generation fermions are unstable and typically decay into lighter-generation fermions?",
+            "options": [
+              "Heavier-generation fermions experience stronger electromagnetic interactions that force them to decay.",
+              "Heavier-generation fermions have larger couplings to the Higgs field, giving them greater mass and allowing kinematically allowed decay channels into lighter fermions.",
+              "Heavier-generation fermions carry different color charge that makes them break apart into lighter leptons.",
+              "Heavier-generation fermions violate conservation of lepton and baryon number, so they must decay."
+            ],
+            "correctAnswer": "Heavier-generation fermions have larger couplings to the Higgs field, giving them greater mass and allowing kinematically allowed decay channels into lighter fermions.",
+            "explanation": "The slide and transcript emphasize that the only fundamental difference between generations is their mass, which arises from different Yukawa couplings to the Higgs field. Larger mass means more available phase space for decays into lighter particles, so heavy fermions (like the top quark or tau) can decay to lighter-generation fermions. The other options are incorrect: electromagnetic interaction strength does not generally force decay, color charge relates to quarks but doesn't by itself explain generational instability, and generation-to-generation decays obey conserved quantum numbers (e.g., lepton number in many processes), so they do not decay because of violation of conservation laws.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q2",
+            "type": "true-false",
+            "question": "Quarks participate in the strong interaction while leptons do not; therefore neutrinos can be completely ignored when analyzing strong-interaction processes at a particle collider.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "While it is true that quarks interact via the strong force and leptons (including neutrinos) do not, neutrinos cannot be ignored in collider analyses. They appear in final states as missing energy/momentum and influence event signatures and conservation checks. Moreover, neutrinos participate in weak interactions that can convert between flavors and affect decay chains that originate from strongly produced particles (e.g., hadron decays producing leptons and neutrinos).",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the Standard Model the different masses of the three generations of fermions arise from their differing Yukawa couplings to the _______ field.",
+            "options": [],
+            "correctAnswer": "Higgs",
+            "explanation": "The transcript and slide state that generation differences are due to different couplings to the Higgs field; these Yukawa couplings determine the fermion masses after electroweak symmetry breaking. Thus the Higgs field is responsible for giving mass to fermions in the Standard Model.",
+            "slideReference": "Matter Particles (Slide 3)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "4": {
+      "slideNumber": 4,
+      "sectionId": "slide-4",
+      "title": "The Higgs Boson",
+      "questions": [
+        {
+          "id": "4_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which feature of the Higgs mechanism explains how W and Z bosons acquire mass according to the slide transcript?",
+          "options": [
+            "The Higgs boson directly collides with W and Z bosons to give them mass",
+            "Spontaneous symmetry breaking moves the lowest-energy state away from zero in the Higgs potential",
+            "Quantum tunneling of the Higgs field transfers mass to gauge bosons",
+            "Conservation of electric charge in the Higgs interaction produces mass"
+          ],
+          "correctAnswer": "Spontaneous symmetry breaking moves the lowest-energy state away from zero in the Higgs potential",
+          "explanation": "The transcript describes the Higgs potential as a 'Mexican hat' whose lowest-energy state is away from zero; this spontaneous symmetry breaking gives mass to the W and Z bosons. It is not described as direct collisions, tunneling, or charge conservation producing mass.",
+          "slideReference": "The Higgs Boson (Slide 4)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "4_d3_q2",
+          "type": "true-false",
+          "question": "The Higgs boson has electric charge zero and is represented by the symbol H.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "The slide lists the Higgs boson properties: symbol H, number 1, and charge 0. Therefore the statement is true.",
+          "slideReference": "The Higgs Boson (Slide 4)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "4_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: In the Standard Model, particles acquire mass through their coupling to the _____ field.",
+          "options": [],
+          "correctAnswer": "Higgs",
+          "explanation": "The transcript explains that coupling of matter particles to the Higgs field gives them mass; thus the correct fill-in is 'Higgs'.",
+          "slideReference": "The Higgs Boson (Slide 4)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "4_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which property correctly describes the Higgs boson as presented in the slide content?",
+            "options": [
+              "It has electric charge +1",
+              "It is represented by the symbol H and has charge 0",
+              "It comes in three color charges like quarks",
+              "It is a massless force carrier"
+            ],
+            "correctAnswer": "It is represented by the symbol H and has charge 0",
+            "explanation": "The slide lists the Higgs boson properties: symbol H, number 1 (one particle), and electric charge 0. Unlike quarks, it has no color charge, and unlike massless force carriers (photons, gluons), the Higgs is a massive scalar particle.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d1_q2",
+            "type": "true-false",
+            "question": "The Mexican hat potential illustrated in the transcript explains how spontaneous symmetry breaking of the Higgs field gives mass to the W and Z bosons.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The transcript describes the Mexican hat potential where the lowest-energy state breaks symmetry; this spontaneous symmetry breaking of the Higgs field leads to the W and Z bosons acquiring mass through their coupling to the field.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The Higgs boson couples to matter particles and through that coupling gives them _____ .",
+            "options": [],
+            "correctAnswer": "mass",
+            "explanation": "According to the transcript and standard model explanation, coupling of matter particles to the Higgs field is what gives those particles mass. The Higgs boson is the quantum excitation of that field.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "4_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which property of the Higgs boson explains why it gives mass to other particles in the Standard Model?",
+            "options": [
+              "Its electric charge is zero, allowing it to couple to matter",
+              "Its interaction with the Higgs field causes spontaneous symmetry breaking",
+              "It is one of multiple Higgs particles (Number >1) that distribute mass",
+              "Its high spin allows it to transfer mass during collisions"
+            ],
+            "correctAnswer": "Its interaction with the Higgs field causes spontaneous symmetry breaking",
+            "explanation": "The Higgs mechanism involves the Higgs field having a nonzero vacuum expectation value (visualized by the Mexican hat potential). This spontaneous symmetry breaking gives mass to W and Z bosons and, via coupling to the field, to matter particles. The Higgs boson is the field's quantum excitation; its zero charge and single particle number are properties but not the direct reason it gives mass.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d2_q2",
+            "type": "true-false",
+            "question": "The Higgs boson has electric charge zero and is represented by the symbol H.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "According to the slide, the Higgs boson has charge 0 and is denoted by the symbol H. These properties are basic identifiers of the particle in the Standard Model.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The shape used to visualize the Higgs potential, which shows that the lowest-energy state breaks symmetry, is commonly called the ______ hat potential.",
+            "options": [],
+            "correctAnswer": "Mexican",
+            "explanation": "The Higgs potential is often illustrated as a 'Mexican hat' (or sombrero) shape; its minimum lies on a ring away from zero, illustrating spontaneous symmetry breaking that gives mass to certain particles.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "4_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which feature of the Higgs mechanism explains how W and Z bosons acquire mass according to the slide transcript?",
+            "options": [
+              "The Higgs boson directly collides with W and Z bosons to give them mass",
+              "Spontaneous symmetry breaking moves the lowest-energy state away from zero in the Higgs potential",
+              "Quantum tunneling of the Higgs field transfers mass to gauge bosons",
+              "Conservation of electric charge in the Higgs interaction produces mass"
+            ],
+            "correctAnswer": "Spontaneous symmetry breaking moves the lowest-energy state away from zero in the Higgs potential",
+            "explanation": "The transcript describes the Higgs potential as a 'Mexican hat' whose lowest-energy state is away from zero; this spontaneous symmetry breaking gives mass to the W and Z bosons. It is not described as direct collisions, tunneling, or charge conservation producing mass.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d3_q2",
+            "type": "true-false",
+            "question": "The Higgs boson has electric charge zero and is represented by the symbol H.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The slide lists the Higgs boson properties: symbol H, number 1, and charge 0. Therefore the statement is true.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model, particles acquire mass through their coupling to the _____ field.",
+            "options": [],
+            "correctAnswer": "Higgs",
+            "explanation": "The transcript explains that coupling of matter particles to the Higgs field gives them mass; thus the correct fill-in is 'Higgs'.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "4_d4_q1",
+            "type": "multiple-choice",
+            "question": "The 'Mexican hat' potential described in the slide is central to the Higgs mechanism. Which of the following best explains how this potential leads to particle masses in the Standard Model?",
+            "options": [
+              "The potential forces the Higgs field to vanish at the minimum, allowing gauge bosons to acquire mass through direct terms in the Lagrangian.",
+              "The potential's lowest-energy states lie at nonzero field value, spontaneously breaking the symmetry so that W and Z bosons acquire mass and fermions gain mass via their coupling to the nonzero Higgs field.",
+              "The potential confines particles into bound states, and the binding energy is observed as particle mass for W, Z, and fermions.",
+              "The Mexican hat shape causes the Higgs boson to oscillate, and these oscillations transfer energy to other particles which become massive as a result."
+            ],
+            "correctAnswer": "The potential's lowest-energy states lie at nonzero field value, spontaneously breaking the symmetry so that W and Z bosons acquire mass and fermions gain mass via their coupling to the nonzero Higgs field.",
+            "explanation": "The Mexican hat potential has minima at a nonzero value of the Higgs field, so the field obtains a vacuum expectation value that breaks electroweak symmetry. This spontaneous symmetry breaking gives mass to the W and Z gauge bosons through the Higgs mechanism. Fermions acquire mass through their Yukawa couplings to the nonzero Higgs field. The other options mischaracterize the mechanism (field does not vanish, it's not confinement, and mass is not from oscillatory energy transfer).",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d4_q2",
+            "type": "true-false",
+            "question": "The Higgs boson itself is electrically neutral and is represented by the symbol H with a count of 1 in the slide's properties.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "According to the slide, the Higgs boson has symbol H, number 1 (meaning a single particle type in this context), and charge 0, indicating it is electrically neutral. This matches the Standard Model description of the observed Higgs particle.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model, fermion masses arise from their _____ to the Higgs field which acquires a nonzero vacuum expectation value.",
+            "options": [],
+            "correctAnswer": "coupling",
+            "explanation": "Fermions obtain mass through Yukawa couplings to the Higgs field. When the Higgs field acquires a nonzero vacuum expectation value (due to the Mexican hat potential), these couplings manifest as mass terms for the fermions. The key idea is the interaction (coupling) between matter fields and the Higgs field.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "4_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider the Higgs mechanism illustrated by the 'Mexican hat' potential discussed in the slide. Which of the following best explains how spontaneous symmetry breaking in that potential leads to some particles acquiring mass while preserving gauge invariance?",
+            "options": [
+              "The Higgs field sits at the symmetric top of the potential and directly transfers its kinetic energy to particles, making them massive.",
+              "The Higgs field chooses a nonzero vacuum expectation value (VEV) at the minimum of the Mexican-hat potential, and gauge bosons acquire mass through their coupling to fluctuations around that VEV while gauge invariance is preserved by the Higgs field's transformation properties.",
+              "The Higgs boson itself collides with massless particles and embeds mass into them via inelastic scattering at high energies.",
+              "Spontaneous symmetry breaking removes the gauge symmetry entirely, allowing explicit mass terms to be added to the Lagrangian for W and Z bosons without affecting other interactions."
+            ],
+            "correctAnswer": "The Higgs field chooses a nonzero vacuum expectation value (VEV) at the minimum of the Mexican-hat potential, and gauge bosons acquire mass through their coupling to fluctuations around that VEV while gauge invariance is preserved by the Higgs field's transformation properties.",
+            "explanation": "In the Mexican-hat potential the lowest-energy state lies at nonzero field value; the Higgs field acquires a vacuum expectation value (VEV). Fluctuations around that VEV (the physical Higgs boson) couple to gauge fields and fermions, generating effective mass terms while the underlying gauge symmetry is realized nonlinearly rather than being explicitly broken. Options A and C describe incorrect mechanisms and D incorrectly states that gauge symmetry is removed rather than hidden by the Higgs mechanism.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "4_d5_q2",
+            "type": "true-false",
+            "question": "The discovery of the Higgs boson (symbol H, charge 0) at CERN provided direct evidence that coupling of matter particles to the Higgs field is responsible for all observed particle masses.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The Higgs discovery confirmed that the Higgs field exists and that it provides mass to some fundamental particles (notably W and Z bosons and fermions through Yukawa couplings), but it does not by itself explain the origins of all observed masses (e.g., most of the proton mass arises from QCD binding energy, and neutrino mass generation may involve mechanisms beyond the Standard Model). Thus the statement is an overreach.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "4_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the context of proton–proton collision displays at CERN, the reconstructed Higgs boson signature is identified by detecting its decay products and reconstructing their invariant mass to find a resonance near _____.",
+            "options": [],
+            "correctAnswer": "125 GeV",
+            "explanation": "The Higgs boson discovered at CERN appears as a resonance near 125 GeV in the invariant-mass distributions of its decay products (for example in gamma-gamma or four-lepton channels). Event displays and specialized 'pizza day' imagery often show collision events whose decay kinematics reconstruct to that mass, which provided the experimental evidence for the Higgs.",
+            "slideReference": "The Higgs Boson (Slide 4)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "5": {
+      "slideNumber": 5,
+      "sectionId": "slide-5",
+      "title": "Elementary Particle",
+      "questions": [
+        {
+          "id": "5_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which pair correctly groups particles from the Standard Model into 'quarks' and 'leptons' respectively?",
+          "options": [
+            "Up quark and electron",
+            "Photon and neutrino",
+            "Gluon and muon",
+            "Higgs boson and top quark"
+          ],
+          "correctAnswer": "Up quark and electron",
+          "explanation": "Quarks (e.g., up quark) and leptons (e.g., electron) are the two main classes of matter particles in the Standard Model. Photons and gluons are force-carrying bosons, neutrinos are leptons (but photon is not), and the Higgs boson is not a quark or lepton.",
+          "slideReference": "Elementary Particle (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q2",
+          "type": "true-false",
+          "question": "The Higgs boson is a force carrier that is primarily responsible for giving certain particles mass and 'holding everything together' in the Standard Model.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "The Higgs boson is associated with the Higgs field; interactions with this field give many elementary particles their mass. While not a force carrier like the photon or gluon, it plays a crucial role in the structure of the Standard Model, which can be described colloquially as 'holding together' particle mass generation.",
+          "slideReference": "Elementary Particle (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: The Standard Model groups fundamental matter particles into quarks and _______.",
+          "options": [],
+          "correctAnswer": "leptons",
+          "explanation": "The Standard Model classifies matter particles into two families: quarks (which make up hadrons like protons and neutrons) and leptons (such as electrons and neutrinos).",
+          "slideReference": "Elementary Particle (Slide 5)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "5_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following groups correctly lists two types of elementary particles mentioned in the slide content?",
+            "options": [
+              "Quarks and Leptons",
+              "Atoms and Molecules",
+              "Photons and Electrons only",
+              "Protons and Neutrons"
+            ],
+            "correctAnswer": "Quarks and Leptons",
+            "explanation": "The slide lists 'Quarks' and 'Leptons' as main concepts. Atoms and molecules are composite, not elementary. Photons are force carriers but 'Photons and Electrons only' is incomplete and misleading. Protons and neutrons are made of quarks, so they are not elementary.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q2",
+            "type": "true-false",
+            "question": "The Higgs boson is described in the transcript as a special particle that helps hold things together.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The transcript refers to the Higgs boson as a special particle that 'holds everything together.' This reflects the role of the Higgs field in giving particles mass, which is commonly described as fundamental to the structure of matter.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Particles that make up protons and neutrons and come in types like 'up' and 'down' are called ____.",
+            "options": [],
+            "correctAnswer": "quarks",
+            "explanation": "Quarks are the elementary particles that combine to form protons and neutrons; common types (flavors) include 'up' and 'down'. This ties directly to the slide's emphasis on quarks.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "5_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which pair correctly classifies two types of elementary particles mentioned in the slide content?",
+            "options": [
+              "Quarks and Leptons",
+              "Photons and Gravity",
+              "Electrons and Molecules",
+              "Protons and Neutrons"
+            ],
+            "correctAnswer": "Quarks and Leptons",
+            "explanation": "The slide highlights quarks and leptons as fundamental categories in the Standard Model. Photons are force carriers (not a particle category paired with gravity here), electrons are a type of lepton but 'electrons and molecules' mixes scales, and protons/neutrons are composite particles made of quarks.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q2",
+            "type": "true-false",
+            "question": "The Higgs boson is described in the transcript as a special particle that helps give other particles mass and 'hold things together.'",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The transcript refers to the Higgs boson as a special particle that holds things together; more accurately, the Higgs field gives particles mass, which is why the Higgs boson is often described as responsible for mass generation in the Standard Model.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model, particles that experience the strong force are built from ______.",
+            "options": [],
+            "correctAnswer": "quarks",
+            "explanation": "Hadrons such as protons and neutrons are composed of quarks, which interact via the strong force mediated by gluons; the slide and transcript emphasize quarks as fundamental constituents.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "5_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which pair correctly groups particles from the Standard Model into 'quarks' and 'leptons' respectively?",
+            "options": [
+              "Up quark and electron",
+              "Photon and neutrino",
+              "Gluon and muon",
+              "Higgs boson and top quark"
+            ],
+            "correctAnswer": "Up quark and electron",
+            "explanation": "Quarks (e.g., up quark) and leptons (e.g., electron) are the two main classes of matter particles in the Standard Model. Photons and gluons are force-carrying bosons, neutrinos are leptons (but photon is not), and the Higgs boson is not a quark or lepton.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q2",
+            "type": "true-false",
+            "question": "The Higgs boson is a force carrier that is primarily responsible for giving certain particles mass and 'holding everything together' in the Standard Model.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The Higgs boson is associated with the Higgs field; interactions with this field give many elementary particles their mass. While not a force carrier like the photon or gluon, it plays a crucial role in the structure of the Standard Model, which can be described colloquially as 'holding together' particle mass generation.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The Standard Model groups fundamental matter particles into quarks and _______.",
+            "options": [],
+            "correctAnswer": "leptons",
+            "explanation": "The Standard Model classifies matter particles into two families: quarks (which make up hadrons like protons and neutrons) and leptons (such as electrons and neutrinos).",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "5_d4_q1",
+            "type": "multiple-choice",
+            "question": "Within the Standard Model context described, which reasoning best explains why quarks cannot be isolated as free particles under normal conditions?",
+            "options": [
+              "Quarks carry electric charge that prevents them from existing separately",
+              "Quarks are bound by the strong force which becomes stronger as they are separated (confinement)",
+              "Quarks transform into leptons when isolated",
+              "Quarks are unstable and immediately decay into photons when free"
+            ],
+            "correctAnswer": "Quarks are bound by the strong force which becomes stronger as they are separated (confinement)",
+            "explanation": "The slide emphasizes quarks as fundamental constituents. In the Standard Model, quarks interact via the strong force mediated by gluons; due to color confinement the force does not diminish with distance, preventing isolation of single quarks. This explanation tests conceptual understanding of why quarks are never observed free rather than a memorized fact.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q2",
+            "type": "true-false",
+            "question": "The Higgs boson is described in the transcript as the particle responsible for giving mass to other particles and 'holding everything together.' This means the Higgs boson is the force carrier (mediator) of an interaction like the photon mediates the electromagnetic force.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "While the transcript calls the Higgs a special particle that gives mass, the Higgs boson is not a force carrier in the same sense as gauge bosons (photon, W/Z, gluons). The Higgs field provides masses via spontaneous symmetry breaking; the Higgs boson is an excitation of that field, not a mediator of a long-range force.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model taxonomy on the slide, the two broad families of fundamental fermions are quarks and _____ .",
+            "options": [],
+            "correctAnswer": "leptons",
+            "explanation": "The slide lists 'Quarks' and 'Leptons' as the primary categories of elementary fermions in the Standard Model. This tests understanding of the basic classification of matter particles rather than rote recall of names.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "5_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider the Standard Model elements mentioned (quarks, leptons, gauge bosons, and the Higgs). Which conceptual explanation best describes how the Higgs field differentiates particle masses while leaving gauge interactions (forces) mediated by photons and gluons largely unaffected?",
+            "options": [
+              "The Higgs field couples to gauge bosons only, giving photons and gluons mass and so altering their force behavior.",
+              "The Higgs field provides mass through Yukawa couplings to fermions; gauge bosons remain massless unless they interact with the Higgs via spontaneous symmetry breaking specific to the electroweak sector.",
+              "The Higgs field universally increases inertia for all particles, so forces become weaker as mass increases for every particle including photons and gluons.",
+              "The Higgs field converts quarks into leptons, and this conversion is what determines observed particle masses and force carriers."
+            ],
+            "correctAnswer": "The Higgs field provides mass through Yukawa couplings to fermions; gauge bosons remain massless unless they interact with the Higgs via spontaneous symmetry breaking specific to the electroweak sector.",
+            "explanation": "The Standard Model assigns mass to fermions (quarks and charged leptons) via Yukawa couplings to the Higgs field; when the Higgs acquires a vacuum expectation value, these couplings produce fermion masses. Gauge bosons associated with the electroweak interaction (W and Z) gain mass through electroweak symmetry breaking, while the photon remains massless because it corresponds to an unbroken gauge symmetry; gluons remain massless because the strong interaction's SU(3) symmetry is unbroken. This explains why the Higgs affects particle masses without universally altering all force carriers.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q2",
+            "type": "true-false",
+            "question": "Statement: Because quarks carry color charge and interact via gluons, they can exist in isolation as free particles the same way neutral leptons (neutrinos) can travel freely without confinement.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Quarks are never observed as isolated free particles due to color confinement in quantum chromodynamics; they are always bound into color-neutral hadrons (e.g., protons, neutrons, mesons). Neutral leptons such as neutrinos do travel freely (weakly interacting) and are not confined. This contrasts quark confinement with lepton freedom.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In the Standard Model, the fundamental fermions are divided into two families: charged leptons and neutral leptons (neutrinos), and the strongly interacting constituents called ______, which come in different 'flavors' and carry color charge.",
+            "options": [],
+            "correctAnswer": "quarks",
+            "explanation": "The fermions of the Standard Model include leptons (charged leptons like the electron and neutral leptons like neutrinos) and quarks. Quarks carry color charge, interact via the strong force mediated by gluons, and appear in multiple flavors (up, down, charm, strange, top, bottom). This distinction underlies much of particle physics and was referenced in the slide content.",
+            "slideReference": "Elementary Particle (Slide 5)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "6": {
+      "slideNumber": 6,
+      "sectionId": "slide-6",
+      "title": "Timeline of Discoveries",
+      "questions": [
+        {
+          "id": "6_d3_q1",
+          "type": "multiple-choice",
+          "question": "The slide discusses differences between when particles were theorized/explained and when they were experimentally discovered. Which implication best follows from the example of the Higgs boson (theorized ~50 years before discovery)?",
+          "options": [
+            "A theoretical proposal is usually accepted as fact immediately without experiments",
+            "Experimental discovery can lag far behind theoretical prediction due to technological limits",
+            "All particles are discovered within a few years of being theorized",
+            "Theorists always predict the exact mass and properties needed for immediate detection"
+          ],
+          "correctAnswer": "Experimental discovery can lag far behind theoretical prediction due to technological limits",
+          "explanation": "The slide highlights that the Higgs boson was theorized decades before experimental confirmation. This shows that even well-founded theoretical predictions may require advances in experimental technology and resources before discovery, so experimental confirmation can lag significantly.",
+          "slideReference": "Timeline of Discoveries (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q2",
+          "type": "true-false",
+          "question": "The Standard Model groups fundamental particles into categories such as leptons, quarks, and bosons, and the historical timeline compares when these particles were first discovered versus when they were theoretically explained.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "This statement reflects the slide's main concepts: the Standard Model organizes particles into leptons, quarks, and bosons, and the timeline emphasizes differences between theoretical explanation and experimental discovery times.",
+          "slideReference": "Timeline of Discoveries (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: In the context of the timeline discussed, the discovery of the electron by J.J. Thomson is an example of an early experimental discovery, while the Higgs boson illustrates a much longer gap between theoretical prediction and experimental __________.",
+          "options": [],
+          "correctAnswer": "confirmation",
+          "explanation": "The slide contrasts early experimental discoveries like the electron with the Higgs boson, which was predicted theoretically long before experimental confirmation. 'Confirmation' captures the idea of experimental verification of a theoretical prediction.",
+          "slideReference": "Timeline of Discoveries (Slide 6)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "6_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following best describes the relationship between the theoretical proposal and experimental discovery of the Higgs boson as mentioned in the slide transcript?",
+            "options": [
+              "The Higgs boson was discovered experimentally long before it was theoretically proposed.",
+              "Theoretical prediction and experimental discovery of the Higgs boson occurred within a few years of each other.",
+              "The Higgs boson was predicted theoretically about 50 years before it was discovered experimentally.",
+              "The Higgs boson has not been experimentally discovered."
+            ],
+            "correctAnswer": "The Higgs boson was predicted theoretically about 50 years before it was discovered experimentally.",
+            "explanation": "The transcript notes that Peter Higgs and collaborators theorized the Higgs boson roughly 50 years before its experimental discovery in 2012, highlighting a long gap between theory and confirmation.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q2",
+            "type": "true-false",
+            "question": "The Standard Model groups fundamental particles into categories such as leptons, bosons, and quarks.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This statement aligns with the slide's main concepts: the Standard Model classifies fundamental particles into categories including leptons (e.g., electrons), bosons (force carriers like the Higgs), and quarks (constituents of hadrons).",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The electron was one of the earliest particles to be discovered; its discovery is associated with J.J. _______.",
+            "options": [],
+            "correctAnswer": "Thomson",
+            "explanation": "The transcript refers to J.J. Thomson as the experimenter who discovered the electron, making 'Thomson' the correct single-word completion.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "6_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best explains the relationship between when a particle is theorized and when it is discovered, based on the timeline concept in the slide?",
+            "options": [
+              "Theorized particles are always discovered within a few years after prediction.",
+              "Some particles, like the Higgs boson, were predicted decades before experimental confirmation.",
+              "Experimental discovery always comes before theoretical explanation.",
+              "Once a particle is discovered experimentally, no further theoretical work is needed."
+            ],
+            "correctAnswer": "Some particles, like the Higgs boson, were predicted decades before experimental confirmation.",
+            "explanation": "The slide and transcript highlight that particles can be theorized long before they are experimentally observed — the Higgs boson is a key example, with about a 50-year gap between theoretical prediction and experimental discovery. This shows theory can precede experiment by decades.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q2",
+            "type": "true-false",
+            "question": "The timeline of discoveries in particle physics includes categories such as leptons, bosons, and quarks.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The slide lists major particle categories (leptons, bosons, quarks) as part of the historical timeline. Understanding the timeline requires recognizing these categories and when members of each were discovered or explained.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The Standard Model of particle physics organizes fundamental particles into groups like leptons, _____, and quarks.",
+            "options": [],
+            "correctAnswer": "bosons",
+            "explanation": "The Standard Model groups particles into categories: leptons (e.g., electrons), bosons (force carriers like the Higgs and photons), and quarks (components of protons and neutrons). The slide emphasizes these groups in the discovery timeline.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "6_d3_q1",
+            "type": "multiple-choice",
+            "question": "The slide discusses differences between when particles were theorized/explained and when they were experimentally discovered. Which implication best follows from the example of the Higgs boson (theorized ~50 years before discovery)?",
+            "options": [
+              "A theoretical proposal is usually accepted as fact immediately without experiments",
+              "Experimental discovery can lag far behind theoretical prediction due to technological limits",
+              "All particles are discovered within a few years of being theorized",
+              "Theorists always predict the exact mass and properties needed for immediate detection"
+            ],
+            "correctAnswer": "Experimental discovery can lag far behind theoretical prediction due to technological limits",
+            "explanation": "The slide highlights that the Higgs boson was theorized decades before experimental confirmation. This shows that even well-founded theoretical predictions may require advances in experimental technology and resources before discovery, so experimental confirmation can lag significantly.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q2",
+            "type": "true-false",
+            "question": "The Standard Model groups fundamental particles into categories such as leptons, quarks, and bosons, and the historical timeline compares when these particles were first discovered versus when they were theoretically explained.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This statement reflects the slide's main concepts: the Standard Model organizes particles into leptons, quarks, and bosons, and the timeline emphasizes differences between theoretical explanation and experimental discovery times.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the context of the timeline discussed, the discovery of the electron by J.J. Thomson is an example of an early experimental discovery, while the Higgs boson illustrates a much longer gap between theoretical prediction and experimental __________.",
+            "options": [],
+            "correctAnswer": "confirmation",
+            "explanation": "The slide contrasts early experimental discoveries like the electron with the Higgs boson, which was predicted theoretically long before experimental confirmation. 'Confirmation' captures the idea of experimental verification of a theoretical prediction.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "6_d4_q1",
+            "type": "multiple-choice",
+            "question": "Which inference best explains the significance of the time gap between theoretical prediction and experimental discovery illustrated by the Higgs boson example in the timeline?",
+            "options": [
+              "Theories are usually confirmed almost immediately by experiments, so long gaps are anomalies.",
+              "Long gaps indicate that theoretical frameworks are often wrong until experiments correct them.",
+              "A long gap can occur because experimental technology and methods may take decades to reach the sensitivity required to test a robust theoretical prediction.",
+              "Theoretical predictions are typically vague and require many adjustments, causing long delays before any experiment attempts verification."
+            ],
+            "correctAnswer": "A long gap can occur because experimental technology and methods may take decades to reach the sensitivity required to test a robust theoretical prediction.",
+            "explanation": "The slide notes the Higgs boson was theorized about 50 years before experimental confirmation. This reflects that a correct theoretical prediction can precede the necessary experimental capability by decades. It emphasizes the interplay between theoretical development and technological progress rather than immediate confirmation or theory failure.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q2",
+            "type": "true-false",
+            "question": "The Standard Model's particle content (leptons, quarks, and bosons) was fully experimentally discovered before theorists proposed the framework that explains them.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. The Standard Model is a theoretical framework that organized known and predicted particles; in many cases (e.g., the Higgs boson) the theory preceded experimental discovery. The timeline shows theory and experiment often interact, with theory sometimes predicting particles before they are observed.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: A historical timeline of particle discoveries helps illustrate the interplay between theoretical prediction and experimental _______.",
+            "options": [],
+            "correctAnswer": "verification",
+            "explanation": "The timeline highlights how theories (like the Standard Model) predict particles and later experiments verify them. 'Verification' captures the process of experimentally confirming theoretical predictions, which is the central lesson from examples such as the Higgs boson.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "6_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider the history of particle physics as summarized in the slide. Which inference best explains why some particles (like the Higgs boson) were theorized decades before experimental discovery?",
+            "options": [
+              "Experimental technology required to produce or detect those particles lagged behind theoretical frameworks.",
+              "Theoretical predictions were mistaken and only coincidentally matched later data.",
+              "Particle properties prevented them from interacting with any known forces until recently.",
+              "Early experiments intentionally ignored evidence for new particles to preserve older models."
+            ],
+            "correctAnswer": "Experimental technology required to produce or detect those particles lagged behind theoretical frameworks.",
+            "explanation": "The slide and transcript note that the Higgs was theorized about 50 years before experimental confirmation. This gap is best explained by limitations in accelerator energy, detector sensitivity, and experimental techniques needed to produce and observe such heavy or weakly interacting particles. The other options are inconsistent with how the Standard Model developed: theories were not simply mistaken (they successfully guided experiments), particles don't suddenly begin interacting, and scientists do not deliberately ignore credible evidence to keep old models.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q2",
+            "type": "true-false",
+            "question": "The Standard Model's completion (e.g., discovery of the Higgs boson) implies there are no remaining unknown fundamental particles to be discovered.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Although discovery of the Higgs filled a major gap in the Standard Model, the slide and broader physics context indicate a distinction between modeled/explained particles and those still unknown. The Standard Model does not account for phenomena like dark matter, neutrino masses in some formulations, or gravity, so the possibility of additional fundamental particles or extensions remains. Therefore completion of the Standard Model does not imply all fundamental particles are known.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The slide contrasts the historical timeline of particle discoveries with theoretical explanations, highlighting that the electron was discovered experimentally early while the _____ boson was theorized long before its 2012 experimental confirmation.",
+            "options": [],
+            "correctAnswer": "Higgs",
+            "explanation": "The slide and transcript specifically reference J.J. Thomson's early experimental discovery of the electron and the Higgs boson as an example of a particle that was theorized several decades before its experimental detection in 2012. This contrast illustrates how theoretical prediction and experimental capability can be separated in time.",
+            "slideReference": "Timeline of Discoveries (Slide 6)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "7": {
+      "slideNumber": 7,
+      "sectionId": "slide-7",
+      "title": "Composite Particles and Hadrons",
+      "questions": [
+        {
+          "id": "7_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which property correctly distinguishes mesons from baryons?",
+          "options": [
+            "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+            "Mesons are three-quark states and are fermions; baryons are quark–antiquark pairs and are bosons.",
+            "Mesons are made only of up and down quarks; baryons contain strange quarks.",
+            "Mesons always carry electric charge; baryons are always neutral."
+          ],
+          "correctAnswer": "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+          "explanation": "Mesons are bound states of a quark and an antiquark; combining two spin-1/2 particles can produce integer total spin, so mesons behave as bosons. Baryons are made of three quarks; three spin-1/2 constituents yield half-integer total spin, so baryons are fermions. The other options confuse composition or make incorrect absolute claims about quark flavor or charge.",
+          "slideReference": "Composite Particles and Hadrons (Slide 7)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "7_d3_q2",
+          "type": "true-false",
+          "question": "A pion can be either charged or neutral and is an example of a meson composed of up and down quarks (or their antiquarks).",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Pions (π+, π0, π−) are mesons made from combinations of up and down quarks and antiquarks (for example π+ is u anti-d). They can be charged or neutral and are classic examples of quark–antiquark bound states.",
+          "slideReference": "Composite Particles and Hadrons (Slide 7)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "7_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: Mesons are composed of a quark and an __________ and behave as __________.",
+          "options": [],
+          "correctAnswer": "antiquark, bosons",
+          "explanation": "By definition, mesons consist of one quark and one antiquark. Because the constituents are spin-1/2 fermions, their combined spin can be integer, so mesons have bosonic behavior.",
+          "slideReference": "Composite Particles and Hadrons (Slide 7)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "7_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best describes a meson based on the slide content?",
+            "options": [
+              "A meson is a bound state of a quark and an antiquark and behaves as a boson.",
+              "A meson is a single quark that carries baryon number and behaves as a fermion.",
+              "A meson is made of three quarks and is always electrically neutral.",
+              "A meson is a fundamental particle with no internal structure."
+            ],
+            "correctAnswer": "A meson is a bound state of a quark and an antiquark and behaves as a boson.",
+            "explanation": "Mesons are composite particles consisting of a quark paired with an antiquark. Because they combine two spin-1/2 constituents, their total spin can be integer, so they act as bosons. This contrasts with baryons (three quarks) which are fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d1_q2",
+            "type": "true-false",
+            "question": "Baryons are composite particles made of three quarks and are classified as fermions.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Baryons consist of three quarks; combining three spin-1/2 particles yields half-integer total spin, so baryons obey Fermi–Dirac statistics and are fermions. This matches the slide's distinction between mesons and baryons.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: A pion is an example of a ______ made from up and down quarks (or their antiquarks).",
+            "options": [],
+            "correctAnswer": "meson",
+            "explanation": "Pions are mesons — bound states of an up or down quark paired with the corresponding antiquark. The slide mentions pions as examples of mesons, which can be charged or neutral depending on the quark content.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "7_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following correctly describes the difference between mesons and baryons?",
+            "options": [
+              "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+              "Mesons are three-quark states and are fermions; baryons are quark–antiquark pairs and are bosons.",
+              "Mesons and baryons are both three-quark states but differ in electric charge.",
+              "Mesons are made only of up and down quarks; baryons contain strange quarks only."
+            ],
+            "correctAnswer": "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+            "explanation": "Mesons consist of a quark paired with an antiquark; combining two spin-1/2 constituents yields integer total spin, so mesons behave as bosons. Baryons consist of three quarks; three half-integer spins combine to give half-integer total spin, so baryons are fermions. This distinction is a fundamental feature of hadrons.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d2_q2",
+            "type": "true-false",
+            "question": "A pion is an example of a meson and can be made from up and down quarks (including charged and neutral varieties).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Pions are mesons composed of up and down quarks and their antiquarks. There are charged pions (π+ and π−) made from up–antidown or down–antiup combinations and a neutral pion (π0) typically involving a mixture of up–antiup and down–antidown. This matches the slide’s example of mesons.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Mesons are composite particles made of a quark and an ________.",
+            "options": [],
+            "correctAnswer": "antiquark",
+            "explanation": "By definition, mesons are bound states of a quark and an antiquark. This quark–antiquark pairing distinguishes mesons from baryons, which are three-quark states.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "7_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which property correctly distinguishes mesons from baryons?",
+            "options": [
+              "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+              "Mesons are three-quark states and are fermions; baryons are quark–antiquark pairs and are bosons.",
+              "Mesons are made only of up and down quarks; baryons contain strange quarks.",
+              "Mesons always carry electric charge; baryons are always neutral."
+            ],
+            "correctAnswer": "Mesons are quark–antiquark pairs and are bosons; baryons are three-quark states and are fermions.",
+            "explanation": "Mesons are bound states of a quark and an antiquark; combining two spin-1/2 particles can produce integer total spin, so mesons behave as bosons. Baryons are made of three quarks; three spin-1/2 constituents yield half-integer total spin, so baryons are fermions. The other options confuse composition or make incorrect absolute claims about quark flavor or charge.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d3_q2",
+            "type": "true-false",
+            "question": "A pion can be either charged or neutral and is an example of a meson composed of up and down quarks (or their antiquarks).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Pions (π+, π0, π−) are mesons made from combinations of up and down quarks and antiquarks (for example π+ is u anti-d). They can be charged or neutral and are classic examples of quark–antiquark bound states.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Mesons are composed of a quark and an __________ and behave as __________.",
+            "options": [],
+            "correctAnswer": "antiquark, bosons",
+            "explanation": "By definition, mesons consist of one quark and one antiquark. Because the constituents are spin-1/2 fermions, their combined spin can be integer, so mesons have bosonic behavior.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "7_d4_q1",
+            "type": "multiple-choice",
+            "question": "Which property most directly explains why mesons behave as bosons while baryons behave as fermions?",
+            "options": [
+              "Mesons are made of a quark and an antiquark giving integer total spin, while baryons have three quarks giving half-integer total spin",
+              "Mesons contain only light quarks (up/down), while baryons contain at least one heavy quark",
+              "Mesons participate only in the electromagnetic force, while baryons participate in the strong force",
+              "Mesons are unstable and baryons are stable, so their statistics differ"
+            ],
+            "correctAnswer": "Mesons are made of a quark and an antiquark giving integer total spin, while baryons have three quarks giving half-integer total spin",
+            "explanation": "Bosonic or fermionic behavior depends on the particle's total spin. A meson is a bound state of a quark (spin-1/2) and an antiquark (spin-1/2); their spins can combine to give integer total spin, so mesons are bosons. A baryon contains three spin-1/2 quarks; combining three half-integer spins yields half-integer total spin, so baryons are fermions. The other options confuse composition with other properties.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d4_q2",
+            "type": "true-false",
+            "question": "A pion can be considered a meson composed of an up quark and a down antiquark (or their charge conjugates), and different charge states of the pion arise from different combinations of up/down quarks and antiquarks.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Pions are the lightest mesons and occur in three charge states: π+, π0, and π−. For example, π+ is u anti-d, π− is d anti-u, and π0 is a mixture of u anti-u and d anti-d. The charge states reflect different quark–antiquark combinations.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Hadrons are composite particles made of quarks; the two broad classes are mesons (quark–antiquark) and baryons (___).",
+            "options": [],
+            "correctAnswer": "three quarks",
+            "explanation": "Hadrons are strongly interacting composite particles. Mesons are quark–antiquark bound states, while baryons are bound states of three quarks. This distinction also leads to mesons being bosons and baryons being fermions due to spin combinations.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "7_d5_q1",
+            "type": "multiple-choice",
+            "question": "Considering the quark composition and spin statistics, which of the following reasoning best explains why mesons behave as bosons while baryons behave as fermions?",
+            "options": [
+              "Mesons contain an even number of quarks (two) so their total spin is always integer; baryons contain an odd number (three) so their total spin is half-integer.",
+              "Mesons are made of quark–antiquark pairs whose color charges cancel, forcing integer spin; baryons cannot cancel color so they have half-integer spin.",
+              "Mesons are composed of quarks from the same generation, producing integer spin; baryons mix generations and therefore have half-integer spin.",
+              "Mesons contain exactly two constituent fermions whose combined spin can be integer (bosonic), while baryons contain three constituent fermions whose combined spin must be half-integer (fermionic)."
+            ],
+            "correctAnswer": "Mesons contain an even number of quarks (two) so their total spin is always integer; baryons contain an odd number (three) so their total spin is half-integer.",
+            "explanation": "Mesons are bound states of a quark and an antiquark (two spin-1/2 fermions). Combining two fermion spins can yield integer total spin, allowing bosonic behavior. Baryons contain three spin-1/2 quarks (an odd number), so the overall spin is half-integer and they obey Fermi–Dirac statistics. While color cancellation is important for forming colorless hadrons, boson/fermion behavior follows from total spin (statistics) determined by the number and coupling of constituent fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "7_d5_q2",
+            "type": "true-false",
+            "question": "A pion (π) must always consist only of up and down quarks; introducing a strange quark would produce a completely different class of particles, so pions cannot contain strangeness.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "This statement is false. Pions are members of the lightest meson isospin multiplet made from up and down quarks, but the broader meson family includes states with strangeness (strange quarks). Introducing strangeness yields kaons and other strange mesons, not pions, so while pions themselves do not contain strange quarks, the existence of strange mesons shows that meson composition can include strangeness. The slide/transcript points out that adding strange quarks expands the meson spectrum.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "7_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Hadrons that are composed of three quarks are called ______ and, because they contain an odd number of spin-1/2 constituents, they obey ______ statistics.",
+            "options": [],
+            "correctAnswer": "baryons; Fermi–Dirac",
+            "explanation": "Three-quark composite particles are baryons (for example, protons and neutrons). Each quark is a spin-1/2 fermion; combining an odd number of fermions yields half-integer total spin, so baryons follow Fermi–Dirac (fermionic) statistics. This links composition (three quarks) to quantum statistics.",
+            "slideReference": "Composite Particles and Hadrons (Slide 7)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "8": {
+      "slideNumber": 8,
+      "sectionId": "slide-8",
+      "title": "Composite Particles and Hadrons",
+      "questions": [
+        {
+          "id": "8_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which of the following best explains why mesons are classified as bosons while baryons are classified as fermions?",
+          "options": [
+            "Mesons are made of two quarks so they have integer spin, while baryons are made of three quarks so they have half-integer spin.",
+            "Mesons contain at least one strange quark making them bosons, whereas baryons never contain strange quarks and are fermions.",
+            "Mesons are electrically neutral and thus bosons; baryons are charged and thus fermions.",
+            "Mesons are lighter than baryons, and lighter particles are bosons while heavier ones are fermions."
+          ],
+          "correctAnswer": "Mesons are made of two quarks so they have integer spin, while baryons are made of three quarks so they have half-integer spin.",
+          "explanation": "Mesons are quark–antiquark pairs; combining a quark (spin-1/2) and an antiquark can produce integer total spin, so mesons obey bosonic statistics. Baryons are three-quark states; combining three spin-1/2 particles yields half-integer total spin, so baryons are fermions. The other options confuse quantum statistics with charge, mass, or specific quark content.",
+          "slideReference": "Composite Particles and Hadrons (Slide 8)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "8_d3_q2",
+          "type": "true-false",
+          "question": "A kaon (K) is an example of a meson that contains one strange quark paired with an up or down antiquark.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Kaons (K mesons) typically consist of one strange quark (or antiquark) and one up or down antiquark (or quark). This places them in the meson family (quark–antiquark states) and explains their 'strangeness' quantum number.",
+          "slideReference": "Composite Particles and Hadrons (Slide 8)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "8_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: Baryons are composite particles made of three _____ and obey Fermi–Dirac statistics.",
+          "options": [],
+          "correctAnswer": "quarks",
+          "explanation": "By definition, baryons are three-quark bound states (for example, protons and neutrons). Because they consist of an odd number of spin-1/2 constituents, baryons have half-integer spin and follow Fermi–Dirac (fermionic) statistics.",
+          "slideReference": "Composite Particles and Hadrons (Slide 8)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "8_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which statement correctly distinguishes mesons from baryons?",
+            "options": [
+              "Mesons are made of a quark and an antiquark and are bosons; baryons are made of three quarks and are fermions.",
+              "Mesons are made of three quarks and are fermions; baryons are made of a quark and an antiquark and are bosons.",
+              "Both mesons and baryons are made of three quarks but differ in electric charge.",
+              "Mesons are elementary particles while baryons are composite particles made of quarks."
+            ],
+            "correctAnswer": "Mesons are made of a quark and an antiquark and are bosons; baryons are made of three quarks and are fermions.",
+            "explanation": "The slide explains that mesons are quark–antiquark pairs and behave as bosons, while baryons consist of three quarks and are fermions (for example, protons and neutrons). This distinguishes their composition and quantum statistics.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "8_d1_q2",
+            "type": "true-false",
+            "question": "A kaon (K meson) contains a strange quark combined with an up or down quark.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The transcript mentions kaons as particles that include one strange quark plus an up or down quark; kaons are mesons (quark–antiquark states) that carry strangeness.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "8_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Baryons are composite particles made of exactly three _______.",
+            "options": [],
+            "correctAnswer": "quarks",
+            "explanation": "By definition (and as noted on the slide), baryons are composed of three quarks (examples include the proton and neutron), which makes them fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "8_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which statement best distinguishes mesons from baryons?",
+            "options": [
+              "Mesons are made of a quark and an antiquark and are bosons; baryons are made of three quarks and are fermions.",
+              "Mesons are made of three quarks and are fermions; baryons are made of a quark and an antiquark and are bosons.",
+              "Both mesons and baryons are made of three quarks but differ in charge.",
+              "Both mesons and baryons are quark-antiquark pairs but mesons are heavier."
+            ],
+            "correctAnswer": "Mesons are made of a quark and an antiquark and are bosons; baryons are made of three quarks and are fermions.",
+            "explanation": "Mesons consist of a quark paired with an antiquark and have integer spin so they behave as bosons. Baryons consist of three quarks and have half-integer spin, making them fermions. This distinction is fundamental to classifying hadrons.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "8_d2_q2",
+            "type": "true-false",
+            "question": "A kaon (K) is an example of a meson that contains a strange quark paired with an up or down quark.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Kaons (K mesons) contain one strange quark (or antiquark) together with an up or down quark (or antiquark), so they are mesons (quark-antiquark states) and often carry strangeness.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "8_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Hadrons made of three quarks are called ______ and behave as ______ due to their half-integer spin.",
+            "options": [],
+            "correctAnswer": "baryons, fermions",
+            "explanation": "Three-quark hadrons are called baryons (for example, the proton and neutron). Because they have half-integer total spin, baryons obey Fermi-Dirac statistics and are classified as fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "8_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following best explains why mesons are classified as bosons while baryons are classified as fermions?",
+            "options": [
+              "Mesons are made of two quarks so they have integer spin, while baryons are made of three quarks so they have half-integer spin.",
+              "Mesons contain at least one strange quark making them bosons, whereas baryons never contain strange quarks and are fermions.",
+              "Mesons are electrically neutral and thus bosons; baryons are charged and thus fermions.",
+              "Mesons are lighter than baryons, and lighter particles are bosons while heavier ones are fermions."
+            ],
+            "correctAnswer": "Mesons are made of two quarks so they have integer spin, while baryons are made of three quarks so they have half-integer spin.",
+            "explanation": "Mesons are quark–antiquark pairs; combining a quark (spin-1/2) and an antiquark can produce integer total spin, so mesons obey bosonic statistics. Baryons are three-quark states; combining three spin-1/2 particles yields half-integer total spin, so baryons are fermions. The other options confuse quantum statistics with charge, mass, or specific quark content.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "8_d3_q2",
+            "type": "true-false",
+            "question": "A kaon (K) is an example of a meson that contains one strange quark paired with an up or down antiquark.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Kaons (K mesons) typically consist of one strange quark (or antiquark) and one up or down antiquark (or quark). This places them in the meson family (quark–antiquark states) and explains their 'strangeness' quantum number.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "8_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Baryons are composite particles made of three _____ and obey Fermi–Dirac statistics.",
+            "options": [],
+            "correctAnswer": "quarks",
+            "explanation": "By definition, baryons are three-quark bound states (for example, protons and neutrons). Because they consist of an odd number of spin-1/2 constituents, baryons have half-integer spin and follow Fermi–Dirac (fermionic) statistics.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "8_d4_q1",
+            "type": "multiple-choice",
+            "question": "Which of the following best explains why mesons behave as bosons while baryons behave as fermions?",
+            "options": [
+              "Mesons contain an even number of quarks giving them integer spin, while baryons contain an odd number of quarks giving them half-integer spin.",
+              "Mesons are composed only of light quarks, which always produce bosonic behavior, while baryons contain heavy quarks that produce fermionic behavior.",
+              "Mesons are unstable particles and instability implies bosonic statistics; baryons are stable and therefore fermionic.",
+              "Mesons carry no electric charge and only neutral particles are bosons; baryons often carry charge and are fermions."
+            ],
+            "correctAnswer": "Mesons contain an even number of quarks giving them integer spin, while baryons contain an odd number of quarks giving them half-integer spin.",
+            "explanation": "Mesons are quark–antiquark pairs (two constituent fermions) whose spins combine to give integer total spin, so they obey bosonic statistics. Baryons consist of three quarks (an odd number of fermions) whose combined spin is half-integer, so they obey fermionic statistics. The distinction arises from how constituent quark spins combine, not charge, stability, or quark mass.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "8_d4_q2",
+            "type": "true-false",
+            "question": "A kaon (K) is classified as a meson because it contains one strange quark paired with an up or down antiquark (or vice versa), making it a quark–antiquark state.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Kaons contain one strange flavor and one up or down flavor in a quark–antiquark configuration, so they are mesons. This fits the slide/transcript description that kaons (kons) have a strange quark plus an up or down quark and are part of the meson family.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "8_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Baryons are composite particles made of _____ quarks and, as a result, are classified as fermions.",
+            "options": [],
+            "correctAnswer": "three",
+            "explanation": "Baryons consist of three quarks (for example, the proton and neutron), and because they are composed of an odd number of constituent fermions, their total spin is half-integer and they obey Fermi-Dirac statistics—hence they are fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "8_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a hypothetical hadron X that is a color-neutral bound state composed of two quarks and one antiquark. Based on the quark model concepts in the slide, which statement best explains why such a state is not a conventional baryon or meson and would be classified differently?",
+            "options": [
+              "Because baryons must contain exactly three quarks and mesons exactly one quark and one antiquark, so a two-quark–one-antiquark state violates baryon number conservation and must be a tetraquark.",
+              "Because baryons are fermions (three quarks) and mesons are bosons (quark–antiquark); a two-quark–one-antiquark configuration can have quantum numbers that make it an exotic multiquark state (e.g., a baryon-like pentaquark fragment) rather than a conventional baryon or meson.",
+              "Because any bound hadron must contain either only quarks or only antiquarks; mixing quarks and antiquarks is forbidden by the strong interaction, so the state cannot exist.",
+              "Because isospin symmetry requires hadrons to have equal numbers of up and down quarks, so a two-quark–one-antiquark arrangement cannot satisfy isospin and is therefore an excited meson."
+            ],
+            "correctAnswer": "Because baryons are fermions (three quarks) and mesons are bosons (quark–antiquark); a two-quark–one-antiquark configuration can have quantum numbers that make it an exotic multiquark state (e.g., a baryon-like pentaquark fragment) rather than a conventional baryon or meson.",
+            "explanation": "The slide emphasizes that conventional mesons are quark–antiquark (bosons) and baryons are three-quark (fermions). A two-quark–one-antiquark combination does not fit those simple categories and is an example of an exotic multiquark configuration (often described in the literature as a tetraquark or a component of a pentaquark-like system depending on grouping). Such states can exist as color-neutral combinations but are not conventional mesons or baryons because their quark content and resulting quantum numbers differ.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "8_d5_q2",
+            "type": "true-false",
+            "question": "True or False: The distinction between mesons and baryons depends only on the electric charge of the constituent quarks, so changing a quark flavor does not change whether a hadron is a meson or a baryon.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The key distinction is quark content: mesons are quark–antiquark pairs (bosons) and baryons are three-quark states (fermions). Changing a quark’s flavor (e.g., replacing an up with a strange quark) alters quantum numbers like strangeness and charge but does not change the classification unless the number/type of quarks vs antiquarks changes. Thus classification is about quark composition, not just electric charge.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "8_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the quark model described on the slide, mesons are composed of a quark and an _____, making them overall bosons.",
+            "options": [],
+            "correctAnswer": "antiquark",
+            "explanation": "By definition in the quark model, mesons consist of a quark paired with an antiquark. That pairing gives mesons integer spin (bosonic) behavior in contrast to baryons, which are three-quark fermions.",
+            "slideReference": "Composite Particles and Hadrons (Slide 8)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    },
+    "9": {
+      "slideNumber": 9,
+      "sectionId": "slide-9",
+      "title": "Nuclei",
+      "questions": [
+        {
+          "id": "9_d3_q1",
+          "type": "multiple-choice",
+          "question": "A nucleus is described by Z and N. If an isotope has Z = 8 and N = 10, which of the following statements is correct?",
+          "options": [
+            "Its mass number A is 18 and it has 8 protons.",
+            "Its mass number A is 2 and it has 10 protons.",
+            "Its atomic number Z is 18 and it has 10 neutrons.",
+            "Its mass number A is 80 and it has 18 neutrons."
+          ],
+          "correctAnswer": "Its mass number A is 18 and it has 8 protons.",
+          "explanation": "By definition Z is the number of protons and N is the number of neutrons. The mass number A = Z + N = 8 + 10 = 18. So the nucleus has 8 protons and 10 neutrons, mass number 18. The other options mix up or miscompute these quantities.",
+          "slideReference": "Nuclei (Slide 9)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "9_d3_q2",
+          "type": "true-false",
+          "question": "True or False: The mass of a nucleus is always exactly the sum of the masses of its protons and neutrons.",
+          "options": [],
+          "correctAnswer": "False",
+          "explanation": "False. While the mass number approximates the total number of nucleons, the actual mass of a nucleus differs from the simple sum of individual proton and neutron masses because of nuclear binding energy (mass defect) associated with the strong force that holds nucleons together.",
+          "slideReference": "Nuclei (Slide 9)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "9_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: On a nuclear chart that plots number of neutrons versus number of protons, regions indicate different dominant nuclear behaviors such as stability or types of ______.",
+          "options": [],
+          "correctAnswer": "decay",
+          "explanation": "Nuclear charts (neutron number vs proton number) show where isotopes are stable and where they undergo various types of decay (e.g., beta decay, alpha decay). These regions help predict dominant decay modes for isotopes off the stability line.",
+          "slideReference": "Nuclei (Slide 9)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "9_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which pair of numbers uniquely identifies a specific isotope of an element?",
+            "options": [
+              "Number of protons (Z) and number of neutrons (N)",
+              "Atomic mass (A) and binding energy",
+              "Number of electrons and atomic mass (A)",
+              "Decay type and half-life"
+            ],
+            "correctAnswer": "Number of protons (Z) and number of neutrons (N)",
+            "explanation": "An isotope is defined by its numbers of protons and neutrons. The proton number Z determines the element, and the neutron number N distinguishes different isotopes of that element. The mass number A equals Z + N but A alone does not distinguish how many protons versus neutrons are present.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "9_d1_q2",
+            "type": "true-false",
+            "question": "The mass number A of a nucleus is the sum of the number of protons and neutrons it contains.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "By definition, A = Z + N, where Z is the number of protons and N is the number of neutrons. Note that the actual measured nuclear mass differs slightly from this sum because of nuclear binding energy, but A counts the nucleons.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "9_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Protons and neutrons are held together in the nucleus primarily by the _____ force.",
+            "options": [],
+            "correctAnswer": "strong",
+            "explanation": "The strong (nuclear) force binds protons and neutrons (nucleons) together in the nucleus, overcoming the electrostatic repulsion between protons. This is why nuclei form bound states such as isotopes.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "9_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which combination of quantities correctly identifies an isotope of an element?",
+            "options": [
+              "Same number of protons Z, different number of neutrons N",
+              "Same mass number A, different number of protons Z",
+              "Same number of neutrons N, different number of protons Z",
+              "Same atomic mass in GeV for all isotopes"
+            ],
+            "correctAnswer": "Same number of protons Z, different number of neutrons N",
+            "explanation": "Isotopes are nuclei of the same element, so they have the same number of protons (Z) but can have different numbers of neutrons (N). Having the same mass number A does not guarantee the same element, and atomic masses in GeV vary due to binding energy differences.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "9_d2_q2",
+            "type": "true-false",
+            "question": "The mass number A of a nucleus is given by the sum A = Z + N, where Z is the number of protons and N is the number of neutrons.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "By definition, the mass number A counts all nucleons in the nucleus, so A = Z (protons) + N (neutrons). This is a fundamental way to describe nuclei and isotopes.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "9_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Protons and neutrons are held together in the nucleus primarily by the _____ force.",
+            "options": [],
+            "correctAnswer": "strong",
+            "explanation": "The strong nuclear force (often just called the strong force) binds protons and neutrons together in the nucleus, overcoming the electrostatic repulsion between protons at short ranges.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "9_d3_q1",
+            "type": "multiple-choice",
+            "question": "A nucleus is described by Z and N. If an isotope has Z = 8 and N = 10, which of the following statements is correct?",
+            "options": [
+              "Its mass number A is 18 and it has 8 protons.",
+              "Its mass number A is 2 and it has 10 protons.",
+              "Its atomic number Z is 18 and it has 10 neutrons.",
+              "Its mass number A is 80 and it has 18 neutrons."
+            ],
+            "correctAnswer": "Its mass number A is 18 and it has 8 protons.",
+            "explanation": "By definition Z is the number of protons and N is the number of neutrons. The mass number A = Z + N = 8 + 10 = 18. So the nucleus has 8 protons and 10 neutrons, mass number 18. The other options mix up or miscompute these quantities.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "9_d3_q2",
+            "type": "true-false",
+            "question": "True or False: The mass of a nucleus is always exactly the sum of the masses of its protons and neutrons.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. While the mass number approximates the total number of nucleons, the actual mass of a nucleus differs from the simple sum of individual proton and neutron masses because of nuclear binding energy (mass defect) associated with the strong force that holds nucleons together.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "9_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: On a nuclear chart that plots number of neutrons versus number of protons, regions indicate different dominant nuclear behaviors such as stability or types of ______.",
+            "options": [],
+            "correctAnswer": "decay",
+            "explanation": "Nuclear charts (neutron number vs proton number) show where isotopes are stable and where they undergo various types of decay (e.g., beta decay, alpha decay). These regions help predict dominant decay modes for isotopes off the stability line.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "9_d4_q1",
+            "type": "multiple-choice",
+            "question": "Consider two nuclides: X with Z = 8 and N = 8, and Y with Z = 8 and N = 10. Which statement best explains the primary difference between X and Y and how that difference affects their placement on a nuclear chart?",
+            "options": [
+              "X and Y are different elements because they have different proton numbers; they appear on different vertical columns of the nuclear chart.",
+              "X and Y are isotopes of the same element; they share the same Z so they lie in the same vertical column but at different positions along the neutron axis.",
+              "X and Y are isotones and therefore have the same N; they lie on the same horizontal row of a nuclear chart.",
+              "X and Y must have identical stability because protons and neutrons contribute equally to nuclear binding, so they occupy the same point on the chart."
+            ],
+            "correctAnswer": "X and Y are isotopes of the same element; they share the same Z so they lie in the same vertical column but at different positions along the neutron axis.",
+            "explanation": "Isotopes share the same proton number Z but differ in neutron number N. On a nuclear chart (neutron number vs proton number), isotopes of an element line up vertically (same Z) but at different N positions. Option A is wrong because proton number is the same; option C is wrong because isotones have the same N (not the case here); option D is incorrect because differing neutron numbers affect binding and stability.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "9_d4_q2",
+            "type": "true-false",
+            "question": "The mass number A of a nucleus equals the sum of the numbers of protons and neutrons, and therefore the measured nuclear mass is always exactly A times the proton mass.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "While A = Z + N by definition, the actual measured mass of a nucleus differs from the simple sum of constituent nucleon masses because binding energy (mass defect) alters the total mass via E = mc^2. Thus the nuclear mass is not exactly A times the proton mass.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "9_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: A nucleus is a bound state of protons and neutrons held together primarily by the _____ force.",
+            "options": [],
+            "correctAnswer": "strong",
+            "explanation": "Protons and neutrons (nucleons) are bound in the nucleus by the strong nuclear force, which overcomes electrostatic repulsion between protons at short ranges and is responsible for nuclear binding and the existence of isotopes.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "9_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider two nuclei: one has Z = 20 and N = 20, the other has Z = 20 and N = 28. Both have the same element (same Z). From the slide concepts about nuclear binding and stability, which statement best explains why the two isotopes can have different stability and decay behavior despite identical Z?",
+            "options": [
+              "Because the electric charge of the nucleus changes with N, altering electromagnetic repulsion and stability.",
+              "Because the strong force acts only between protons, so adding neutrons does not affect binding energy.",
+              "Because the balance between the strong force (which binds nucleons) and other effects (like neutron–proton ratio and binding energy per nucleon) changes with N, altering whether the isotope is stable or prone to decay.",
+              "Because neutrons do not contribute to mass number A, so isotopes with different N are always unstable."
+            ],
+            "correctAnswer": "Because the balance between the strong force (which binds nucleons) and other effects (like neutron–proton ratio and binding energy per nucleon) changes with N, altering whether the isotope is stable or prone to decay.",
+            "explanation": "The slide emphasizes that nuclei are bound states of protons and neutrons via the strong force and are described by Z and N with A = Z+N. Stability depends on the detailed balance between attractive strong interactions among nucleons, the neutron-to-proton ratio, and binding energy per nucleon. Changing N alters that balance and can move an isotope into regions of stability or different decay modes on the nuclear chart. The other options are incorrect because electric charge depends only on Z (not N), the strong force acts among all nucleons (not only protons), and neutrons do contribute to the mass number A.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "9_d5_q2",
+            "type": "true-false",
+            "question": "A nucleus with mass number A equal to the arithmetic sum of Z and N always has a mass exactly equal to the sum of the masses of Z protons and N neutrons.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Although A = Z + N counts nucleons, the actual nuclear mass differs from the simple sum of free proton and neutron masses because of nuclear binding energy (mass defect). Binding energy reduces the total mass-energy of the bound nucleus relative to the sum of separated nucleons, so the nucleus' mass is not exactly the arithmetic sum.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "9_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: On a nuclear chart plotting number of neutrons versus number of protons, regions where nuclei undergo different decay modes (e.g., beta decay, neutron emission) primarily reflect variations in the ________ between neutrons and protons and the resulting binding energy.",
+            "options": [],
+            "correctAnswer": "ratio",
+            "explanation": "The nuclear chart displays stability and decay types as functions of N and Z. Whether a nucleus will beta-decay, emit neutrons, or be stable depends largely on the neutron-to-proton ratio (N/Z) and how that ratio affects the binding energy and balance of forces in the nucleus. Thus 'ratio' (neutron-to-proton ratio) is the key concept connecting positions on the chart to decay behavior.",
+            "slideReference": "Nuclei (Slide 9)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T04:34:18.797Z"
+    }
+  }
+}

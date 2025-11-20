@@ -1,0 +1,930 @@
+{
+  "videoName": "linear-algebra",
+  "generatedAt": "2025-09-05T03:35:35.821Z",
+  "quizzes": {
+    "2": {
+      "slideNumber": 2,
+      "sectionId": "slide-2",
+      "title": "Geometric transformations",
+      "questions": [
+        {
+          "id": "2_d3_q1",
+          "type": "multiple-choice",
+          "question": "If A is the 2x2 rotation matrix that rotates vectors counterclockwise by θ, what is A applied to the unit vector e1 = [1, 0]^T?",
+          "options": [
+            "[cosθ, sinθ]^T",
+            "[cosθ, -sinθ]^T",
+            "[-sinθ, cosθ]^T",
+            "[sinθ, cosθ]^T"
+          ],
+          "correctAnswer": "[cosθ, sinθ]^T",
+          "explanation": "Applying the rotation matrix [[cosθ, -sinθ],[sinθ, cosθ]] to e1 = [1,0]^T picks out the first column of the matrix, which is [cosθ, sinθ]^T. Geometrically this is the image of the x-axis unit vector after a counterclockwise rotation by θ.",
+          "slideReference": "Geometric transformations (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q2",
+          "type": "true-false",
+          "question": "A 2×2 rotation matrix preserves the length (norm) of every vector it transforms.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Rotation matrices are orthogonal with determinant 1, so they preserve inner products and therefore norms. Geometrically, rotations change direction but not magnitude.",
+          "slideReference": "Geometric transformations (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: The 2×2 matrix for a rotation by angle θ has entries [ [____, -sinθ], [sinθ, cosθ] ] where the blank is cosθ.",
+          "options": [],
+          "correctAnswer": "cosθ",
+          "explanation": "The standard rotation matrix is [[cosθ, -sinθ],[sinθ, cosθ]]. The top-left entry is cosθ, which along with the other entries encodes the counterclockwise rotation by θ.",
+          "slideReference": "Geometric transformations (Slide 2)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "2_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which 2x2 matrix represents a counterclockwise rotation of a vector by an angle θ?",
+            "options": [
+              "[[cosθ, -sinθ], [sinθ, cosθ]]",
+              "[[cosθ, sinθ], [-sinθ, cosθ]]",
+              "[[cosθ, -sinθ], [-sinθ, -cosθ]]",
+              "[[sinθ, cosθ], [cosθ, -sinθ]]"
+            ],
+            "correctAnswer": "[[cosθ, -sinθ], [sinθ, cosθ]]",
+            "explanation": "The standard rotation matrix for a counterclockwise rotation by θ is [[cosθ, -sinθ], [sinθ, cosθ]]. Multiplying this matrix by a vector x rotates x by θ while preserving its length.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q2",
+            "type": "true-false",
+            "question": "Applying a rotation matrix to a vector changes the vector's length (norm).",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Rotation matrices are orthogonal and preserve vector norms; they change direction but not length.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The geometric transformation y = Ax maps a vector x to y by applying the __________ represented by A.",
+            "options": [],
+            "correctAnswer": "transformation",
+            "explanation": "In y = Ax, the matrix A encodes the geometric transformation (for example, a rotation) that is applied to x to produce y.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "2_d2_q1",
+            "type": "multiple-choice",
+            "question": "If A is the 2×2 rotation matrix given by [[cosθ, -sinθ], [sinθ, cosθ]], what is the geometric effect of multiplying a vector x by A?",
+            "options": [
+              "It scales x by a factor of cosθ",
+              "It rotates x counterclockwise by angle θ without changing its length",
+              "It reflects x across the x-axis",
+              "It shears x horizontally by an amount θ"
+            ],
+            "correctAnswer": "It rotates x counterclockwise by angle θ without changing its length",
+            "explanation": "The matrix [[cosθ, -sinθ],[sinθ, cosθ]] is the standard 2D rotation matrix. Multiplying a vector x by this matrix rotates x by θ in the mathematically positive (counterclockwise) direction and preserves its norm, so the length remains the same.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q2",
+            "type": "true-false",
+            "question": "True or False: Any geometric transformation in 2D that can be written as y = Ax, where A is a matrix, must preserve vector lengths.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Not all matrix transformations preserve lengths. Only orthogonal matrices with determinant ±1 (such as rotation matrices) preserve lengths. General matrices can scale, shear, or distort vectors and so do not necessarily preserve norms.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the sentence: The 2×2 rotation matrix that maps a vector x to y = Ax has entries cosθ and -sinθ in the first row and _____ and cosθ in the second row.",
+            "options": [],
+            "correctAnswer": "sinθ",
+            "explanation": "The standard rotation matrix is [[cosθ, -sinθ],[sinθ, cosθ]]. The second row contains sinθ and cosθ, which together with the first row produce a counterclockwise rotation by θ.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "2_d3_q1",
+            "type": "multiple-choice",
+            "question": "If A is the 2x2 rotation matrix that rotates vectors counterclockwise by θ, what is A applied to the unit vector e1 = [1, 0]^T?",
+            "options": [
+              "[cosθ, sinθ]^T",
+              "[cosθ, -sinθ]^T",
+              "[-sinθ, cosθ]^T",
+              "[sinθ, cosθ]^T"
+            ],
+            "correctAnswer": "[cosθ, sinθ]^T",
+            "explanation": "Applying the rotation matrix [[cosθ, -sinθ],[sinθ, cosθ]] to e1 = [1,0]^T picks out the first column of the matrix, which is [cosθ, sinθ]^T. Geometrically this is the image of the x-axis unit vector after a counterclockwise rotation by θ.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q2",
+            "type": "true-false",
+            "question": "A 2×2 rotation matrix preserves the length (norm) of every vector it transforms.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Rotation matrices are orthogonal with determinant 1, so they preserve inner products and therefore norms. Geometrically, rotations change direction but not magnitude.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The 2×2 matrix for a rotation by angle θ has entries [ [____, -sinθ], [sinθ, cosθ] ] where the blank is cosθ.",
+            "options": [],
+            "correctAnswer": "cosθ",
+            "explanation": "The standard rotation matrix is [[cosθ, -sinθ],[sinθ, cosθ]]. The top-left entry is cosθ, which along with the other entries encodes the counterclockwise rotation by θ.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "2_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given the rotation matrix R(θ) = [[cosθ, -sinθ],[sinθ, cosθ]], which of the following statements best explains why R(θ) preserves vector norms (lengths) for all θ?",
+            "options": [
+              "Because each column of R(θ) is a scalar multiple of the corresponding standard basis vector.",
+              "Because R(θ) is orthogonal: its transpose equals its inverse, so R(θ)^T R(θ) = I.",
+              "Because the determinant of R(θ) is zero, which forces lengths to remain constant.",
+              "Because R(θ) only changes the x-component of a vector and leaves the y-component unchanged."
+            ],
+            "correctAnswer": "Because R(θ) is orthogonal: its transpose equals its inverse, so R(θ)^T R(θ) = I.",
+            "explanation": "Rotation matrices have columns that are orthonormal, which makes the matrix orthogonal. For an orthogonal matrix A, A^T A = I, so (Ax)·(Ax) = x^T A^T A x = x^T x, meaning the length (norm) is preserved. This is the reason rotations preserve norms, not because of scalar multiples or determinant zero (in fact det R(θ)=1).",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q2",
+            "type": "true-false",
+            "question": "Applying the 2D rotation matrix R(θ) to the first standard basis vector e1 produces the column [cosθ, sinθ]^T, which is the image of e1 under the rotation.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Multiplying R(θ) by e1 selects the first column of R(θ). The first column is [cosθ, sinθ]^T, which geometrically is the unit vector obtained by rotating e1 by θ counterclockwise. This follows directly from y = Ax and the interpretation of columns as images of basis vectors.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: A linear transformation represented by matrix A maps vectors by matrix multiplication y = Ax. For the 2×2 rotation matrix, the geometric effect of A on any vector x is a _____ of x by angle θ about the origin.",
+            "options": [],
+            "correctAnswer": "rotation",
+            "explanation": "The 2×2 rotation matrix R(θ) = [[cosθ, -sinθ],[sinθ, cosθ]] multiplies any vector x to produce y = R(θ)x, which is the original vector rotated counterclockwise by θ about the origin. This captures the geometric interpretation of the matrix mapping described in the slide.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "2_d5_q1",
+            "type": "multiple-choice",
+            "question": "Suppose A is the 2×2 rotation matrix R(θ) = [[cosθ, -sinθ],[sinθ, cosθ]]. If a nonzero vector v in R^2 is an eigenvector of A with real eigenvalue λ, which of the following must be true?",
+            "options": [
+              "λ = 1 and θ = 0 (mod 2π)",
+              "λ = cosθ and v is aligned with (1,0)",
+              "λ = ±1 and θ = kπ for some integer k",
+              "No real eigenvalue exists for any θ ≠ 0 (mod π)"
+            ],
+            "correctAnswer": "No real eigenvalue exists for any θ ≠ 0 (mod π)",
+            "explanation": "A rotation by θ (0<|θ|<π) has no real eigenvectors because it changes every nonzero vector's direction; real eigenvalues occur only when the rotation is by 0 or π (mod 2π gives λ=1, mod π gives λ=−1). Thus for θ not an integer multiple of π, there are no real eigenvalues. The option stating no real eigenvalue exists for θ ≠ 0 (mod π) correctly captures that fact. This tests understanding of how the rotation matrix acts geometrically and algebraically (eigenstructure).",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q2",
+            "type": "true-false",
+            "question": "Applying the rotation matrix R(θ) to the standard basis vectors e1 and e2 produces the columns of R(θ), and those columns are the images of e1 and e2 under the linear transformation that rotates by θ.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "By definition of matrix multiplication, A's columns equal A applied to the basis vectors. For the rotation matrix R(θ), its first column is R(θ)e1 = (cosθ, sinθ)^T and second column is R(θ)e2 = (−sinθ, cosθ)^T, which are precisely the rotated basis vectors. This links the geometric action (rotating vectors) to the matrix representation.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: For a linear transformation represented by y = Ax in R^2, if A is orthogonal with determinant +1, then A represents a _____ by some angle θ (possibly 0) about the origin.",
+            "options": [],
+            "correctAnswer": "rotation",
+            "explanation": "An orthogonal 2×2 matrix with determinant +1 is a rotation matrix: it preserves lengths and orientation and can be written as [[cosθ, −sinθ],[sinθ, cosθ]] for some θ. This connects the matrix properties (A^T A = I and det A = +1) to the geometric interpretation of rotation described in the slide.",
+            "slideReference": "Geometric transformations (Slide 2)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:35:35.821Z"
+    },
+    "3": {
+      "slideNumber": 3,
+      "sectionId": "slide-3",
+      "title": "Geometric transformations",
+      "questions": [
+        {
+          "id": "3_d3_q1",
+          "type": "multiple-choice",
+          "question": "If A is the 2D rotation matrix by angle θ given by [[cosθ, -sinθ],[sinθ, cosθ]], what geometric meaning do the columns of A have?",
+          "options": [
+            "They are the images of the standard basis vectors e1 and e2 after rotation by θ",
+            "They are the eigenvectors of A for any θ",
+            "They give the reflection axes of the transformation",
+            "They represent the scaling factors along x and y axes"
+          ],
+          "correctAnswer": "They are the images of the standard basis vectors e1 and e2 after rotation by θ",
+          "explanation": "Multiplying A by e1 gives the first column and multiplying A by e2 gives the second column. For a rotation matrix, these columns are exactly the rotated positions of the unit basis vectors (cosθ,sinθ) and (−sinθ,cosθ). They are not eigenvectors for general θ, nor do they describe reflections or scaling factors.",
+          "slideReference": "Geometric transformations (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q2",
+          "type": "true-false",
+          "question": "A 2D rotation matrix by angle θ always preserves lengths and angles between vectors (i.e., it is an orthogonal transformation).",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Rotation matrices have orthonormal columns and determinant 1, so they preserve dot products, which implies lengths and angles are preserved. Hence rotations are orthogonal (and special orthogonal) transformations.",
+          "slideReference": "Geometric transformations (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: When you multiply a matrix A by the standard basis vector e2, the result equals the matrix's _____ column.",
+          "options": [],
+          "correctAnswer": "second",
+          "explanation": "By definition, A e_j equals the j-th column of A. So Ae2 yields the second column, which in the rotation example is (−sinθ, cosθ).",
+          "slideReference": "Geometric transformations (Slide 3)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "3_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which 2x2 matrix represents a rotation by angle θ in the plane?",
+            "options": [
+              "[[cos θ, -sin θ], [sin θ, cos θ]]",
+              "[[cos θ, sin θ], [-sin θ, cos θ]]",
+              "[[cos θ, 0], [0, cos θ]]",
+              "[[1, -θ], [θ, 1]]"
+            ],
+            "correctAnswer": "[[cos θ, -sin θ], [sin θ, cos θ]]",
+            "explanation": "A 2D rotation by θ maps the first unit vector to (cos θ, sin θ) and the second to (-sin θ, cos θ), giving the matrix [[cos θ, -sin θ],[sin θ, cos θ]]. The other options do not produce the correct rotated unit vectors.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q2",
+            "type": "true-false",
+            "question": "True or False: Multiplying a matrix A by the first standard basis vector e1 produces the first column of A.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "By definition of matrix multiplication, A e1 selects the first column of A. The transcript explicitly uses this fact to explain how rotation matrices are formed from images of e1 and e2.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q3",
+            "type": "fill-blank",
+            "question": "Fill in the blank: In the rotation matrix, the x-coordinate of the image of e2 is -_____ (one word or symbol).",
+            "options": [],
+            "correctAnswer": "sin θ",
+            "explanation": "When e2 = (0,1) is rotated by θ, its x-coordinate becomes -sin θ and its y-coordinate becomes cos θ; thus the top-right entry of the rotation matrix is -sin θ.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "3_d2_q1",
+            "type": "multiple-choice",
+            "question": "If A is the 2×2 rotation matrix R(θ) = [[cos θ, -sin θ],[sin θ, cos θ]], what vector does Ae1 produce (where e1 = [1,0]^T)?",
+            "options": [
+              "[cos θ, sin θ]^T",
+              "[-sin θ, cos θ]^T",
+              "[cos θ, -sin θ]^T",
+              "[sin θ, cos θ]^T"
+            ],
+            "correctAnswer": "[cos θ, sin θ]^T",
+            "explanation": "Multiplying the matrix by e1 picks out the first column of A. For the rotation matrix the first column is [cos θ, sin θ]^T, which is the image of the unit x-axis after rotation by θ.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q2",
+            "type": "true-false",
+            "question": "The second column of a 2D rotation matrix R(θ) equals the image of the second unit vector e2 after rotation; its x-coordinate is -sin θ and its y-coordinate is cos θ.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Multiplying R(θ) by e2 yields the second column. For the rotation matrix that column is [-sin θ, cos θ]^T, so the x-coordinate is -sin θ and the y-coordinate is cos θ.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Representing a geometric transformation of 2-D vectors as y = Ax means the transformation is applied by matrix __________ to vector x.",
+            "options": [],
+            "correctAnswer": "multiplication",
+            "explanation": "The notation y = Ax indicates the transformation is performed by multiplying the matrix A with the vector x. This compactly encodes linear mappings such as rotations and reflections.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "3_d3_q1",
+            "type": "multiple-choice",
+            "question": "If A is the 2D rotation matrix by angle θ given by [[cosθ, -sinθ],[sinθ, cosθ]], what geometric meaning do the columns of A have?",
+            "options": [
+              "They are the images of the standard basis vectors e1 and e2 after rotation by θ",
+              "They are the eigenvectors of A for any θ",
+              "They give the reflection axes of the transformation",
+              "They represent the scaling factors along x and y axes"
+            ],
+            "correctAnswer": "They are the images of the standard basis vectors e1 and e2 after rotation by θ",
+            "explanation": "Multiplying A by e1 gives the first column and multiplying A by e2 gives the second column. For a rotation matrix, these columns are exactly the rotated positions of the unit basis vectors (cosθ,sinθ) and (−sinθ,cosθ). They are not eigenvectors for general θ, nor do they describe reflections or scaling factors.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q2",
+            "type": "true-false",
+            "question": "A 2D rotation matrix by angle θ always preserves lengths and angles between vectors (i.e., it is an orthogonal transformation).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Rotation matrices have orthonormal columns and determinant 1, so they preserve dot products, which implies lengths and angles are preserved. Hence rotations are orthogonal (and special orthogonal) transformations.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: When you multiply a matrix A by the standard basis vector e2, the result equals the matrix's _____ column.",
+            "options": [],
+            "correctAnswer": "second",
+            "explanation": "By definition, A e_j equals the j-th column of A. So Ae2 yields the second column, which in the rotation example is (−sinθ, cosθ).",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "3_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given the 2×2 rotation matrix R(θ) = [[cos θ, -sin θ], [sin θ, cos θ]], what geometric property of vectors does R(θ) always preserve for any θ?",
+            "options": [
+              "A) It preserves vector lengths (norms) and angles between vectors.",
+              "B) It preserves only the x-components of vectors.",
+              "C) It preserves oriented area but not lengths.",
+              "D) It preserves vector lengths but reverses the orientation (makes reflections)."
+            ],
+            "correctAnswer": "A) It preserves vector lengths (norms) and angles between vectors.",
+            "explanation": "A rotation matrix is orthogonal with determinant +1, so it preserves inner products. Preserving inner products implies preservation of lengths (norms) and angles between vectors. It does not generally fix x-components, nor does it reverse orientation (that would have determinant -1, a reflection).",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q2",
+            "type": "true-false",
+            "question": "True or False: The first column of a matrix A is the image A e1, so for the 2D rotation matrix R(θ) the first column equals the coordinates of the rotated first unit vector and is [cos θ, sin θ]^T.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Multiplying a matrix by the standard basis vector e1 selects the first column. For R(θ), rotating e1 = (1,0) by θ yields (cos θ, sin θ), which is the first column of R(θ). This connects the geometric action on basis vectors to the matrix columns.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: For a linear transformation represented by y = Ax, the image of the second standard basis vector e2 is equal to the _______ column of A, which for a 2D rotation by θ has coordinates [-sin θ, cos θ]^T.",
+            "options": [],
+            "correctAnswer": "second",
+            "explanation": "By definition, A e_i equals the i-th column of A. Thus A e2 is the second column. For the 2D rotation matrix this second column is the coordinates of the rotated e2, namely (-sin θ, cos θ).",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "3_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider the 2×2 matrix R(θ) = [[cos θ, -sin θ],[sin θ, cos θ]]. Which of the following statements best explains why R(θ) rotates any vector x in R^2 by angle θ about the origin?",
+            "options": [
+              "Multiplying by R(θ) scales the length of x by cos θ and shifts its direction by sin θ.",
+              "The columns of R(θ) are the images of the standard basis vectors e1 and e2 after rotation by θ, so R(θ) maps basis coordinates to rotated coordinates and thus rotates every vector by linearity.",
+              "R(θ) is orthogonal and has determinant zero, which forces a pure rotation of all vectors.",
+              "R(θ) maps each vector to its projection onto the unit circle, which is equivalent to rotating it by θ."
+            ],
+            "correctAnswer": "The columns of R(θ) are the images of the standard basis vectors e1 and e2 after rotation by θ, so R(θ) maps basis coordinates to rotated coordinates and thus rotates every vector by linearity.",
+            "explanation": "A linear map is determined by its action on a basis. Multiplying R(θ) by e1 and e2 yields the first and second columns, which are e1 and e2 rotated by θ (with coordinates [cos θ, sin θ] and [-sin θ, cos θ]). Because any vector x is a linear combination of e1 and e2, R(θ)x is the same combination of the rotated basis vectors, so every vector is rotated by θ. (Note: R(θ) is orthogonal with determinant 1, not zero.)",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q2",
+            "type": "true-false",
+            "question": "If A is a 2×2 matrix that rotates e1 to (cos θ, sin θ) and e2 to (-sin θ, cos θ), then A must be equal to the matrix [[cos θ, -sin θ],[sin θ, cos θ]] for all θ.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "A 2×2 matrix is uniquely determined by its columns, which are Ae1 and Ae2. If those columns match the given rotated vectors for e1 and e2, the matrix entries must be exactly those trigonometric values, so A equals the standard rotation matrix R(θ).",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The action of a linear transformation A on an arbitrary vector x can be understood geometrically by expressing x as a linear combination of basis vectors and applying A to each basis vector; therefore, the columns of A are the images of the basis vectors, so A maps basis coordinates to the _____ of those images.",
+            "options": [],
+            "correctAnswer": "coordinates",
+            "explanation": "When x = c1 e1 + c2 e2, Ax = c1 Ae1 + c2 Ae2. The columns of A are Ae1 and Ae2, and the coefficients (the coordinates) c1 and c2 combine those column images to produce Ax. Thus A maps coordinates in the original basis to the coordinates of the resulting linear combination of the column images.",
+            "slideReference": "Geometric transformations (Slide 3)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:35:35.821Z"
+    },
+    "5": {
+      "slideNumber": 5,
+      "sectionId": "slide-5",
+      "title": "Selectors",
+      "questions": [
+        {
+          "id": "5_d3_q1",
+          "type": "multiple-choice",
+          "question": "Given an m × n selector matrix A whose rows are transposed unit vectors, what does the product y = A x represent?",
+          "options": [
+            "A new vector y whose entries are linear combinations of multiple entries of x using arbitrary weights",
+            "A vector y whose entries are selected entries of x (possibly with repetition)",
+            "A matrix where each column is a unit vector extracted from x",
+            "The elementwise product of x with a binary mask"
+          ],
+          "correctAnswer": "A vector y whose entries are selected entries of x (possibly with repetition)",
+          "explanation": "Each row of a selector matrix is a transposed unit vector (a single 1 and zeros elsewhere). Multiplying A by x picks the component of x corresponding to the 1 in each row, so y consists of selected entries of x. Repetition can occur if multiple rows use the same unit vector. This differs from arbitrary weighted linear combinations or elementwise products.",
+          "slideReference": "Selectors (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q2",
+          "type": "true-false",
+          "question": "A selector matrix can be used to down-sample a signal by extracting every other sample into a shorter vector.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "True. By choosing rows that are unit vectors corresponding to the indices of every other sample, multiplication by the selector matrix picks those entries, implementing down-sampling (extracting samples).",
+          "slideReference": "Selectors (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: In a selector matrix each row is a transposed _____ vector containing a single 1 and zeros elsewhere.",
+          "options": [],
+          "correctAnswer": "unit",
+          "explanation": "A selector matrix's rows are transposed unit vectors (also called standard basis vectors). Each has a single 1 in the position of the selected entry and zeros elsewhere, so multiplying by x extracts that entry.",
+          "slideReference": "Selectors (Slide 5)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "5_d1_q1",
+            "type": "multiple-choice",
+            "question": "If A is an m × n selector matrix and x is an n-vector, what does the product y = A x produce?",
+            "options": [
+              "A vector y whose entries are selected entries of x (possibly repeated)",
+              "A matrix that permutes the columns of A",
+              "A scalar equal to the dot product of A and x",
+              "A vector of zeros unless A is square"
+            ],
+            "correctAnswer": "A vector y whose entries are selected entries of x (possibly repeated)",
+            "explanation": "By definition a selector matrix has rows that are transposed unit vectors, so multiplying A by x picks out particular components of x for each row. Components can repeat if the same unit vector appears in multiple rows.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q2",
+            "type": "true-false",
+            "question": "Each row of an m × n selector matrix is a transposed unit vector (a standard basis vector).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Selector matrices are constructed so each row equals a unit vector (e_i^T). This ensures that multiplying by x selects the corresponding entry of x.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Multiplication by a selector matrix is often used to extract samples such as for ________ (one-word).",
+            "options": [],
+            "correctAnswer": "down-sampling",
+            "explanation": "A selector matrix can pick out a subset of entries from a signal vector; selecting every k-th sample or a reduced set of samples is commonly called down-sampling.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "5_d2_q1",
+            "type": "multiple-choice",
+            "question": "An m × n selector matrix A multiplies a vector x (of length n) to produce y = Ax. Which of the following best describes each row of A?",
+            "options": [
+              "Each row is a scalar multiple of x",
+              "Each row is a unit vector (transposed) that picks one entry of x",
+              "Each row is a zero vector except possibly the last element",
+              "Each row is the sum of two or more standard basis vectors"
+            ],
+            "correctAnswer": "Each row is a unit vector (transposed) that picks one entry of x",
+            "explanation": "By definition an m × n selector matrix has rows that are transposed unit vectors (standard basis vectors). When you multiply A by x, each row·x equals one entry of x, so y consists of selected entries (possibly repeated).",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q2",
+            "type": "true-false",
+            "question": "True or False: A selector matrix can repeat entries of the input vector x in the output y (for example y might contain x3 twice).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. Rows of the selector matrix can be the same unit vector more than once, so the corresponding entry of x will appear multiple times in y (as described in the transcript where x3 appears twice).",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Multiplying a selector matrix A by a vector x 'selects' specific _____ of x to form y.",
+            "options": [],
+            "correctAnswer": "entries",
+            "explanation": "The product y = Ax returns components of x: each row of A selects a particular entry of x, so the output y is made from selected entries of x.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "5_d3_q1",
+            "type": "multiple-choice",
+            "question": "Given an m × n selector matrix A whose rows are transposed unit vectors, what does the product y = A x represent?",
+            "options": [
+              "A new vector y whose entries are linear combinations of multiple entries of x using arbitrary weights",
+              "A vector y whose entries are selected entries of x (possibly with repetition)",
+              "A matrix where each column is a unit vector extracted from x",
+              "The elementwise product of x with a binary mask"
+            ],
+            "correctAnswer": "A vector y whose entries are selected entries of x (possibly with repetition)",
+            "explanation": "Each row of a selector matrix is a transposed unit vector (a single 1 and zeros elsewhere). Multiplying A by x picks the component of x corresponding to the 1 in each row, so y consists of selected entries of x. Repetition can occur if multiple rows use the same unit vector. This differs from arbitrary weighted linear combinations or elementwise products.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q2",
+            "type": "true-false",
+            "question": "A selector matrix can be used to down-sample a signal by extracting every other sample into a shorter vector.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. By choosing rows that are unit vectors corresponding to the indices of every other sample, multiplication by the selector matrix picks those entries, implementing down-sampling (extracting samples).",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In a selector matrix each row is a transposed _____ vector containing a single 1 and zeros elsewhere.",
+            "options": [],
+            "correctAnswer": "unit",
+            "explanation": "A selector matrix's rows are transposed unit vectors (also called standard basis vectors). Each has a single 1 in the position of the selected entry and zeros elsewhere, so multiplying by x extracts that entry.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "5_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given an m × n selector matrix A whose rows are transposed unit vectors, which of the following statements best describes the effect of multiplying A by a vector x in R^n?",
+            "options": [
+              "A produces a vector y in R^m whose entries are linear combinations of several entries of x with arbitrary coefficients.",
+              "A produces a vector y in R^m by selecting (possibly repeating) specific entries of x, each entry of y equal to exactly one entry of x.",
+              "A produces a vector y in R^m that is the projection of x onto an m-dimensional subspace spanned by all-ones vectors.",
+              "A produces a vector y in R^m by sorting the entries of x in ascending order and taking the first m entries."
+            ],
+            "correctAnswer": "A produces a vector y in R^m by selecting (possibly repeating) specific entries of x, each entry of y equal to exactly one entry of x.",
+            "explanation": "A selector matrix has rows that are transposed unit vectors (standard basis vectors). Multiplying A by x picks out the components of x corresponding to the 1 positions in each row. Because rows can repeat the same unit vector, entries of y can repeat entries of x. There are no arbitrary coefficients or sorting involved.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q2",
+            "type": "true-false",
+            "question": "True or False: An m × n selector matrix can be used to down-sample a signal by selecting every k-th sample, and this action can be represented by appropriate placement of unit rows in A.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. Down-sampling (extracting every k-th sample) is achieved by constructing A so that its rows are unit vectors positioned at the indices of the desired samples. Multiplying A by the signal vector returns only those samples, which implements down-sampling.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In a selector matrix, each row is a transposed _____ vector that has a single 1 and zeros elsewhere.",
+            "options": [],
+            "correctAnswer": "unit",
+            "explanation": "Each row of a selector matrix is a transposed unit (standard basis) vector: it contains a single 1 in the column corresponding to the selected entry and zeros elsewhere. This structure ensures multiplication by the matrix picks that single component of x.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "5_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given an m × n selector matrix A whose rows are transposed unit vectors, which of the following statements best describes the effect of multiplying A by a vector x ∈ R^n?",
+            "options": [
+              "Each entry of Ax is a linear combination of all entries of x with distinct nonzero coefficients.",
+              "Each entry of Ax picks out a single entry of x (possibly repeated across entries of Ax), and thus Ax is a subvector of x up to replication and ordering.",
+              "Ax always results in a vector of length n containing zeros except at positions corresponding to selected indices.",
+              "The product Ax permutes the entries of x and scales them by nonzero scalars determined by A."
+            ],
+            "correctAnswer": "Each entry of Ax picks out a single entry of x (possibly repeated across entries of Ax), and thus Ax is a subvector of x up to replication and ordering.",
+            "explanation": "A selector matrix A has rows that are transposed unit vectors (e_i^T). Multiplying A by x returns rows e_i^T x, which equal the single component x_i. Therefore each entry of Ax equals a particular entry of x; entries can be repeated if multiple rows use the same unit vector, and the order can be rearranged depending on which unit vectors appear in each row. It is not a general linear combination or scaling (except trivial scale 1), nor does Ax necessarily have length n or produce scaled entries.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q2",
+            "type": "true-false",
+            "question": "True or False: An m × 2m selector matrix that is used for down-sampling can be full rank for m ≤ 2m and therefore invertible on its image, allowing perfect reconstruction of x from Ax without additional information.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "While an m × 2m selector matrix can have rank m (≤ 2m), it maps a 2m-dimensional vector x to an m-dimensional y by selecting m components. This is a many-to-one mapping (unless x is known to lie in a restricted subspace), so information is lost and x cannot generally be reconstructed from Ax alone. The matrix is not square (invertibility as a full inverse requires a square matrix), though it may be left-invertible on a restricted subspace if additional constraints exist.",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In a selector matrix A, each row is a transposed unit vector e_i^T, so the product (Ax)_j equals _____ where i corresponds to the unit vector used in the j-th row.",
+            "options": [],
+            "correctAnswer": "x_i",
+            "explanation": "Each row of A being e_i^T means the j-th entry of Ax is e_i^T x, which extracts the i-th component of x. Thus (Ax)_j = x_i, illustrating that selector matrices pick entries of x (possibly repeating or reordering them).",
+            "slideReference": "Selectors (Slide 5)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:35:35.821Z"
+    },
+    "6": {
+      "slideNumber": 6,
+      "sectionId": "slide-6",
+      "title": "Selectors",
+      "questions": [
+        {
+          "id": "6_d3_q1",
+          "type": "multiple-choice",
+          "question": "Given an m × 2m selector matrix A whose rows are e1^T, e3^T, e5^T, ... (odd-indexed unit vectors), what is the effect of multiplying A by a length-2m vector x?",
+          "options": [
+            "It returns a length-m vector consisting of every other entry of x starting with x1 (i.e., x1, x3, x5, ...).",
+            "It returns a length-2m vector where each entry is the sum of adjacent pairs from x (i.e., x1+x2, x3+x4, ...).",
+            "It returns the full vector x unchanged because A is square and invertible.",
+            "It returns a scalar equal to the dot product of x with the first column of A."
+          ],
+          "correctAnswer": "It returns a length-m vector consisting of every other entry of x starting with x1 (i.e., x1, x3, x5, ...).",
+          "explanation": "Each row of A is a transposed unit vector (e.g., e1^T, e3^T, ...). Multiplying A by x picks the component of x corresponding to the 1 position in each unit vector. Thus Ax = [x1, x3, x5, ...]^T, which is down-sampling by a factor of 2.",
+          "slideReference": "Selectors (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q2",
+          "type": "true-false",
+          "question": "A selector matrix can be used to implement an image crop by selecting a contiguous subset of pixel entries from a vectorized image.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "True. A selector matrix has rows that are transposed unit vectors which pick specific entries of the input vector. By choosing rows that correspond to the pixel indices in the crop region (contiguous or otherwise), multiplying the selector by the vectorized image extracts those pixel values.",
+          "slideReference": "Selectors (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the statement: Each row of a selector matrix is a unit vector transposed, so multiplying the selector by x selects specific _____ of x.",
+          "options": [],
+          "correctAnswer": "entries",
+          "explanation": "Each row equals some e_i^T, which when multiplied by x yields the i-th component of x. Therefore the product selects particular entries of x (e.g., for down-sampling or cropping).",
+          "slideReference": "Selectors (Slide 6)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "6_d1_q1",
+            "type": "multiple-choice",
+            "question": "What does an m × n selector matrix A do when multiplied by a vector x?",
+            "options": [
+              "It selects and outputs specific entries of x as its components",
+              "It multiplies every entry of x by the same scalar",
+              "It computes the Fourier transform of x",
+              "It transposes the vector x"
+            ],
+            "correctAnswer": "It selects and outputs specific entries of x as its components",
+            "explanation": "A selector matrix has rows that are transposed unit vectors (e_i^T). Multiplying A by x picks out specified entries of x (e.g., x1, x3, x5…), so the product contains those selected components. This is used for down-sampling or cropping.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q2",
+            "type": "true-false",
+            "question": "True or False: The rows of a selector matrix are unit vectors (transposed), so a row can be repeated to select the same entry of x multiple times.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Each row of a selector matrix is e_i^T, a transposed unit vector. Repeating a row means that the same entry of x will appear multiple times in the product Ax, which matches the transcript remark that entries can be repeated.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: An m × 2m selector matrix that has rows e1^T, e3^T, e5^T, ... performs 2x _____ on a time series vector x by taking entries x1, x3, x5, ...",
+            "options": [],
+            "correctAnswer": "down-sampling",
+            "explanation": "Selecting every other entry (x1, x3, x5, ...) from a time series is called down-sampling by a factor of 2. The selector matrix implements this by having rows equal to the appropriate transposed unit vectors.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "6_d2_q1",
+            "type": "multiple-choice",
+            "question": "What does each row of an m × n selector matrix represent?",
+            "options": [
+              "A scaled copy of the input vector",
+              "A unit vector (transposed) that picks a specific entry of the input",
+              "A random projection of the input",
+              "A zero vector used to remove entries"
+            ],
+            "correctAnswer": "A unit vector (transposed) that picks a specific entry of the input",
+            "explanation": "By definition each row of a selector matrix is a unit vector (transposed). When the selector matrix multiplies a vector x, each row picks out (selects) a specific entry of x, producing the desired subset of components.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q2",
+            "type": "true-false",
+            "question": "Multiplying a selector matrix A by a vector x can be used to down-sample a time series by taking every other entry (e.g., entries 1, 3, 5, ...).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "A selector matrix with rows equal to e1^T, e3^T, e5^T, ... will produce a vector containing x1, x3, x5, ... when multiplied by x. This is the standard way to represent down-sampling by a factor of 2 using a matrix.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Using a selector matrix to pick a contiguous block of entries from an image vector is an example of image _____.",
+            "options": [],
+            "correctAnswer": "cropping",
+            "explanation": "When an image is represented as a long vector, a selector matrix can choose a contiguous subset of components corresponding to a smaller subimage. This operation is commonly called image cropping.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "6_d3_q1",
+            "type": "multiple-choice",
+            "question": "Given an m × 2m selector matrix A whose rows are e1^T, e3^T, e5^T, ... (odd-indexed unit vectors), what is the effect of multiplying A by a length-2m vector x?",
+            "options": [
+              "It returns a length-m vector consisting of every other entry of x starting with x1 (i.e., x1, x3, x5, ...).",
+              "It returns a length-2m vector where each entry is the sum of adjacent pairs from x (i.e., x1+x2, x3+x4, ...).",
+              "It returns the full vector x unchanged because A is square and invertible.",
+              "It returns a scalar equal to the dot product of x with the first column of A."
+            ],
+            "correctAnswer": "It returns a length-m vector consisting of every other entry of x starting with x1 (i.e., x1, x3, x5, ...).",
+            "explanation": "Each row of A is a transposed unit vector (e.g., e1^T, e3^T, ...). Multiplying A by x picks the component of x corresponding to the 1 position in each unit vector. Thus Ax = [x1, x3, x5, ...]^T, which is down-sampling by a factor of 2.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q2",
+            "type": "true-false",
+            "question": "A selector matrix can be used to implement an image crop by selecting a contiguous subset of pixel entries from a vectorized image.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. A selector matrix has rows that are transposed unit vectors which pick specific entries of the input vector. By choosing rows that correspond to the pixel indices in the crop region (contiguous or otherwise), multiplying the selector by the vectorized image extracts those pixel values.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Each row of a selector matrix is a unit vector transposed, so multiplying the selector by x selects specific _____ of x.",
+            "options": [],
+            "correctAnswer": "entries",
+            "explanation": "Each row equals some e_i^T, which when multiplied by x yields the i-th component of x. Therefore the product selects particular entries of x (e.g., for down-sampling or cropping).",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "6_d4_q1",
+            "type": "multiple-choice",
+            "question": "Let A be an m × 2m selector matrix whose rows are e1^T, e3^T, e5^T, ... (odd indices). If x is a length-2m vector representing a time series, which of the following statements correctly describes the effect of multiplying y = A x?",
+            "options": [
+              "y contains every second entry of x starting from x1 (i.e., x1, x3, x5, ...), which is equivalent to down-sampling by a factor of 2",
+              "y is a low-pass filtered version of x obtained by averaging adjacent entries (i.e., (x1+x2)/2, (x3+x4)/2, ...)",
+              "y equals x but zero-padded to length m",
+              "y contains only the even-indexed entries of x (i.e., x2, x4, x6, ...)"
+            ],
+            "correctAnswer": "y contains every second entry of x starting from x1 (i.e., x1, x3, x5, ...), which is equivalent to down-sampling by a factor of 2",
+            "explanation": "Each row of A is a transposed unit vector selecting a single entry of x. If rows are e1^T, e3^T, e5^T, ..., then Ax = [x1, x3, x5, ...]^T. This operation picks every other sample starting at index 1, which is the definition of down-sampling by 2, not averaging or padding.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q2",
+            "type": "true-false",
+            "question": "A selector matrix can have repeated rows, and when it does, the resulting product A x will include repeated entries of x in the corresponding positions of A x.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. The transcript explicitly notes rows can be repeated (e.g., x3 shows up multiple times). Since each row is a unit vector transposed, repeating a row selects the same entry of x again, producing repeated values in Ax.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: When a selector matrix A is used to extract a contiguous block of entries from a long image vector x (i.e., cropping), each row of A is a transposed _____ that picks one coordinate of x.",
+            "options": [],
+            "correctAnswer": "unit vector",
+            "explanation": "Each row of a selector matrix is the transpose of a standard basis (unit) vector e_i^T; multiplying by that row extracts the i-th coordinate of x. Using a set of such rows corresponding to a contiguous block implements cropping.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "6_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given an m × 2m selector matrix A whose rows are e1^T, e3^T, e5^T, ..., which of the following statements best explains the effect of multiplying A by a vector x of length 2m and how that relates to signal processing?",
+            "options": [
+              "A extracts consecutive pairs (x1,x2), (x3,x4), ... from x producing an m×2 matrix that represents a sliding-window average used in low-pass filtering.",
+              "A selects every second entry of x (x1, x3, x5, ...), effectively down-sampling the original time series by a factor of 2 with aliasing unless preceded by an anti-aliasing filter.",
+              "A permutes the entries of x by reversing their order, which is useful for time-reversal operations in signal reconstruction.",
+              "A computes inner products of x with orthonormal basis vectors producing the Fourier transform coefficients necessary for spectral analysis."
+            ],
+            "correctAnswer": "A selects every second entry of x (x1, x3, x5, ...), effectively down-sampling the original time series by a factor of 2 with aliasing unless preceded by an anti-aliasing filter.",
+            "explanation": "Each row of the selector matrix is a transposed unit vector (e_k^T), so A x picks specific components of x. When rows are e1^T, e3^T, e5^T, ... A x = [x1, x3, x5, ...]^T which is exactly down-sampling by 2. In signal processing, down-sampling can introduce aliasing unless an anti-aliasing (low-pass) filter is applied first, so the answer connects the matrix action to practical implications.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q2",
+            "type": "true-false",
+            "question": "A selector matrix can be used to both crop a sub-image represented as a vector and to permute entries of that vector, solely by reordering which unit vectors appear as rows.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "A selector matrix has rows that are transposed unit vectors; choosing a subset of those unit vectors crops (selects) entries, while arranging them in a different order permutes entries. Thus the same construction—appropriate choice and ordering of e_i^T rows—implements cropping (selection) or permutation.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: An m × n selector matrix A has rows equal to transposed unit vectors e_i^T, so the matrix product A x is equivalent to forming a length-m vector whose entries are specific ______ of the original vector x.",
+            "options": [],
+            "correctAnswer": "entries",
+            "explanation": "By definition each row of A is e_i^T, and e_i^T x returns the i-th entry of x. Therefore A x collects specific entries of x into a new vector. This emphasizes that selector matrices 'select' or extract components rather than performing general linear combinations.",
+            "slideReference": "Selectors (Slide 6)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:35:35.821Z"
+    }
+  }
+}

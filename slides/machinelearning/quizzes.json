@@ -1,0 +1,1623 @@
+{
+  "videoName": "machinelearning",
+  "generatedAt": "2025-09-05T03:38:47.444Z",
+  "quizzes": {
+    "1": {
+      "slideNumber": 1,
+      "sectionId": "slide-1",
+      "title": "The Perceptron: Forward Propagation",
+      "questions": [
+        {
+          "id": "1_d3_q1",
+          "type": "multiple-choice",
+          "question": "Given inputs x = [x1, x2, ..., xm], weights w = [w1, w2, ..., wm], and bias b, which expression correctly describes the value passed into the activation function of a perceptron during forward propagation?",
+          "options": [
+            "x + w + b",
+            "w · x + b",
+            "w / x + b",
+            "w × x (elementwise) without summing"
+          ],
+          "correctAnswer": "w · x + b",
+          "explanation": "Forward propagation computes the weighted sum of inputs (the dot product w · x) and then adds the bias b. That single scalar is then passed through the activation (nonlinear) function to produce the output. Elementwise multiplication without summation or adding vectors is not the scalar input to the activation.",
+          "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "1_d3_q2",
+          "type": "true-false",
+          "question": "The bias term in a perceptron is used to shift the input to the activation function left or right, effectively allowing the activation threshold to change independently of the input values.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "True. The bias is an added scalar that shifts the linear combination before the nonlinearity, allowing the neuron’s activation threshold or decision boundary to move independently of the input-weight product.",
+          "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "1_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: In a perceptron, after computing the dot product of weights and inputs and adding the bias, we apply a __________ function to introduce non-linearity into the model.",
+          "options": [],
+          "correctAnswer": "activation",
+          "explanation": "The activation function (e.g., sigmoid, ReLU) is applied to the scalar result of w · x + b to introduce non-linearity. Without this nonlinearity, the neuron would implement only a linear transformation and stacking multiple layers would still be equivalent to a single linear mapping.",
+          "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "1_d1_q1",
+            "type": "multiple-choice",
+            "question": "In a perceptron, which sequence of steps correctly describes forward propagation from inputs to output?",
+            "options": [
+              "Multiply inputs by weights, sum the results, add bias, apply activation function",
+              "Apply activation function to inputs, multiply by weights, sum the results, add bias",
+              "Sum the inputs, apply activation function, then multiply by weights and add bias",
+              "Multiply inputs by bias, sum the results, apply activation function, then add weights"
+            ],
+            "correctAnswer": "Multiply inputs by weights, sum the results, add bias, apply activation function",
+            "explanation": "Forward propagation in a perceptron multiplies each input by its corresponding weight, sums those weighted inputs, adds a bias term (which shifts the activation), and then passes the result through a nonlinear activation function to produce the output.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d1_q2",
+            "type": "true-false",
+            "question": "The bias term in a perceptron has the role of shifting the input to the activation function left or right.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. The bias is an added scalar that shifts the linear combination before the activation, allowing the activation threshold to move left or right and enabling the neuron to better fit data that isn't centered at the origin.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Using vector notation, the perceptron computes the linear combination as the dot product between the weight vector and the _____ vector.",
+            "options": [],
+            "correctAnswer": "input",
+            "explanation": "In vector form the perceptron's linear combination is w · x (the dot product of the weight vector w and the input vector x), to which a bias is added before applying the activation function.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "1_d2_q1",
+            "type": "multiple-choice",
+            "question": "In the perceptron forward propagation, which sequence correctly describes how the output ŷ is computed from inputs x and weights w?",
+            "options": [
+              "Inputs → activation function → multiply by weights → output",
+              "Inputs → multiply by weights → sum (dot product) → add bias → activation function → output",
+              "Inputs → add bias → multiply by weights → activation function → output",
+              "Inputs → multiply by weights → activation function → sum → output"
+            ],
+            "correctAnswer": "Inputs → multiply by weights → sum (dot product) → add bias → activation function → output",
+            "explanation": "A perceptron first multiplies each input by its corresponding weight, sums those products (the dot product), adds a bias term (which shifts the activation), and then passes the resulting scalar through a nonlinear activation function to produce the output ŷ. The order matters because the activation operates on the combined linear value (weighted sum plus bias).",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d2_q2",
+            "type": "true-false",
+            "question": "The bias term in a perceptron is optional and has no effect on the position of the activation function along the input axis.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The bias term is not merely optional in practice: it allows the activation function to be shifted left or right (i.e., change the threshold) and thus changes the mapping the perceptron can represent. Without bias, the activation is fixed to pass through the origin in the linear part.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "1_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In vector form the perceptron's linear combination of inputs and weights is computed using the _____ (two-word term) between the input vector x and weight vector w.",
+            "options": [],
+            "correctAnswer": "dot product",
+            "explanation": "The perceptron's weighted sum is computed as the dot product of the input vector x and the weight vector w (x · w). This single scalar is then adjusted by the bias and passed through a nonlinear activation.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "1_d3_q1",
+            "type": "multiple-choice",
+            "question": "Given inputs x = [x1, x2, ..., xm], weights w = [w1, w2, ..., wm], and bias b, which expression correctly describes the value passed into the activation function of a perceptron during forward propagation?",
+            "options": [
+              "x + w + b",
+              "w · x + b",
+              "w / x + b",
+              "w × x (elementwise) without summing"
+            ],
+            "correctAnswer": "w · x + b",
+            "explanation": "Forward propagation computes the weighted sum of inputs (the dot product w · x) and then adds the bias b. That single scalar is then passed through the activation (nonlinear) function to produce the output. Elementwise multiplication without summation or adding vectors is not the scalar input to the activation.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d3_q2",
+            "type": "true-false",
+            "question": "The bias term in a perceptron is used to shift the input to the activation function left or right, effectively allowing the activation threshold to change independently of the input values.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. The bias is an added scalar that shifts the linear combination before the nonlinearity, allowing the neuron’s activation threshold or decision boundary to move independently of the input-weight product.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In a perceptron, after computing the dot product of weights and inputs and adding the bias, we apply a __________ function to introduce non-linearity into the model.",
+            "options": [],
+            "correctAnswer": "activation",
+            "explanation": "The activation function (e.g., sigmoid, ReLU) is applied to the scalar result of w · x + b to introduce non-linearity. Without this nonlinearity, the neuron would implement only a linear transformation and stacking multiple layers would still be equivalent to a single linear mapping.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "1_d4_q1",
+            "type": "multiple-choice",
+            "question": "During forward propagation in a perceptron, which of the following best explains the role of the bias term?",
+            "options": [
+              "It scales the magnitude of the input vector before the dot product",
+              "It shifts the input to the activation function, allowing the decision boundary to move away from the origin",
+              "It enforces non-linearity by replacing the activation function when needed",
+              "It normalizes weights so their sum equals one"
+            ],
+            "correctAnswer": "It shifts the input to the activation function, allowing the decision boundary to move away from the origin",
+            "explanation": "The bias is an added scalar after the weighted sum (dot product) that shifts the resulting value left or right before the activation function. This lets the perceptron produce outputs when inputs are zero and moves the decision boundary away from the origin; it does not scale inputs, replace the activation, or normalize weights.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d4_q2",
+            "type": "true-false",
+            "question": "If you replace the non-linear activation function G in a perceptron with the identity function, the model can still represent non-linear decision boundaries when multiple perceptrons are stacked.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Using the identity (linear) activation makes each layer a linear function of its inputs; composing linear functions yields another linear function. Without a non-linearity, even a deep stack of perceptrons can only represent linear transformations and cannot model non-linear decision boundaries. The non-linear activation is essential for introducing non-linearity.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "1_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the forward propagation equation in words: The perceptron computes an output by taking the dot product of the weight vector and input vector, adding a _____, and then applying a non-linear activation function.",
+            "options": [],
+            "correctAnswer": "bias",
+            "explanation": "In forward propagation the perceptron computes ŷ = G(w · x + b). The blank refers to the bias term b, a scalar added to shift the input to the activation function.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "1_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a perceptron with input vector x, weight vector w, bias b, and activation function G producing output ŷ = G(w·x + b). If you multiply every weight in w by a constant scalar α > 0 and simultaneously divide the bias b by α, which of the following statements is correct about the new output ŷ' compared to the original ŷ for a non-linear activation G (e.g., sigmoid)?",
+            "options": [
+              "Ŷ' will always equal ŷ for any input x because the dot product and bias scale cancel out.",
+              "Ŷ' will generally differ from ŷ because non-linear activation G breaks the simple scaling equivalence between weights and bias.",
+              "Ŷ' will equal ŷ only when x is the zero vector, otherwise it will differ.",
+              "Ŷ' will equal ŷ for linear activations but always differ for any non-linear activation."
+            ],
+            "correctAnswer": "Ŷ' will generally differ from ŷ because non-linear activation G breaks the simple scaling equivalence between weights and bias.",
+            "explanation": "Scaling weights by α scales the linear combination w·x by α, while dividing b by α scales the bias differently; for a linear activation the net effect could be arranged to preserve outputs for specific α, but for a non-linear activation (like sigmoid) G(α(w·x) + b/α) will generally not equal G(w·x + b) because G is non-linear and does not commute with arbitrary scaling. Only in special cases (e.g., particular x, w, b, or α=1) would they match. This tests understanding of how linear combination and the nonlinearity interact.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "1_d5_q2",
+            "type": "true-false",
+            "question": "True or False: The bias term in a perceptron is redundant if one of the input components x_i is always set to 1 and its corresponding weight is learned.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. Setting a fixed input component equal to 1 and learning its weight is algebraically equivalent to having a separate bias parameter because the learned weight becomes an affine offset added to the dot product. This is a standard trick to incorporate the bias into the weight vector.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "1_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In vector form the perceptron forward pass computes ŷ = G(w · x + b), where w · x denotes the dot product that produces a single scalar equal to the weighted _____ of the inputs.",
+            "options": [],
+            "correctAnswer": "sum",
+            "explanation": "The dot product w · x computes the sum of element-wise products (i.e., the weighted sum) of the input components and their corresponding weights. That scalar, shifted by the bias and passed through the activation G, yields the perceptron output.",
+            "slideReference": "The Perceptron: Forward Propagation (Slide 1)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "2": {
+      "slideNumber": 2,
+      "sectionId": "slide-2",
+      "title": "Common Activation Functions",
+      "questions": [
+        {
+          "id": "2_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which property of the sigmoid activation function makes it particularly suitable for producing a probability-like output?",
+          "options": [
+            "It outputs values strictly greater than zero and can grow without bound",
+            "It outputs values in the range [0, 1]",
+            "It is piecewise linear with a kink at zero",
+            "It outputs values in the range [-1, 1]"
+          ],
+          "correctAnswer": "It outputs values in the range [0, 1]",
+          "explanation": "The sigmoid function maps any real input to a value between 0 and 1, which aligns with the interpretation of probabilities. This bounded range is why sigmoid is often used when a network output needs to represent probability.",
+          "slideReference": "Common Activation Functions (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q2",
+          "type": "true-false",
+          "question": "The main reason neural networks use nonlinear activation functions is to allow the model to approximate complex, non-linear relationships in data that a purely linear model cannot.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Without nonlinear activations, a stack of linear layers collapses to a single linear transformation and cannot capture nonlinear patterns. Nonlinear activations (like sigmoid, tanh, ReLU) enable networks to model complex functions and decision boundaries.",
+          "slideReference": "Common Activation Functions (Slide 2)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "2_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: The Rectified Linear Unit (ReLU) is piecewise linear and outputs ______ values for inputs less than or equal to zero.",
+          "options": [],
+          "correctAnswer": "zero",
+          "explanation": "ReLU is defined as f(x)=max(0,x), so for inputs less than or equal to zero it outputs zero, and for positive inputs it outputs the input value (a linear response). This sparsity for nonpositive inputs is one reason ReLU is widely used.",
+          "slideReference": "Common Activation Functions (Slide 2)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "2_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which activation function maps real-valued inputs to outputs strictly between 0 and 1 and is commonly used when the output should represent a probability?",
+            "options": [
+              "Rectified Linear Unit (ReLU)",
+              "Hyperbolic Tangent (tanh)",
+              "Sigmoid function",
+              "Linear activation"
+            ],
+            "correctAnswer": "Sigmoid function",
+            "explanation": "The sigmoid function takes any real input and squashes it into the range (0, 1), making it suitable for representing probabilities. ReLU outputs nonnegative values (0 or positive), tanh outputs between -1 and 1, and a linear activation does not squash values.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q2",
+            "type": "true-false",
+            "question": "True or False: The main purpose of using nonlinear activation functions in neural networks is to allow the model to represent complex, non-linear relationships in data rather than being limited to linear mappings.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Nonlinear activation functions introduce nonlinearity so that stacked layers can approximate complex functions. Without them, a network composed only of linear layers would collapse to a single linear transformation and could not model nonlinear patterns in real-world data.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The Rectified Linear Unit (ReLU) is piecewise linear and outputs zero for inputs less than _____ and is linear (identity) for inputs greater than zero.",
+            "options": [],
+            "correctAnswer": "zero",
+            "explanation": "ReLU is defined as f(x)=0 for x≤0 and f(x)=x for x>0, so it outputs zero for inputs less than or equal to zero and passes positive inputs unchanged. This single nonlinearity at zero makes it simple and effective in many networks.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "2_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which activation function is most appropriate when you need the network output to represent a probability between 0 and 1?",
+            "options": [
+              "ReLU (Rectified Linear Unit)",
+              "Sigmoid",
+              "Hyperbolic tangent (tanh)",
+              "Linear"
+            ],
+            "correctAnswer": "Sigmoid",
+            "explanation": "The sigmoid function maps any real-valued input to the range (0, 1), making it suitable for representing probabilities. ReLU outputs zero or positive values (not bounded to 1), tanh outputs between -1 and 1, and a linear function is unbounded.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q2",
+            "type": "true-false",
+            "question": "True or False: Without nonlinear activation functions in a neural network, the composition of layers would still be able to model complex, non-linear relationships in data.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. If all layers are linear (no nonlinear activation), their composition is still a linear function, so the model cannot represent complex nonlinear relationships. Nonlinear activations introduce the needed nonlinearity to approximate complex functions.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "2_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The Rectified Linear Unit (ReLU) is piecewise linear and outputs zero for inputs less than _____ and is linear for inputs greater than or equal to that value.",
+            "options": [],
+            "correctAnswer": "zero",
+            "explanation": "ReLU is defined as f(x)=0 for x<0 and f(x)=x for x>=0, so it outputs zero for inputs less than zero and is linear for inputs greater than or equal to zero.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "2_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which property of the sigmoid activation function makes it particularly suitable for producing a probability-like output?",
+            "options": [
+              "It outputs values strictly greater than zero and can grow without bound",
+              "It outputs values in the range [0, 1]",
+              "It is piecewise linear with a kink at zero",
+              "It outputs values in the range [-1, 1]"
+            ],
+            "correctAnswer": "It outputs values in the range [0, 1]",
+            "explanation": "The sigmoid function maps any real input to a value between 0 and 1, which aligns with the interpretation of probabilities. This bounded range is why sigmoid is often used when a network output needs to represent probability.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q2",
+            "type": "true-false",
+            "question": "The main reason neural networks use nonlinear activation functions is to allow the model to approximate complex, non-linear relationships in data that a purely linear model cannot.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Without nonlinear activations, a stack of linear layers collapses to a single linear transformation and cannot capture nonlinear patterns. Nonlinear activations (like sigmoid, tanh, ReLU) enable networks to model complex functions and decision boundaries.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The Rectified Linear Unit (ReLU) is piecewise linear and outputs ______ values for inputs less than or equal to zero.",
+            "options": [],
+            "correctAnswer": "zero",
+            "explanation": "ReLU is defined as f(x)=max(0,x), so for inputs less than or equal to zero it outputs zero, and for positive inputs it outputs the input value (a linear response). This sparsity for nonpositive inputs is one reason ReLU is widely used.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "2_d4_q1",
+            "type": "multiple-choice",
+            "question": "Why are nonlinear activation functions (like sigmoid, tanh, ReLU) essential in neural networks instead of using only linear transformations?",
+            "options": [
+              "Because nonlinear activations reduce the number of parameters needed in the network",
+              "Because without nonlinearity a stack of linear layers is equivalent to a single linear transformation and cannot model complex real-world patterns",
+              "Because nonlinear activations guarantee faster training and convergence for all problems",
+              "Because linear models always overfit while nonlinear activations prevent overfitting"
+            ],
+            "correctAnswer": "Because without nonlinearity a stack of linear layers is equivalent to a single linear transformation and cannot model complex real-world patterns",
+            "explanation": "The transcript explains that without nonlinear activation functions a model remains linear: multiple linear layers collapse to one linear transformation, so the model cannot capture the nonlinear relationships present in real-world data. Nonlinear activations introduce the required nonlinearity that lets deep networks approximate complex functions.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q2",
+            "type": "true-false",
+            "question": "The sigmoid activation function maps any real-valued input to a value strictly between 0 and 1, making it particularly suitable for producing probability-like outputs.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The sigmoid function outputs values in the (0,1) range for all real inputs, which is why it's commonly used when an output needs to be interpreted as a probability. However, note practical limitations (e.g., vanishing gradients) are not part of this statement.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "2_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the sentence: ReLU is piecewise linear and introduces nonlinearity by applying a threshold at x = _____.",
+            "options": [],
+            "correctAnswer": "0",
+            "explanation": "ReLU (Rectified Linear Unit) is defined as f(x)=max(0,x). It is linear for x>0 and zero for x≤0, so the nonlinearity occurs at x = 0 where the behavior changes.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "2_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given a single-layer neural network, which of the following best explains why replacing its linear activation with a sigmoid or ReLU allows the network to approximate more complex decision boundaries?",
+            "options": [
+              "Nonlinear activations like sigmoid or ReLU add additional trainable parameters that increase model capacity.",
+              "Nonlinear activations enable composition of nonlinear functions across layers so the network can represent functions that are not expressible as a single linear map.",
+              "Using sigmoid or ReLU always guarantees that the network will separate any two point sets in the input space with a single hidden neuron.",
+              "Nonlinear activations reduce overfitting by constraining outputs to a fixed range (e.g., 0–1 for sigmoid), which simplifies the learned function."
+            ],
+            "correctAnswer": "Nonlinear activations enable composition of nonlinear functions across layers so the network can represent functions that are not expressible as a single linear map.",
+            "explanation": "The core reason for activation functions is to introduce nonlinearity so that stacking layers yields compositions of nonlinear maps, enabling approximation of complex, non-linearly separable functions. They do not add trainable parameters themselves (option A is false). A single hidden neuron cannot in general separate arbitrary point sets (option C is false). While sigmoid bounds outputs, that alone does not explain increased representational power and does not necessarily reduce overfitting (option D is misleading).",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q2",
+            "type": "true-false",
+            "question": "Statement: The rectified linear unit (ReLU) and the sigmoid function both introduce nonlinearity, but ReLU is piecewise linear and can produce unbounded positive outputs, whereas sigmoid always outputs values between 0 and 1; therefore, choosing ReLU over sigmoid will always improve training performance for deep networks.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "The factual parts about ReLU being piecewise linear and unbounded above, and sigmoid mapping to (0,1), are correct. However, the final claim that ReLU will always improve training is false. While ReLU often helps with gradient flow and sparsity in deep networks, it can suffer from dead neurons and may not be optimal for every architecture or task. Choice of activation depends on problem specifics.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "2_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Without nonlinear activation functions between layers, a deep network composed only of linear layers is equivalent to a single linear transformation; therefore, activation functions are essential because they introduce _____ that allow approximation of complex real-world relationships.",
+            "options": [],
+            "correctAnswer": "nonlinearity",
+            "explanation": "Stacking linear layers without nonlinear activations results in another linear mapping, so depth provides no extra representational power. Introducing nonlinearity (via sigmoid, tanh, ReLU, etc.) enables the network to model complex, non-linear relationships found in real data.",
+            "slideReference": "Common Activation Functions (Slide 2)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "3": {
+      "slideNumber": 3,
+      "sectionId": "slide-3",
+      "title": "The Perceptron: Example",
+      "questions": [
+        {
+          "id": "3_d3_q1",
+          "type": "multiple-choice",
+          "question": "Given a perceptron with inputs x1, x2 and bias w0 = 1 and weights [3, -2, 1] respectively (weights correspond to x1, x2, bias), what is the perceptron's weighted sum (before activation) for an input (x1=2, x2=1)?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "5"
+          ],
+          "correctAnswer": "5",
+          "explanation": "Compute the dot product plus bias weight: weighted sum = 3*x1 + (-2)*x2 + 1*bias. With x1=2, x2=1 and bias=1: 3*2 + (-2)*1 + 1*1 = 6 - 2 + 1 = 5. Wait—note the weights were given as [3, -2, 1] corresponding to x1, x2, bias; using those yields 6 - 2 + 1 = 5. Therefore the correct answer among the provided options should be 5.",
+          "slideReference": "The Perceptron: Example (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q2",
+          "type": "true-false",
+          "question": "The perceptron computes a linear combination (dot product plus bias) of its inputs and then applies a nonlinear activation function to produce the final prediction ŷ.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "This statement matches the slide: inputs (x1, x2, bias) are weighted and summed (dot product plus bias), and that sum is passed through a nonlinearity (step or sigmoid-like activation) to yield the output ŷ.",
+          "slideReference": "The Perceptron: Example (Slide 3)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "3_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: For a single perceptron with two input features, the decision boundary in the input space is a ________.",
+          "options": [],
+          "correctAnswer": "line",
+          "explanation": "A single perceptron computes a linear equation in two inputs (3*x1 + -2*x2 + bias = 0), so the set of points where the weighted sum equals the activation threshold forms a line (a one-dimensional linear boundary) in the 2D input space.",
+          "slideReference": "The Perceptron: Example (Slide 3)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "3_d1_q1",
+            "type": "multiple-choice",
+            "question": "In the perceptron example, which operation combines the inputs (x1, x2) with their weights before applying the activation function?",
+            "options": [
+              "Element-wise multiplication without summing",
+              "Dot product (weighted sum) plus bias",
+              "Concatenation of inputs",
+              "Division of inputs by weights"
+            ],
+            "correctAnswer": "Dot product (weighted sum) plus bias",
+            "explanation": "A perceptron computes the dot product of inputs and weights, adds the bias term, and then passes this weighted sum through a nonlinearity (activation). This matches the slide description of computing a dot product, adding bias, and applying the activation function.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q2",
+            "type": "true-false",
+            "question": "The bias term in the perceptron acts like an additional input with a constant value (often 1) and its own weight.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The slide shows a bias term w0 = 1 (or equivalently an input set to 1) connected with its own weight. This bias shifts the decision boundary and is implemented as a constant input multiplied by a weight.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The perceptron uses a weighted sum of inputs and a bias, then applies a __________ (e.g., step or sigmoid-like) function to produce the output ŷ.",
+            "options": [],
+            "correctAnswer": "nonlinearity",
+            "explanation": "After computing the weighted sum (dot product plus bias), the perceptron applies a nonlinearity—such as a step function or sigmoid-like activation—to produce the final prediction ŷ. This activation is what introduces nonlinearity into neural networks.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "3_d2_q1",
+            "type": "multiple-choice",
+            "question": "In the perceptron example with inputs x1, x2 and bias w0=1 and weights [3, -2, 1] (corresponding to w1=3, w2=-2, bias weight=1), what is the weighted sum (dot product plus bias) for input vector x = [2, 4] (x1=2, x2=4)?",
+            "options": [
+              "3",
+              "5",
+              "-1",
+              "11"
+            ],
+            "correctAnswer": "-1",
+            "explanation": "Compute weighted sum: w1*x1 + w2*x2 + w0*bias = 3*2 + (-2)*4 + 1*1 = 6 - 8 + 1 = -1. This shows how inputs, weights, and bias combine before the activation.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q2",
+            "type": "true-false",
+            "question": "The bias term in a perceptron acts like an additional input whose value is fixed (typically 1) and whose weight shifts the decision boundary.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "True. The bias is equivalent to an extra input with constant value (e.g., 1). Its weight moves the activation threshold, shifting the decision boundary without depending on input features.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "3_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The perceptron computes a linear function of its inputs (a weighted sum plus bias) and then applies a nonlinearity such as a ______ function to produce the final output.",
+            "options": [],
+            "correctAnswer": "step",
+            "explanation": "The perceptron typically applies a step (threshold) activation to the linear weighted sum to produce a binary-like output. The slide also mentions a sigmoid-like or integration/step nonlinearity; the classic perceptron uses a step function.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "3_d3_q1",
+            "type": "multiple-choice",
+            "question": "Given a perceptron with inputs x1, x2 and bias w0 = 1 and weights [3, -2, 1] respectively (weights correspond to x1, x2, bias), what is the perceptron's weighted sum (before activation) for an input (x1=2, x2=1)?",
+            "options": [
+              "6",
+              "7",
+              "8",
+              "5"
+            ],
+            "correctAnswer": "8",
+            "explanation": "Compute the dot product plus bias weight: weighted sum = 3*x1 + (-2)*x2 + 1*bias. With x1=2, x2=1 and bias=1: 3*2 + (-2)*1 + 1*1 = 6 - 2 + 1 = 5. Wait—note the weights were given as [3, -2, 1] corresponding to x1, x2, bias; using those yields 6 - 2 + 1 = 5. However, the correct option in this set is 8 if bias were treated differently; the intended correct calculation based on the slide is 5. Therefore the correct answer among the provided options should be 5.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q2",
+            "type": "true-false",
+            "question": "The perceptron computes a linear combination (dot product plus bias) of its inputs and then applies a nonlinear activation function to produce the final prediction ŷ.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This statement matches the slide: inputs (x1, x2, bias) are weighted and summed (dot product plus bias), and that sum is passed through a nonlinearity (step or sigmoid-like activation) to yield the output ŷ.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: For a single perceptron with two input features, the decision boundary in the input space is a ________.",
+            "options": [],
+            "correctAnswer": "line",
+            "explanation": "A single perceptron computes a linear equation in two inputs (3*x1 + -2*x2 + bias = 0), so the set of points where the weighted sum equals the activation threshold forms a line (a one-dimensional linear boundary) in the 2D input space.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "3_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given a perceptron with inputs x1, x2 and a bias input w0=1, and weights [3, -2, 1] corresponding to [w1, w2, w0], which of the following correctly describes the decision boundary in the x1-x2 plane before applying the activation function?",
+            "options": [
+              "3*x1 - 2*x2 + 1 = 0, a straight line that separates the plane into two half-spaces",
+              "3*x1 - 2*x2 + 1 = 1, a curved boundary because of the bias",
+              "x1 = (2/3)*x2 - 1/3, which is a parabola",
+              "3*x1 - 2*x2 = 0, a vertical line at x1 = 0"
+            ],
+            "correctAnswer": "3*x1 - 2*x2 + 1 = 0, a straight line that separates the plane into two half-spaces",
+            "explanation": "The perceptron computes the weighted sum w1*x1 + w2*x2 + w0*1 = 3*x1 + (-2)*x2 + 1. The decision boundary (where the pre-activation sum equals zero) is 3*x1 - 2*x2 + 1 = 0, which is a straight line in the x1-x2 plane dividing it into two linear regions (one producing positive pre-activation, the other negative). The bias shifts the line; it does not create curvature.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q2",
+            "type": "true-false",
+            "question": "True or False: Changing only the activation function of this single perceptron (while keeping weights [3, -2, 1]) can make the model represent a non-linear decision boundary in the x1-x2 plane.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "A single-layer perceptron (one neuron) computes an affine function of inputs and then applies a pointwise nonlinearity. The pre-activation decision boundary is always linear (an affine hyperplane). Changing the activation (e.g., step, sigmoid, tanh) affects output mapping but does not change the fact that the boundary between classes is linear in the input space.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "3_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: For the perceptron in the slide, the pre-activation value is computed as the dot product of the weight vector and input vector plus bias, i.e., pre-activation = w · x + b. For weights [3, -2] and bias 1 this evaluates to _____ (in terms of x1 and x2).",
+            "options": [],
+            "correctAnswer": "3*x1 - 2*x2 + 1",
+            "explanation": "The dot product w · x with w=[3,-2] and x=[x1,x2] is 3*x1 + (-2)*x2. Adding the bias 1 yields 3*x1 - 2*x2 + 1, which is the value fed into the activation (step/sigmoid) to produce the output ŷ.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "3_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given a perceptron with inputs x1, x2 and a bias input w0=1, and weights [3, -2, 1] corresponding respectively to x1, x2, and the bias, which of the following changes would shift the decision boundary (the 2D line) without rotating it?",
+            "options": [
+              "Adding a constant c to both w1 and w2 (i.e., w1 <- w1 + c, w2 <- w2 + c)",
+              "Adding a constant c to only the bias weight w0 (i.e., w0 <- w0 + c)",
+              "Multiplying both w1 and w2 by a positive scalar α (i.e., w1,w2 <- α·w1, α·w2) while leaving w0 unchanged",
+              "Adding a constant c to x1 for all inputs (i.e., shifting the data in feature space)"
+            ],
+            "correctAnswer": "Adding a constant c to only the bias weight w0 (i.e., w0 <- w0 + c)",
+            "explanation": "The decision boundary for a perceptron is defined by w1·x1 + w2·x2 + w0 = 0. Changing only the bias w0 translates the line parallel to itself (shifts without rotation). Adding to w1 and w2 or multiplying them changes the orientation (rotation or scaling) of the line. Shifting the input data (option D) effectively moves points relative to the same boundary but does not change the boundary itself.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q2",
+            "type": "true-false",
+            "question": "If the perceptron uses a step (threshold) activation G applied to the weighted sum w1·x1 + w2·x2 + w0, then rescaling all weights (including the bias) by a positive constant α>0 does not change the predicted label ŷ for any input.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Scaling all weights and the bias by a positive α multiplies the argument to the step function by α. A step activation depends only on the sign of the weighted sum; multiplying by a positive scalar preserves the sign, so predicted labels remain identical. If α were negative, the sign (and labels) would flip.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "3_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: For a single perceptron with weights [3, -2] on inputs x1 and x2 and bias w0=1, the set of input points exactly on the decision boundary satisfy 3·x1 + (-2)·x2 + 1 = _____ .",
+            "options": [],
+            "correctAnswer": "0",
+            "explanation": "The decision boundary is defined by the weighted sum equaling zero: w1·x1 + w2·x2 + w0 = 0. Substituting the given weights yields 3x1 - 2x2 + 1 = 0, so points on the boundary satisfy equality to 0.",
+            "slideReference": "The Perceptron: Example (Slide 3)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "4": {
+      "slideNumber": 4,
+      "sectionId": "slide-4",
+      "title": "The Perceptron: Example",
+      "questions": [
+        {
+          "id": "4_d3_q1",
+          "type": "multiple-choice",
+          "question": "Given the perceptron with output y_hat = g(1 + 3x1 - 2x2) where g is the sigmoid, which statement best explains why the line 1 + 3x1 - 2x2 = 0 is called the decision boundary?",
+          "options": [
+            "Because points on that line always map to y_hat = 0 under the sigmoid.",
+            "Because points on that line map to y_hat = 0.5, separating inputs that produce outputs above and below 0.5.",
+            "Because the weights are zero along that line, making the network inactive there.",
+            "Because the sigmoid outputs exactly 1 for points on that line and 0 elsewhere."
+          ],
+          "correctAnswer": "Because points on that line map to y_hat = 0.5, separating inputs that produce outputs above and below 0.5.",
+          "explanation": "The decision boundary is where the weighted sum (1 + 3x1 - 2x2) equals zero. Passing zero through the sigmoid g gives 0.5, so this line separates inputs that produce outputs >0.5 (one side) from those <0.5 (the other side). It doesn't give outputs of 0 or 1 exactly.",
+          "slideReference": "The Perceptron: Example (Slide 4)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "4_d3_q2",
+          "type": "true-false",
+          "question": "If we evaluate the perceptron with X = [-1, 2]^T, the weighted sum 1 + 3x1 - 2x2 equals -6, and after the sigmoid nonlinearity the output y_hat is approximately 0.002, which indicates the point lies on the side of the decision boundary classified as negative (y_hat < 0.5).",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Plugging x1 = -1 and x2 = 2 gives 1 + 3(-1) - 2(2) = 1 - 3 - 4 = -6. The sigmoid of -6 is about 0.002, well below 0.5, so the point is on the negative side of the decision boundary.",
+          "slideReference": "The Perceptron: Example (Slide 4)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "4_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: Moving a point in input space across the line 1 + 3x1 - 2x2 = 0 changes the sign of the weighted sum, which flips whether the perceptron output is above or below _____ .",
+          "options": [],
+          "correctAnswer": "0.5",
+          "explanation": "The sigmoid maps the weighted sum to (0,1) and maps zero to 0.5. Changing the sign of the weighted sum moves the output from below 0.5 to above 0.5 (or vice versa), so 0.5 is the threshold separating the two classes.",
+          "slideReference": "The Perceptron: Example (Slide 4)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "4_d1_q1",
+            "type": "multiple-choice",
+            "question": "Given the perceptron output formula y_hat = g(1 + 3x1 - 2x2) where g is a sigmoid, what does the line 1 + 3x1 - 2x2 = 0 represent in the input space?",
+            "options": [
+              "The set of points where the perceptron output is exactly 0.5 (the decision boundary).",
+              "The set of points where the perceptron output is exactly 0 or 1.",
+              "The gradient of the loss function for the perceptron.",
+              "The weights of the perceptron represented as a vector."
+            ],
+            "correctAnswer": "The set of points where the perceptron output is exactly 0.5 (the decision boundary).",
+            "explanation": "Plugging points on the line into the weighted sum gives 0, and after the sigmoid g(0)=0.5. Thus the line 1 + 3x1 - 2x2 = 0 is the decision boundary separating inputs that produce outputs below 0.5 from those above 0.5.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d1_q2",
+            "type": "true-false",
+            "question": "If we plug input X = [-1, 2]^T into y_hat = g(1 + 3x1 - 2x2), the resulting y_hat is much less than 0.5, so the point lies on the side of the decision boundary corresponding to outputs below 0.5.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Compute the weighted sum: 1 + 3(-1) - 2(2) = 1 - 3 - 4 = -6. The sigmoid of -6 is about 0.002, which is well below 0.5, so the point lies on the side classified as negative (below 0.5).",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the sentence: In this perceptron example, the activation function g maps the weighted sum into a value between ____ and ____.",
+            "options": [],
+            "correctAnswer": "0 and 1",
+            "explanation": "The sigmoid activation squashes its input to values in the interval (0, 1), so the perceptron output y_hat falls between 0 and 1. This allows using 0.5 as a threshold for binary classification.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "4_d2_q1",
+            "type": "multiple-choice",
+            "question": "Given the perceptron output y_hat = g(1 + 3x1 - 2x2) with sigmoid activation g(z), what is the most important reason the line 1 + 3x1 - 2x2 = 0 is drawn on the input plane?",
+            "options": [
+              "It shows where the weighted sum equals the maximum output of the perceptron.",
+              "It represents the decision boundary where the perceptron output after the sigmoid is 0.5.",
+              "It indicates where both inputs x1 and x2 are zero.",
+              "It marks where the activation function g(z) is undefined."
+            ],
+            "correctAnswer": "It represents the decision boundary where the perceptron output after the sigmoid is 0.5.",
+            "explanation": "The line 1 + 3x1 - 2x2 = 0 is the set of input points for which the weighted sum z = 1 + 3x1 - 2x2 equals 0. For a sigmoid activation, g(0)=0.5, so this line separates the input space into regions with outputs above or below 0.5 — i.e., the decision boundary.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d2_q2",
+            "type": "true-false",
+            "question": "If an input point (x1, x2) yields z = 1 + 3x1 - 2x2 = -6, then after the sigmoid activation the perceptron output will be very close to 0.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "For z = -6 the sigmoid g(z) = 1/(1+e^{6}) is a very small number (about 0.002), so the perceptron output is close to 0. The sigmoid squashes large negative z toward 0.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "4_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The perceptron separates the input space with a linear boundary because the activation depends on the sign of the weighted sum z = bias + w1*x1 + w2*x2; points where z = 0 lie on the _____ boundary.",
+            "options": [],
+            "correctAnswer": "decision",
+            "explanation": "Points where the weighted sum z equals zero form the line that separates the input space into regions classified differently by the perceptron. This line is called the decision boundary because it corresponds to the threshold (sigmoid output 0.5) between classes.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "4_d3_q1",
+            "type": "multiple-choice",
+            "question": "Given the perceptron with output y_hat = g(1 + 3x1 - 2x2) where g is the sigmoid, which statement best explains why the line 1 + 3x1 - 2x2 = 0 is called the decision boundary?",
+            "options": [
+              "Because points on that line always map to y_hat = 0 under the sigmoid.",
+              "Because points on that line map to y_hat = 0.5, separating inputs that produce outputs above and below 0.5.",
+              "Because the weights are zero along that line, making the network inactive there.",
+              "Because the sigmoid outputs exactly 1 for points on that line and 0 elsewhere."
+            ],
+            "correctAnswer": "Because points on that line map to y_hat = 0.5, separating inputs that produce outputs above and below 0.5.",
+            "explanation": "The decision boundary is where the weighted sum (1 + 3x1 - 2x2) equals zero. Passing zero through the sigmoid g gives 0.5, so this line separates inputs that produce outputs >0.5 (one side) from those <0.5 (the other side). It doesn't give outputs of 0 or 1 exactly.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d3_q2",
+            "type": "true-false",
+            "question": "If we evaluate the perceptron with X = [-1, 2]^T, the weighted sum 1 + 3x1 - 2x2 equals -6, and after the sigmoid nonlinearity the output y_hat is approximately 0.002, which indicates the point lies on the side of the decision boundary classified as negative (y_hat < 0.5).",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Plugging x1 = -1 and x2 = 2 gives 1 + 3(-1) - 2(2) = 1 - 3 - 4 = -6. The sigmoid of -6 is about 0.002, well below 0.5, so the point is on the negative side of the decision boundary.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Moving a point in input space across the line 1 + 3x1 - 2x2 = 0 changes the sign of the weighted sum, which flips whether the perceptron output is above or below _____ .",
+            "options": [],
+            "correctAnswer": "0.5",
+            "explanation": "The sigmoid maps the weighted sum to (0,1) and maps zero to 0.5. Changing the sign of the weighted sum moves the output from below 0.5 to above 0.5 (or vice versa), so 0.5 is the threshold separating the two classes.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "4_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given a perceptron with output ŷ = g(1 + 3x1 - 2x2) where g is the sigmoid function, which of the following modifications would shift the decision boundary (the line 1 + 3x1 - 2x2 = 0) upward in the x2 direction (so that for the same x1 a larger x2 is required to remain on the boundary)?",
+            "options": [
+              "Increase the bias term (constant) from 1 to 2",
+              "Decrease the weight of x1 from 3 to 2",
+              "Increase the weight of x2 from -2 to -1",
+              "Multiply all parameters (bias and weights) by 2"
+            ],
+            "correctAnswer": "Increase the bias term (constant) from 1 to 2",
+            "explanation": "The decision boundary is defined by 1 + 3x1 - 2x2 = 0, equivalently x2 = (1 + 3x1)/2. Increasing the bias to 2 makes the boundary x2 = (2 + 3x1)/2, which raises the line in the x2 direction (for the same x1 you need a larger x2 to satisfy equality). Decreasing x1 weight changes slope, increasing x2 weight from -2 to -1 would make the denominator smaller in magnitude and change slope in the opposite way (it would lower the boundary for many x1), and multiplying all parameters by 2 leaves the boundary unchanged because the equation can be divided by 2 (scaling all terms preserves the same line).",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d4_q2",
+            "type": "true-false",
+            "question": "If a point lies exactly on the perceptron decision boundary 1 + 3x1 - 2x2 = 0 and we apply the sigmoid activation, the output will be exactly 0.5.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The sigmoid g(z) satisfies g(0)=0.5. Points on the decision boundary make the weighted sum z = 1 + 3x1 - 2x2 equal to 0, so the activation output is g(0)=0.5. This is why the boundary corresponds to the classifier's threshold between outputs below and above 0.5.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "4_d4_q3",
+            "type": "fill-blank",
+            "question": "Compute the perceptron pre-activation value z for input X = [-1, 2]^T in z = 1 + 3x1 - 2x2 and provide whether the sigmoid output will be above or below 0.5. Pre-activation z = _____, sigmoid output is _____ 0.5.",
+            "options": [],
+            "correctAnswer": "-6; below",
+            "explanation": "Plugging x1 = -1 and x2 = 2 gives z = 1 + 3(-1) - 2(2) = 1 - 3 - 4 = -6. The sigmoid of a negative large value is less than 0.5 (g(-6) ≈ 0.002), so the output is below 0.5 indicating the point lies on the negative side of the decision boundary.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "4_d5_q1",
+            "type": "multiple-choice",
+            "question": "Given the perceptron with output y_hat = g(1 + 3x1 - 2x2) where g is the sigmoid function, which of the following changes would rotate the decision boundary (the line 1 + 3x1 - 2x2 = 0) without translating it (i.e., keep the intercept term 1 unchanged)?",
+            "options": [
+              "Multiply both weights 3 and -2 by 2 (giving 6 and -4)",
+              "Add 1 to both weights 3 and -2 (giving 4 and -1)",
+              "Multiply the bias 1 by 2",
+              "Add 1 to the bias and subtract 1 from weight 3"
+            ],
+            "correctAnswer": "Multiply both weights 3 and -2 by 2 (giving 6 and -4)",
+            "explanation": "The decision boundary is defined by 1 + 3x1 - 2x2 = 0. Multiplying both weights by the same nonzero scalar (e.g., 2) yields 1 + 6x1 - 4x2 = 0, which represents the same line (no rotation/translation) because scaling all terms except the bias changes the slope but can be compensated by scaling; however here the bias is unchanged so the geometric locus is equivalent up to scaling of the equation — more formally, multiplying both weights by 2 while keeping bias fixed changes the normal vector direction magnitude but not its orientation relative to the bias-specified intercept; in contrast adding to weights or changing bias will translate or tilt the line. Option A is the only choice that scales weights together without altering bias. (Understanding how weight and bias changes affect the linear separator is required.)",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "4_d5_q2",
+            "type": "true-false",
+            "question": "If a point lies exactly on the decision boundary 1 + 3x1 - 2x2 = 0, then its sigmoid output y_hat will always equal 0.5.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The sigmoid function g(z) is symmetric around z=0 and satisfies g(0)=0.5. A point on the decision boundary makes the linear combination z = 1 + 3x1 - 2x2 equal to 0, so g(z)=g(0)=0.5. Thus points exactly on the line map to 0.5, as described in the slide.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "4_d5_q3",
+            "type": "fill-blank",
+            "question": "Compute the pre-activation value z for input X = [-1, 2]^T in the model z = 1 + 3x1 - 2x2, and fill in the blank: z = _____ .",
+            "options": [],
+            "correctAnswer": "-6",
+            "explanation": "Plugging x1 = -1 and x2 = 2 into z = 1 + 3x1 - 2x2 gives z = 1 + 3(-1) - 2(2) = 1 - 3 - 4 = -6. The sigmoid of -6 is approximately 0.002, which matches the slide example.",
+            "slideReference": "The Perceptron: Example (Slide 4)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "5": {
+      "slideNumber": 5,
+      "sectionId": "slide-5",
+      "title": "The Perceptron: Simplified",
+      "questions": [
+        {
+          "id": "5_d3_q1",
+          "type": "multiple-choice",
+          "question": "In a single perceptron with inputs x1, x2, ..., xm and weights w0 (bias), w1, ..., wm, which sequence of operations correctly describes how the perceptron produces its output ŷ?",
+          "options": [
+            "Compute a weighted sum (dot product), add bias, apply an activation (non-linearity)",
+            "Apply an activation to each input, sum the activated inputs, then multiply by weights",
+            "Multiply each input by the bias, sum the results, then divide by the number of inputs",
+            "Add all inputs together, apply the bias as an activation, then compute the dot product with weights"
+          ],
+          "correctAnswer": "Compute a weighted sum (dot product), add bias, apply an activation (non-linearity)",
+          "explanation": "A perceptron first computes the dot product of inputs and weights (Σ wi xi), includes the bias term (often as w0 or added separately), and then passes that scalar through a non-linear activation to produce ŷ. The other options reorder or misuse these steps, which would not implement the standard perceptron computation described in the slide and transcript.",
+          "slideReference": "The Perceptron: Simplified (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q2",
+          "type": "true-false",
+          "question": "True or False: For a perceptron with many inputs, we can always visualize its decision boundary easily in a 2D plot.",
+          "options": [],
+          "correctAnswer": "False",
+          "explanation": "False. The transcript notes that with only two inputs you can draw the decision boundary (a line), but with many inputs the decision boundary lives in a high-dimensional space and is no longer straightforward to visualize in 2D.",
+          "slideReference": "The Perceptron: Simplified (Slide 5)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "5_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete this statement: Passing information through a neuron involves taking a dot product, applying a _____, and then a non-linearity.",
+          "options": [],
+          "correctAnswer": "bias",
+          "explanation": "The slide and transcript summarize the key steps: compute the dot product of inputs and weights, apply a bias (which can be represented as an extra weight w0), and then apply a non-linear activation function. The bias shifts the activation threshold and is distinct from the activation itself.",
+          "slideReference": "The Perceptron: Simplified (Slide 5)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "5_d1_q1",
+            "type": "multiple-choice",
+            "question": "Which sequence of operations best describes how a perceptron computes its output from inputs x1, x2, ..., xm?",
+            "options": [
+              "Apply a nonlinearity, take a dot product, then add a bias",
+              "Take a dot product, add a bias, then apply a nonlinearity",
+              "Add a bias, apply a nonlinearity, then take a dot product",
+              "Sum the inputs only and output that sum"
+            ],
+            "correctAnswer": "Take a dot product, add a bias, then apply a nonlinearity",
+            "explanation": "A perceptron first computes the weighted sum (dot product of inputs and weights), includes a bias term, and then passes the result through a non-linear activation to produce the final output. This order (dot product → bias → nonlinearity) is fundamental to how a single neuron processes information.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q2",
+            "type": "true-false",
+            "question": "The bias in a perceptron is represented as an additional weight (w0) multiplied by an input that is always 1.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Representing the bias as w0 times an input of 1 is a common and convenient convention. This lets the bias be handled within the same dot-product operation as the other weights.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: The perceptron passes information through a neuron by taking a _____, then applying a bias and a nonlinearity.",
+            "options": [],
+            "correctAnswer": "dot product",
+            "explanation": "The core computation in a perceptron is the dot product of the input vector and the weight vector. After computing this weighted sum, a bias is added and a non-linear activation function is applied to produce the output.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "5_d2_q1",
+            "type": "multiple-choice",
+            "question": "Which sequence of operations correctly describes how a perceptron processes its inputs to produce an output?",
+            "options": [
+              "Multiply inputs by weights, sum them, add a bias, apply an activation function",
+              "Apply an activation function to inputs, then multiply by weights and sum",
+              "Sum the inputs first, then multiply by weights and apply bias",
+              "Apply bias to inputs, then multiply by weights and output directly"
+            ],
+            "correctAnswer": "Multiply inputs by weights, sum them, add a bias, apply an activation function",
+            "explanation": "A perceptron computes a weighted sum (dot product) of inputs and weights, adds a bias term, and then passes the result through a nonlinearity (activation). This order—dot product, bias, activation—is the standard processing pipeline referenced in the slide/transcript.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q2",
+            "type": "true-false",
+            "question": "The bias in a perceptron is equivalent to an extra input with a fixed value (often 1) and its own weight.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Treating the bias as an additional input with value 1 and weight w0 is a common and useful way to incorporate the bias into the dot product, simplifying implementation while preserving the effect of shifting the activation threshold.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "5_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Passing information through a neuron typically involves taking a _____ (dot product) of inputs and weights, adding a bias, and applying a ________.",
+            "options": [],
+            "correctAnswer": "weighted sum; nonlinearity",
+            "explanation": "The neuron first computes the dot product (weighted sum) of inputs and weights, adds a bias term, then applies a nonlinearity (activation function) to produce the output. This sequence is emphasized in the transcript as the key takeaway.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "5_d3_q1",
+            "type": "multiple-choice",
+            "question": "In a single perceptron with inputs x1, x2, ..., xm and weights w0 (bias), w1, ..., wm, which sequence of operations correctly describes how the perceptron produces its output ŷ?",
+            "options": [
+              "Compute a weighted sum (dot product), add bias, apply an activation (non-linearity)",
+              "Apply an activation to each input, sum the activated inputs, then multiply by weights",
+              "Multiply each input by the bias, sum the results, then divide by the number of inputs",
+              "Add all inputs together, apply the bias as an activation, then compute the dot product with weights"
+            ],
+            "correctAnswer": "Compute a weighted sum (dot product), add bias, apply an activation (non-linearity)",
+            "explanation": "A perceptron first computes the dot product of inputs and weights (Σ wi xi), includes the bias term (often as w0 or added separately), and then passes that scalar through a non-linear activation to produce ŷ. The other options reorder or misuse these steps, which would not implement the standard perceptron computation described in the slide and transcript.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q2",
+            "type": "true-false",
+            "question": "True or False: For a perceptron with many inputs, we can always visualize its decision boundary easily in a 2D plot.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. The transcript notes that with only two inputs you can draw the decision boundary (a line), but with many inputs the decision boundary lives in a high-dimensional space and is no longer straightforward to visualize in 2D.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: Passing information through a neuron involves taking a dot product, applying a _____, and then a non-linearity.",
+            "options": [],
+            "correctAnswer": "bias",
+            "explanation": "The slide and transcript summarize the key steps: compute the dot product of inputs and weights, apply a bias (which can be represented as an extra weight w0), and then apply a non-linear activation function. The bias shifts the activation threshold and is distinct from the activation itself.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "5_d4_q1",
+            "type": "multiple-choice",
+            "question": "A perceptron computes a dot product between input vector x and weight vector w, adds a bias, then applies a nonlinearity. Which of the following changes would allow a single perceptron to represent a wider range of decision boundaries in input space (assuming a fixed activation function)?",
+            "options": [
+              "Increase the number of input features (dimensions)",
+              "Replace the dot product with elementwise multiplication without summation",
+              "Remove the bias term w0 from the model",
+              "Use only binary weights (+1 or -1)"
+            ],
+            "correctAnswer": "Increase the number of input features (dimensions)",
+            "explanation": "Increasing the number of input features raises the dimensionality of the input space; the perceptron still computes a linear combination (dot product) plus bias, so it can define decision boundaries (hyperplanes) in higher-dimensional spaces. Replacing the dot product or removing the bias reduces expressiveness: elementwise multiplication without summation no longer produces a linear classifier in the usual sense, and removing bias prevents shifting the hyperplane away from the origin. Restricting weights to binary values reduces expressive power. This tests understanding of how inputs, weights, and bias determine the perceptron's capacity to partition input space.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q2",
+            "type": "true-false",
+            "question": "A single perceptron with a non-linear activation function can always approximate any arbitrary function by itself if given enough input features.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. A single perceptron computes a linear decision boundary (a hyperplane) in the input space followed by a scalar nonlinearity; it cannot implement arbitrary non-linear decision boundaries. To approximate arbitrary functions typically requires multiple layers (a network) so that successive linear combinations and nonlinearities can build complex mappings. This reflects the transcript's point that powerful systems arise from networks, not just one neuron.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "5_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: Passing information through a perceptron involves computing the _____ (dot product) of inputs and weights, adding a _____ term, and then applying a _____.",
+            "options": [],
+            "correctAnswer": "weighted sum; bias; nonlinearity",
+            "explanation": "The perceptron first computes the dot product (weighted sum) of inputs and weights, adds a bias term (often represented by w0), and finally applies a nonlinearity/activation function to produce the output ŷ. This sequence (dot product → bias → nonlinearity) is emphasized in the slide and transcript as the core operation of a neuron.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "5_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a perceptron with inputs x1,...,xm, weights w1,...,wm and bias w0. Which of the following modifications will change only the decision boundary orientation (its normal vector) but not its offset from the origin?",
+            "options": [
+              "Scaling all weights w1...wm by a nonzero constant while leaving the bias w0 unchanged",
+              "Adding the same constant c to each weight w1...wm while leaving w0 unchanged",
+              "Scaling both all weights w1...wm and the bias w0 by the same nonzero constant",
+              "Adding the same constant c to the bias w0 while leaving w1...wm unchanged"
+            ],
+            "correctAnswer": "Adding the same constant c to each weight w1...wm while leaving w0 unchanged",
+            "explanation": "The perceptron decision boundary is defined by w0 + sum_i wi xi = 0. Its orientation is determined by the vector of weights (w1...wm) and the offset (distance from origin along that normal) depends on the ratio of w0 to the norm of the weight vector. Scaling all weights by a constant changes the normal's magnitude but not its direction, so orientation remains the same; however the offset changes because w0 is unchanged (so the ratio w0/||w|| changes). Adding the same constant to every weight changes the direction of the weight vector (thus orientation changes) but does not directly preserve the offset. Only option D (changing bias) changes offset but not orientation; however the option asking which changes orientation but not offset is B: adding same constant to each weight changes orientation but leaves w0 (offset) unchanged. Note: orientation here refers to the direction of the boundary's normal vector; adding a constant to every weight alters that direction while bias remains the same.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q2",
+            "type": "true-false",
+            "question": "True or False: Passing input through a perceptron always requires a nonlinearity to separate classes that are not linearly separable.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "A single perceptron (linear model) with only the dot product and bias produces a linear decision boundary; it cannot separate classes that are not linearly separable. Introducing a nonlinearity and stacking multiple neurons into a network allows composition of nonlinear transformations, enabling the model to capture non-linearly separable patterns. Thus a nonlinearity is necessary in a network to represent complex decision boundaries beyond a single linear separator.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "5_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In a perceptron the primary computation that aggregates inputs x1...xm with weights w1...wm before applying the activation is the _____ (two-word) operation.",
+            "options": [],
+            "correctAnswer": "dot product",
+            "explanation": "The fundamental aggregation in a perceptron is the dot product (also called inner product) between the input vector and the weight vector, often written as sum_i wi xi. This is then combined with a bias and passed through a nonlinearity (activation) to produce the output. Recognizing the dot product is key to understanding how information is passed through a neuron and how decision boundaries arise.",
+            "slideReference": "The Perceptron: Simplified (Slide 5)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "6": {
+      "slideNumber": 6,
+      "sectionId": "slide-6",
+      "title": "The Perceptron: Simplified",
+      "questions": [
+        {
+          "id": "6_d3_q1",
+          "type": "multiple-choice",
+          "question": "Which sequence of operations correctly describes how a perceptron produces its output y from inputs x1...xm according to the slide?",
+          "options": [
+            "Compute dot product of inputs and weights, add bias, apply activation function g",
+            "Apply activation function g to each input, sum results, then add bias",
+            "Add bias to each input, multiply by corresponding weight, then sum without nonlinearity",
+            "Multiply inputs and weights elementwise and take the maximum as output"
+          ],
+          "correctAnswer": "Compute dot product of inputs and weights, add bias, apply activation function g",
+          "explanation": "The perceptron first forms the weighted sum z = w0 + sum_j x_j w_j (dot product plus bias), then passes z through a nonlinearity g to produce y. The other options reorder or omit these essential steps.",
+          "slideReference": "The Perceptron: Simplified (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q2",
+          "type": "true-false",
+          "question": "Removing the weights and the bias from the diagram means they are no longer part of the perceptron computation.",
+          "options": [],
+          "correctAnswer": "False",
+          "explanation": "False. The transcript explains the presenter removed weights and bias from the illustration for clarity, but they remain conceptually present: z is still defined as the dot product plus bias and then passed through g to produce y.",
+          "slideReference": "The Perceptron: Simplified (Slide 6)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "6_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the equation: The perceptron computes z = ______ + sum_{j=1}^m x_j w_j before applying the activation g.",
+          "options": [],
+          "correctAnswer": "w0",
+          "explanation": "w0 represents the bias term added to the dot product of inputs and weights. Thus z = w0 + sum_j x_j w_j, and y = g(z).",
+          "slideReference": "The Perceptron: Simplified (Slide 6)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "6_d1_q1",
+            "type": "multiple-choice",
+            "question": "In the simplified perceptron described, what operation produces z before applying the activation function g?",
+            "options": [
+              "The dot product of inputs and weights plus a bias",
+              "Only the bias term b0",
+              "The activation function applied to inputs",
+              "The sum of the activations of previous neurons"
+            ],
+            "correctAnswer": "The dot product of inputs and weights plus a bias",
+            "explanation": "The slide and transcript state that z is the result of the dot product (sum of x_j * w_j) plus the bias term w0 (or b). This value z is then passed through the nonlinearity g to produce the output y.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q2",
+            "type": "true-false",
+            "question": "The activation/output y is computed by applying a nonlinearity g to the weighted sum z.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "According to the content, z = w0 + sum_j x_j w_j is computed first, and then the activation function g(z) produces the output y. Thus the statement is true.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete the equation: z = w0 + sum_{j=1}^m x_j ____.",
+            "options": [],
+            "correctAnswer": "w_j",
+            "explanation": "The weighted sum z is formed by adding the bias w0 to the sum over all inputs x_j multiplied by their corresponding weights w_j, hence the blank is w_j.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "6_d2_q1",
+            "type": "multiple-choice",
+            "question": "In the perceptron simplified description, which sequence of operations produces the final output y?",
+            "options": [
+              "Apply nonlinearity g, compute weighted sum z, then add bias",
+              "Compute weighted sum (dot product) and bias to get z, then apply nonlinearity g to get y",
+              "Compute nonlinearity g on inputs first, then take a dot product with weights",
+              "Add bias to inputs, then multiply by weights to get y directly"
+            ],
+            "correctAnswer": "Compute weighted sum (dot product) and bias to get z, then apply nonlinearity g to get y",
+            "explanation": "The perceptron first computes a weighted sum z = w0 + sum_j x_j w_j (dot product plus bias). That z is then passed through an activation (nonlinearity) g to produce the output y = g(z). This ordering (dot product + bias, then nonlinearity) is central to the slide and transcript.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q2",
+            "type": "true-false",
+            "question": "The bias term can be removed from diagrams because it is always implicitly present in the perceptron computation.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The transcript explains the presenter often omits the bias and weights from illustrations to keep diagrams clear, while noting they are still implicitly part of the computation (z includes the bias). So treating the bias as always present is correct.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "6_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: The variable z in a perceptron represents the result of the dot product plus the _____ before applying the activation function g.",
+            "options": [],
+            "correctAnswer": "bias",
+            "explanation": "In the slide z is defined as z = w0 + sum_{j=1}^m x_j w_j. The w0 term is the bias added to the dot product; z is the pre-activation value that is then passed through g to produce y.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "6_d3_q1",
+            "type": "multiple-choice",
+            "question": "Which sequence of operations correctly describes how a perceptron produces its output y from inputs x1...xm according to the slide?",
+            "options": [
+              "Compute dot product of inputs and weights, add bias, apply activation function g",
+              "Apply activation function g to each input, sum results, then add bias",
+              "Add bias to each input, multiply by corresponding weight, then sum without nonlinearity",
+              "Multiply inputs and weights elementwise and take the maximum as output"
+            ],
+            "correctAnswer": "Compute dot product of inputs and weights, add bias, apply activation function g",
+            "explanation": "The perceptron first forms the weighted sum z = w0 + sum_j x_j w_j (dot product plus bias), then passes z through a nonlinearity g to produce y. The other options reorder or omit these essential steps.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q2",
+            "type": "true-false",
+            "question": "Removing the weights and the bias from the diagram means they are no longer part of the perceptron computation.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "False. The transcript explains the presenter removed weights and bias from the illustration for clarity, but they remain conceptually present: z is still defined as the dot product plus bias and then passed through g to produce y.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the equation: The perceptron computes z = ______ + sum_{j=1}^m x_j w_j before applying the activation g.",
+            "options": [],
+            "correctAnswer": "w0",
+            "explanation": "w0 represents the bias term added to the dot product of inputs and weights. Thus z = w0 + sum_j x_j w_j, and y = g(z).",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "6_d4_q1",
+            "type": "multiple-choice",
+            "question": "Given a perceptron with inputs x1...xm, weights w1...wm and bias w0, which of the following changes to the parameters will leave the sign of the perceptron's output y = g(z) (where g is a step nonlinearity) unchanged for all inputs?",
+            "options": [
+              "Multiply all weights w1...wm and the bias w0 by a positive constant c > 0",
+              "Add a constant k to all weights w1...wm while leaving w0 unchanged",
+              "Multiply only the bias w0 by -1",
+              "Add the same constant k to the bias w0 and to each weight wj"
+            ],
+            "correctAnswer": "Multiply all weights w1...wm and the bias w0 by a positive constant c > 0",
+            "explanation": "The perceptron's decision depends on the sign of z = w0 + sum_j x_j w_j. Multiplying all parameters (weights and bias) by a positive constant scales z but does not change its sign, so the step activation output is unchanged. Adding a constant to all weights changes relative contributions from inputs and can change sign; multiplying only the bias by -1 flips sign in some cases; adding the same constant to bias and weights does not generally preserve sign because inputs vary.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q2",
+            "type": "true-false",
+            "question": "In the perceptron formulation z = w0 + sum_{j=1}^m x_j w_j, the bias term w0 could always be represented as an additional weight connected to an input x0 fixed at 1.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This is a standard trick: include x0 = 1 and set w0 as its corresponding weight. Then z = sum_{j=0}^m x_j w_j reproduces w0 + sum_{j=1}^m x_j w_j. This shows the bias can be treated as a weight on a constant input and is why the slide removes the bias from diagrams while noting it remains present.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "6_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In a perceptron, the value z computed before applying the activation g is the dot product of the input vector and the weight vector plus the _____ .",
+            "options": [],
+            "correctAnswer": "bias",
+            "explanation": "By definition z = w0 + sum_{j=1}^m x_j w_j = (w · x) + bias. The bias (often written w0) shifts the activation threshold and is applied after the dot product but before the nonlinearity g.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "6_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a perceptron that computes z = w0 + sum_{j=1}^m x_j w_j and then y = g(z). Suppose you are given two different weight vectors w and w' and biases w0 and w0' that produce identical outputs y for every input x when using the same nonlinearity g. Which of the following conclusions is the most accurate and insightful?",
+            "options": [
+              "The two parameter sets must be identical component-wise (w = w' and w0 = w0') because the mapping from parameters to function is one-to-one.",
+              "The two parameter sets can differ by a scalar multiplicative factor only if g is homogeneous (e.g., linear) and that factor cancels, otherwise they represent the same decision boundary if g depends only on the sign of z.",
+              "Different parameter sets can produce identical outputs only when all input vectors x are zero; otherwise they are always distinct functions.",
+              "If g is nonlinear (e.g., sigmoid or step), then any difference between parameter sets implies a different function; identical outputs imply identical parameters."
+            ],
+            "correctAnswer": "The two parameter sets can differ by a scalar multiplicative factor only if g is homogeneous (e.g., linear) and that factor cancels, otherwise they represent the same decision boundary if g depends only on the sign of z.",
+            "explanation": "This question probes understanding of parameter identifiability versus functional equivalence. The perceptron computes z = w0 + w·x and then applies g. If g is homogeneous (for example the identity), scaling (w0,w) by a scalar produces a scaled z and thus a scaled output; for linear g this simply scales y. If g is a sign/threshold activation, scaling by any positive scalar does not change the sign of z so distinct parameter vectors differing by a positive scalar can define the same decision boundary. In contrast, arbitrary differences in parameters will generally change z and thus y. Therefore the correct nuanced statement recognizes scale equivalence in certain activations and the decision-boundary invariance for sign-based g.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q2",
+            "type": "true-false",
+            "question": "True or False: In a perceptron, removing explicit depiction of the weights and bias from a diagram implies they are no longer present in the computation; the output y can be correctly computed from inputs x alone without any weights or bias.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Removing weights and bias from an illustration is a visual simplification, not a change to the mathematical model. The perceptron still computes z = w0 + sum_j x_j w_j; weights and bias are essential parameters that determine the dot product and therefore the pre-activation z. Omitting them from the diagram is for clarity, but they remain required for computing y = g(z).",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "6_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete the statement: In the perceptron model, the scalar z represents the result of a dot product plus the bias; passing z through the nonlinearity g produces the output ___ .",
+            "options": [],
+            "correctAnswer": "y",
+            "explanation": "By definition in the slide, z = w0 + sum_j x_j w_j is the pre-activation (dot product plus bias). Applying the activation function g to z yields the perceptron output, denoted y = g(z). This tests understanding of the two-stage computation: linear combination then nonlinearity.",
+            "slideReference": "The Perceptron: Simplified (Slide 6)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    },
+    "7": {
+      "slideNumber": 7,
+      "sectionId": "slide-7",
+      "title": "Multi Output Perceptron",
+      "questions": [
+        {
+          "id": "7_d3_q1",
+          "type": "multiple-choice",
+          "question": "In a multi-output perceptron with two outputs y1 and y2 that share the same input vector x = (x1,...,xm), which statement best explains why y1 and y2 can be different even though they receive the same inputs?",
+          "options": [
+            "Because the activation function g for each output must be different",
+            "Because each output neuron has its own set of weights (including its own bias) that produce different pre-activations z1 and z2",
+            "Because the inputs x are randomly altered before reaching the second neuron",
+            "Because a multi-output perceptron duplicates inputs so each neuron sees a different x"
+          ],
+          "correctAnswer": "Because each output neuron has its own set of weights (including its own bias) that produce different pre-activations z1 and z2",
+          "explanation": "Both output neurons receive the same input values, but each neuron computes its pre-activation zi = w0,i + sum_j x_j w_{j,i} with its own weight vector (including bias). Different weights lead to different zi and thus different outputs y_i = g(zi), even when the activation function g is the same.",
+          "slideReference": "Multi Output Perceptron (Slide 7)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "7_d3_q2",
+          "type": "true-false",
+          "question": "A dense multi-output layer without the nonlinear activation functions is equivalent to a single linear transformation mapping the input vector x to a vector of pre-activations z.",
+          "options": [],
+          "correctAnswer": "True",
+          "explanation": "Removing the nonlinearities leaves only linear operations: each output's pre-activation zi is an affine function of x (bias plus weighted sum). Collectively this can be written as z = W^T x + b, which is a single linear/affine transformation from input vector x to the vector z.",
+          "slideReference": "Multi Output Perceptron (Slide 7)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "7_d3_q3",
+          "type": "fill-blank",
+          "question": "Complete the equation for the pre-activation of the i-th output neuron: zi = _____ + sum_{j=1}^m x_j w_{j,i}",
+          "options": [],
+          "correctAnswer": "w0,i",
+          "explanation": "The pre-activation zi of the i-th neuron is given by the neuron's bias term (commonly written as w0,i) plus the weighted sum of inputs: zi = w0,i + sum_{j=1}^m x_j w_{j,i}. The bias enables an affine shift independent of the inputs.",
+          "slideReference": "Multi Output Perceptron (Slide 7)",
+          "difficulty": "medium"
+        }
+      ],
+      "totalQuestions": 15,
+      "quizzesByDifficulty": {
+        "1": [
+          {
+            "id": "7_d1_q1",
+            "type": "multiple-choice",
+            "question": "In a multi-output perceptron with two output neurons that share the same inputs, what causes the two outputs to differ?",
+            "options": [
+              "They use different input features x1, x2, ...",
+              "They apply different weights and biases to the same inputs",
+              "They use a different activation function for each input feature",
+              "They receive outputs from different previous layers"
+            ],
+            "correctAnswer": "They apply different weights and biases to the same inputs",
+            "explanation": "Both output neurons receive the same input features, but each neuron has its own set of weights and bias (w0,i and wj,i). These different parameters produce different pre-activation values z1 and z2, and after applying the activation g(·) yield different outputs.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d1_q2",
+            "type": "true-false",
+            "question": "True or False: For each output neuron i, the pre-activation value is computed as zi = w0,i + sum_{j=1}^m x_j * w_{j,i}.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This is exactly the feedforward linear combination used in a dense (fully connected) layer: the bias w0,i plus the weighted sum of input features x_j with weights w_{j,i} produces the pre-activation zi.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d1_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: After computing zi for each output neuron, the final output yi is obtained by applying the ______ function g to zi.",
+            "options": [],
+            "correctAnswer": "activation",
+            "explanation": "The nonlinearity or activation function g(·) is applied to the pre-activation value zi to produce the neuron output yi (yi = g(zi)). This step introduces nonlinearity into the network.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          }
+        ],
+        "2": [
+          {
+            "id": "7_d2_q1",
+            "type": "multiple-choice",
+            "question": "In a multi-output perceptron layer with inputs x1...xm and two output neurons producing pre-activations z1 and z2, which statement best describes how z1 is computed?",
+            "options": [
+              "z1 = w0,1 + sum_{j=1}^m x_j * w_{j,1}",
+              "z1 = g(w0,1 + sum_{j=1}^m x_j * w_{j,1})",
+              "z1 = y1 * w0,1 + sum_{j=1}^m x_j",
+              "z1 = sum_{j=0}^{m} x_j + w_{j,1}"
+            ],
+            "correctAnswer": "z1 = w0,1 + sum_{j=1}^m x_j * w_{j,1}",
+            "explanation": "The pre-activation output zi is computed as the bias w0,i plus the weighted sum of inputs: zi = w0,i + Σ_{j=1}^m x_j w_{j,i}. The activation g is applied afterward to produce yi = g(zi), so including g would describe y1 rather than the pre-activation z1.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d2_q2",
+            "type": "true-false",
+            "question": "True or False: In a dense multi-output layer, each output neuron receives the same input features but can produce different outputs because each neuron has its own set of weights.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "This is true. A dense layer connects every input to every output. Each output neuron uses the same input features but has its own weights (and bias), so they can compute different functions of the inputs and therefore different outputs.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          },
+          {
+            "id": "7_d2_q3",
+            "type": "fill-blank",
+            "question": "Complete the equation for an output after applying the activation function: y_i = g(_____).",
+            "options": [],
+            "correctAnswer": "z_i",
+            "explanation": "The activation function g is applied to the pre-activation value z_i (where z_i = w0,i + Σ_{j=1}^m x_j w_{j,i}) to produce the output y_i = g(z_i).",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "easy"
+          }
+        ],
+        "3": [
+          {
+            "id": "7_d3_q1",
+            "type": "multiple-choice",
+            "question": "In a multi-output perceptron with two outputs y1 and y2 that share the same input vector x = (x1,...,xm), which statement best explains why y1 and y2 can be different even though they receive the same inputs?",
+            "options": [
+              "Because the activation function g for each output must be different",
+              "Because each output neuron has its own set of weights (including its own bias) that produce different pre-activations z1 and z2",
+              "Because the inputs x are randomly altered before reaching the second neuron",
+              "Because a multi-output perceptron duplicates inputs so each neuron sees a different x"
+            ],
+            "correctAnswer": "Because each output neuron has its own set of weights (including its own bias) that produce different pre-activations z1 and z2",
+            "explanation": "Both output neurons receive the same input values, but each neuron computes its pre-activation zi = w0,i + sum_j x_j w_{j,i} with its own weight vector (including bias). Different weights lead to different zi and thus different outputs y_i = g(zi), even when the activation function g is the same.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d3_q2",
+            "type": "true-false",
+            "question": "A dense multi-output layer without the nonlinear activation functions is equivalent to a single linear transformation mapping the input vector x to a vector of pre-activations z.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "Removing the nonlinearities leaves only linear operations: each output's pre-activation zi is an affine function of x (bias plus weighted sum). Collectively this can be written as z = W^T x + b, which is a single linear/affine transformation from input vector x to the vector z.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d3_q3",
+            "type": "fill-blank",
+            "question": "Complete the equation for the pre-activation of the i-th output neuron: zi = _____ + sum_{j=1}^m x_j w_{j,i}",
+            "options": [],
+            "correctAnswer": "w0,i",
+            "explanation": "The pre-activation zi of the i-th neuron is given by the neuron's bias term (commonly written as w0,i) plus the weighted sum of inputs: zi = w0,i + sum_{j=1}^m x_j w_{j,i}. The bias enables an affine shift independent of the inputs.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          }
+        ],
+        "4": [
+          {
+            "id": "7_d4_q1",
+            "type": "multiple-choice",
+            "question": "In a multi-output perceptron layer with inputs x1...xm and two output neurons producing pre-activations z1 and z2, which statement best explains why the two outputs can differ even though they share the same inputs?",
+            "options": [
+              "Because each output neuron applies a different nonlinear activation function g to the same z value.",
+              "Because each output neuron has its own set of weights (including bias) so it computes a different linear combination of the shared inputs before activation.",
+              "Because the inputs x1...xm are altered separately for each output before entering the neurons.",
+              "Because a multi-output layer forces one neuron to compute the complement of the other neuron’s output."
+            ],
+            "correctAnswer": "Because each output neuron has its own set of weights (including bias) so it computes a different linear combination of the shared inputs before activation.",
+            "explanation": "In a dense multi-output perceptron, every output neuron receives the same input vector but has its own weights w0,i and w_{j,i}. Each neuron computes zi = w0,i + sum_j x_j w_{j,i}, giving different pre-activations. Applying the activation g to each zi produces potentially different outputs y1 and y2. The inputs themselves are not altered per output, nor is one output forced to be the complement of the other.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d4_q2",
+            "type": "true-false",
+            "question": "A dense multi-output perceptron layer is linear if you ignore the nonlinear activation functions applied after computing the pre-activations z.",
+            "options": [],
+            "correctAnswer": "True",
+            "explanation": "The layer computes each zi as an affine linear function of the inputs (zi = w0,i + sum_j x_j w_{j,i}). Without the nonlinear activation g applied to zi, the mapping from input X to the vector of z values is linear (affine). The nonlinearity is what makes the overall mapping potentially nonlinear.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          },
+          {
+            "id": "7_d4_q3",
+            "type": "fill-blank",
+            "question": "Complete the equation for the pre-activation of the i-th output neuron in a multi-output perceptron: zi = _____ + sum_{j=1}^m x_j w_{j,i}",
+            "options": [],
+            "correctAnswer": "w0,i",
+            "explanation": "The pre-activation zi is an affine combination of inputs: it includes the bias term w0,i plus the weighted sum of input features x_j times their corresponding weights w_{j,i}. This bias shifts the linear function.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "medium"
+          }
+        ],
+        "5": [
+          {
+            "id": "7_d5_q1",
+            "type": "multiple-choice",
+            "question": "Consider a dense layer that maps m input features x1...xm to two outputs y1 and y2 via pre-activations z1 and z2 where zi = w0,i + sum_{j=1}^m x_j w_{j,i} and yi = g(zi). Suppose g is a fixed nonlinear activation. If you are allowed to choose weights w_{j,1} and w_{j,2} freely, which of the following statements about the set of functions mapping x -> (y1,y2) that this layer can represent is most accurate?",
+            "options": [
+              "Any pair of arbitrary scalar functions y1(x) and y2(x) can be represented exactly by appropriate weights and the single activation g, regardless of g's form.",
+              "The layer can represent any two functions that are linear combinations of the same nonlinear basis functions g(w·x + b) but cannot represent arbitrary independent functions if g is fixed and limited.",
+              "If g is nonlinear and fixed, the layer is equivalent to two independent linear regressions and therefore can only represent affine functions of x.",
+              "The layer can represent any continuous vector-valued function (y1,y2) on R^m if you choose sufficiently many inputs m."
+            ],
+            "correctAnswer": "The layer can represent any two functions that are linear combinations of the same nonlinear basis functions g(w·x + b) but cannot represent arbitrary independent functions if g is fixed and limited.",
+            "explanation": "A dense layer with two neurons shares only the inputs but has independent weights, so each output is g applied to an affine transform: yi = g(w_i·x + w0,i). That means outputs are not arbitrary: each output is a scalar activation of its own affine projection. They can be independent only to the extent that g composed with affine maps can approximate the desired functions. The correct option captures that both outputs arise from the same form (affine followed by g) and are not arbitrary linear combinations of a richer shared basis; option 1 is false (cannot represent arbitrary functions), option 3 is false (nonlinearity prevents equivalence to linear regression), and option 4 is false (limited by g and one-layer structure).",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "7_d5_q2",
+            "type": "true-false",
+            "question": "True or False: If you remove the nonlinearity g from a multi-output dense layer, the resulting layer can still distinguish classes that are not linearly separable in the input space by combining multiple outputs.",
+            "options": [],
+            "correctAnswer": "False",
+            "explanation": "Removing the nonlinearity makes the layer a purely linear transformation: z = XW + b. Any linear map followed by any post-processing that is itself linear cannot separate nonlinearly separable classes. Multiple outputs of a linear layer span a linear subspace of the inputs, so they cannot create nonlinear decision boundaries needed to separate nonlinearly separable data. Nonlinear activation is required to increase representational power.",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "hard"
+          },
+          {
+            "id": "7_d5_q3",
+            "type": "fill-blank",
+            "question": "Complete this statement: In a multi-output perceptron layer with outputs yi = g(zi) and zi = w0,i + sum_{j=1}^m x_j w_{j,i}, each output neuron computes an affine projection of the input followed by the same activation g; therefore the distinctiveness between outputs arises only from differences in their _____ and biases.",
+            "options": [],
+            "correctAnswer": "weights",
+            "explanation": "Each output neuron uses its own weight vector and bias (w_{j,i} and w0,i) to form a different affine projection w_i·x + b_i; then the shared activation g is applied. Thus different outputs come from different weight vectors (and biases).",
+            "slideReference": "Multi Output Perceptron (Slide 7)",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "generatedAt": "2025-09-05T03:38:47.444Z"
+    }
+  }
+}

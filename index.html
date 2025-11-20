@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generative Lecture Demo</title>
+  <link rel="icon" type="image/png" href="./icons/hyj.png">
   <link rel="stylesheet" href="styles.css">
   <!-- Vara.js 라이브러리 -->
   <script src="https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js"></script>
@@ -22,6 +23,9 @@
         
         <!-- 선택 영역 표시 레이어 -->
         <div class="selection-layer" id="selectionLayer"></div>
+        
+        <!-- 하이라이트 레이어 -->
+        <div class="highlight-layer" id="highlightLayer"></div>
         
         <!-- Handwriting 오버레이 -->
         <div class="handwriting-overlay" id="handwritingOverlay" style="display: none;">
@@ -65,37 +69,141 @@
         
         <!-- 토스트 알림 -->
         <div class="toast-notification" id="toastNotification"></div>
+        
+        <!-- 퀴즈 모달 -->
+        <div class="quiz-modal" id="quizModal" style="display: none;">
+          <div class="quiz-modal-content">
+            <!-- 퀴즈 헤더 -->
+            <div class="quiz-header">
+              <div class="quiz-header-left">
+                <div class="quiz-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain">
+                    <path d="M12 18V5"/>
+                    <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/>
+                    <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/>
+                    <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/>
+                    <path d="M18 18a4 4 0 0 0 2-7.464"/>
+                    <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/>
+                    <path d="M6 18a4 4 0 0 1-2-7.464"/>
+                    <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="quiz-title" id="quizTitle">Quiz Title</h3>
+                  <div class="quiz-badges">
+                    <span class="quiz-badge" id="quizSlideBadge">Section 1</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 난이도 슬라이더 (헤더 우측) -->
+              <div class="quiz-difficulty-header" id="quizDifficultySection" style="display: none;">
+                <div class="difficulty-slider-wrapper">
+                  <div class="difficulty-header-row">
+                    <label class="difficulty-label">Difficulty: <span id="difficultyLabel">Medium</span></label>
+                    <span class="difficulty-level">Level <span id="difficultyValue">3</span>/5</span>
+                  </div>
+                  <input type="range" id="difficultySlider" class="difficulty-slider" min="1" max="5" value="3" step="1">
+                  <div class="difficulty-labels">
+                    <span>Very Easy</span>
+                    <span>Very Hard</span>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="quiz-close-btn" id="quizCloseBtn">✕</button>
+            </div>
+            
+            <!-- 퀴즈 콘텐츠 -->
+            <div class="quiz-content" id="quizContent">
+              <!-- 질문 또는 피드백이 여기에 동적으로 삽입됨 -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Break 비디오 오버레이 -->
+        <div class="break-overlay" id="breakOverlay" style="display: none;">
+          <video 
+            id="breakVideo" 
+            class="break-video"
+            autoplay
+          ></video>
+          <button class="close-break-btn" id="closeBreakBtn">×</button>
+        </div>
       </div>
       
       <!-- 커스텀 비디오 컨트롤 바 -->
       <div class="video-controls" id="videoControls">
-        <select class="video-selector" id="videoSelector">
-          <option value="physics">Physics</option>
-          <option value="linear-algebra">Linear Algebra</option>
-          <option value="machinelearning">Machine Learning</option>
-        </select>
-        <button class="control-btn" id="playPauseBtn" aria-label="Play/Pause">
-          <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-          <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-          </svg>
-        </button>
-        <div class="time-display">
-          <span id="currentTime">0:00</span>
-          <span>/</span>
-          <span id="duration">0:00</span>
-        </div>
-        <div class="seek-bar-container" id="seekBarContainer">
-          <div class="seek-bar" id="seekBar">
-            <div class="seek-bar-progress" id="seekBarProgress"></div>
-            <div class="seek-bar-handle" id="seekBarHandle"></div>
+        <!-- 첫 번째 행: Play Button + Progress Bar Section -->
+        <div class="progress-bar-row">
+          <button class="control-btn" id="playPauseBtn" aria-label="Play/Pause">
+            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+            </svg>
+          </button>
+          <div class="progress-bar-section">
+            <!-- Time display -->
+            <div class="progress-time-display">
+              <span id="currentTime">0:00</span>
+              <span class="time-separator">/</span>
+              <span id="duration">0:00</span>
+              <span id="hoveredSegmentInfo" class="segment-info"></span>
+            </div>
+            
+            <!-- Segmented Progress Bar -->
+            <div class="segmented-progress-bar-container" id="segmentedProgressBarContainer">
+              <div class="segmented-progress-bar" id="segmentedProgressBar">
+                <!-- Segment blocks will be dynamically inserted here -->
+              </div>
+              <!-- Progress indicator -->
+              <div class="progress-indicator" id="progressIndicator"></div>
+              <!-- Playhead -->
+              <div class="playhead" id="playhead">
+                <div class="playhead-circle"></div>
+              </div>
+              <!-- Quiz indicator lines -->
+              <div class="quiz-indicators" id="quizIndicators"></div>
+            </div>
+            
+            <!-- Segment labels below progress bar -->
+            <div class="segment-labels-container" id="segmentLabelsContainer">
+              <!-- Segment labels and quiz buttons will be dynamically inserted here -->
+            </div>
           </div>
         </div>
-        <button class="diagram-btn" id="interactiveDiagramBtn" aria-label="Open Interactive Diagram">
-          Diagram
-        </button>
+        
+        <!-- 두 번째 행: Control Buttons -->
+        <div class="control-buttons-row">
+          <select class="video-selector" id="videoSelector">
+            <option value="physics">Physics</option>
+            <option value="linear-algebra">Linear Algebra</option>
+            <option value="machinelearning">Machine Learning</option>
+          </select>
+              <div class="control-buttons-right">
+                <div class="learning-interests-container">
+                  <label for="learningInterestsInput" class="learning-interests-label">Learning Interests:</label>
+                  <input 
+                    type="text" 
+                    id="learningInterestsInput" 
+                    class="learning-interests-input" 
+                    placeholder="e.g., football" 
+                    maxlength="30"
+                  />
+                </div>
+                <button class="break-btn" id="breakBtn" aria-label="Break">
+                  Break
+                </button>
+                <button class="diagram-btn" id="interactiveDiagramBtn" aria-label="Open Interactive Diagram">
+                  Diagram
+                </button>
+                <button class="summary-btn" id="summaryBtn" aria-label="View Summary">
+                  Summary
+                </button>
+              </div>
+        </div>
       </div>
     </div>
 

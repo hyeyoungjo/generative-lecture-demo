@@ -6,18 +6,12 @@
         "what is the difference between nucleus and nucleons",
         "difference between nucleus and nucleons",
         "nucleus vs nucleons",
-        "what is difference",
-        "difference"
+        "please explain this",
+        "walk me through this step by step"
       ],
       "videoPath": "./response/physics-nucleus-nucleons.mp4",
       "boundingBox": "instructorRegion",
-      "handwritingText": "The nucleus is the atom's central core made of nucleons. Nucleons are the individual photons and neutrons that make up the nucleus. The nucleus is the system bound by the strong force and has properties like mass and charge that arise from its nucleons and their binding energy.",
-      "handwritingBoundingBox": {
-        "x": 960,
-        "y": 250,
-        "width": 850,
-        "height": 200
-      }
+      "handwritingText": "The nucleus is the atom's central core made of nucleons. Nucleons are the individual photons and neutrons that make up the nucleus. The nucleus is the system bound by the strong force and has properties like mass and charge that arise from its nucleons and their binding energy."
     },
     {
       "questions": [
@@ -27,13 +21,7 @@
       ],
       "videoPath": "./response/physics-analogy.mp4",
       "boundingBox": "instructorRegion",
-      "handwritingText": "Imagine an atom as a football stadium, with electrons like fans circling the stands and the nucleus as the crowded pitch. Protons and neutrons are the players packed together forming the team. Quarks are the player's internal roles, like striker or defender, combining to make each player.",
-      "handwritingBoundingBox": {
-        "x": 960,
-        "y": 250,
-        "width": 800,
-        "height": 250
-      }
+      "handwritingText": "Imagine an atom as a football stadium, with electrons like fans circling the stands and the nucleus as the crowded pitch. Protons and neutrons are the players packed together forming the team. Quarks are the player's internal roles, like striker or defender, combining to make each player."
     }
   ]
 }

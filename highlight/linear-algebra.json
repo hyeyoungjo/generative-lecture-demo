@@ -1,0 +1,106 @@
+[
+  {
+    "startTime": 6.08,
+    "endTime": 33.2,
+    "x": 0.342,
+    "y": 0.338,
+    "width": 0.022,
+    "height": 0.142
+  },
+  {
+    "startTime": 40.96,
+    "endTime": 46,
+    "x": 0.192,
+    "y": 0.123,
+    "width": 0.242,
+    "height": 0.049
+  },
+  {
+    "startTime": 40.96,
+    "endTime": 58.56,
+    "x": 0.066,
+    "y": 0.292,
+    "width": 0.513,
+    "height": 0.066
+  },
+  {
+    "startTime": 78.72,
+    "endTime": 99.2,
+    "x": 0.361,
+    "y": 0.432,
+    "width": 0.148,
+    "height": 0.217
+  },
+  {
+    "startTime": 104.64,
+    "endTime": 226.64,
+    "x": 0.097,
+    "y": 0.436,
+    "width": 0.172,
+    "height": 0.151
+  },
+  {
+    "startTime": 104.64,
+    "endTime": 176.64,
+    "x": 0.066,
+    "y": 0.657,
+    "width": 0.27,
+    "height": 0.086
+  },
+  {
+    "startTime": 275.52,
+    "endTime": 282.24,
+    "x": 0.048,
+    "y": 0.324,
+    "width": 0.089,
+    "height": 0.047
+  },
+  {
+    "startTime": 306.8,
+    "endTime": 314.8,
+    "x": 0.274,
+    "y": 0.227,
+    "width": 0.096,
+    "height": 0.094
+  },
+  {
+    "startTime": 320.72,
+    "endTime": 362.32,
+    "x": 0.128,
+    "y": 0.342,
+    "width": 0.275,
+    "height": 0.059
+  },
+  {
+    "startTime": 391.36,
+    "endTime": 399.12,
+    "x": 0.128,
+    "y": 0.426,
+    "width": 0.254,
+    "height": 0.016
+  },
+  {
+    "startTime": 399.12,
+    "endTime": 429.44,
+    "x": 0.193,
+    "y": 0.451,
+    "width": 0.236,
+    "height": 0.122
+  },
+  {
+    "startTime": 454.08,
+    "endTime": 472.48,
+    "x": 0.129,
+    "y": 0.593,
+    "width": 0.455,
+    "height": 0.033
+  },
+  {
+    "startTime": 495.2,
+    "endTime": 531,
+    "x": 0.127,
+    "y": 0.647,
+    "width": 0.367,
+    "height": 0.018
+  }
+]
